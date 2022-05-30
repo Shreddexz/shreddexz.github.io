@@ -1,0 +1,19 @@
+@import "./utilities/variables";
+@import "./layout/header";
+@import "./utilities/fonts";
+@import "./layout/homelayout";
+@import "./layout/aboutme";
+@import "./layout/contactpage";
+@import "./layout/projectspage";
+@import "./layout/musicpage";
+
+
+html,
+body{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: $DarkModeColor;
+}
+
+

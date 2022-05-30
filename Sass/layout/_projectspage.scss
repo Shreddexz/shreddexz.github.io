@@ -1,0 +1,272 @@
+.GamesContainer{
+    width: 90vw;
+    height: 80vh;
+    display: grid;
+    row-gap: 25px;
+    column-gap: 5px;
+    margin-top: 10vh;
+    margin-left: 4vw;
+    background-color: $CustomGrey;
+    grid-template-rows: 2.2vh 38vh;
+    grid-template-columns: 29.83vw 29.83vw 29.83vw;
+}
+
+.PText{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    height: 45px;
+    width: 90vw;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: $CalmBlue;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*#region The Unseeing Eye*/
+
+.GameOne{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    &:hover .TUEOverlay{
+        opacity: 1;
+    }
+}
+
+.TUE{
+    height: auto;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.TUEImg{
+    height: 35vh;
+    width: auto;
+    margin-top: -1.75vh;
+    opacity: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.TUEOverlay{
+  position: absolute; 
+  background: rgb(0, 0, 0);
+  background:rgba(255, 255, 255, 0.607) ;
+  color: #f1f1f199; 
+  width: 27.75vw;
+  transition: .6s ease;
+  opacity:0;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: -11.25vh;
+}
+
+.P1Overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $PopupBackground;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.G1Popup{
+    text-align: center;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 40vw;
+    position: relative;
+    transition: all 5s ease-in-out;
+    .CloseButton{
+     text-decoration: none;
+     color: red;
+     font-size: xx-large;
+     font-weight: bold;
+    }
+
+    h2{
+        font-size: xx-large;
+    }
+}
+
+/*#endregion RegionName*/
+
+/*#region TD*/
+.GameTwo{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    // background-color: yellow;
+    margin-bottom: 30px;
+    &:hover .TDOverlay{
+        opacity: 1;
+    }
+}
+
+.TD{
+    height: auto;
+    width: 100%;
+    text-decoration: none;
+color: black;
+}
+
+.TDImg{
+    height: auto;
+    width: 100%;
+    margin-top: -1.75vh;
+}
+
+.TDOverlay{
+  position: absolute; 
+  background: rgb(0, 0, 0);
+  background:rgba(255, 255, 255, 0.607) ;
+  color: #f1f1f199; 
+  width: 27.75vw;
+  transition: .6s ease;
+  opacity:0;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: -11.5vh;
+  max-height: 5.1vh;
+}
+
+.P2Overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $PopupBackground;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.G2Popup{
+    text-align: center;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 40vw;
+    position: relative;
+    transition: all 5s ease-in-out;
+    .CloseButton{
+     text-decoration: none;
+     color: red;
+     font-size: xx-large;
+     font-weight: bold;
+    }
+
+    h2{
+        font-size: xx-large;
+    }
+}
+
+/*#endregion TD*/ 
+
+/*#region IRT*/
+
+.GameThree{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start:3;
+    // background-color: yellow;
+    margin-bottom: 30px;
+    &:hover .IRTOverlay{
+        opacity: 1;
+    }
+}
+
+.IRT{
+    height: auto;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.IRTImg{
+    height: auto;
+    width: 100%;
+    margin-top: -1.75vh;
+}
+
+.IRTOverlay{
+  position: absolute; 
+  background: rgb(0, 0, 0);
+  background:rgba(255, 255, 255, 0.607) ;
+  color: #f1f1f199; 
+  width: 27.75vw;
+  transition: .6s ease;
+  opacity:0;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: -11.5vh;
+  max-height: 5.1vh;
+}
+
+.P3Overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $PopupBackground;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.G3Popup{
+    text-align: center;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 38vw;
+    position: relative;
+    transition: all 5s ease-in-out;
+    .CloseButton{
+     text-decoration: none;
+     color: red;
+     font-size: xx-large;
+     font-weight: bold;
+    }
+
+    h2{
+        font-size: xx-large;
+    }
+}
+/*#endregion*/
+

@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+#header {
+  height: 75px;
+  width: 100%;
+  background: black;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.header-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-container a {
+  text-decoration: none;
+  color: inherit;
+  font-size: larger;
+}
+
+.header-container a:hover {
+  color: #00a2ff;
+}
+
+.namehome {
+  color: #00a2ff;
+  margin-right: 23%;
+  margin-left: 3%;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.about-me {
+  color: white;
+  margin-right: 3%;
+}
+
+.projects {
+  color: white;
+  margin-right: 3%;
+}
+
+.music {
+  color: white;
+  margin-right: 3%;
+}
+
+.contact {
+  color: white;
+}
+
+.aboutmecontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  margin-top: 15vh;
+  margin-left: 30vw;
+  position: absolute;
+  width: 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutmetitle {
+  position: relative;
+  color: #00a2ff;
+  font-family: "Cinzel", serif;
+  font-weight: bolder;
+  font-size: xx-large;
+  width: 100%;
+  text-align: center;
+}
+
+.aboutmetext {
+  color: white;
+  text-align: left;
+  margin-top: 5vw;
+  font-size: large;
+}
+
+.aboutmetext a {
+  text-decoration: none;
+}
+
+.CIContainter {
+  width: 40vw;
+  height: 43%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #00a2ff;
+  margin-left: 30vw;
+  margin-top: 20px;
+}
+
+.CIHeader {
+  color: white;
+  height: 30px;
+  text-align: center;
+  font-size: x-large;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.CI-Image {
+  width: 100%;
+}
+
+.linkedin {
+  width: 50px;
+  margin-top: 100px;
+  padding-left: 48vw;
+}
+
+.GamesContainer {
+  width: 90vw;
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 25px;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  margin-top: 10vh;
+  margin-left: 4vw;
+  background-color: #616e75;
+  -ms-grid-rows: 2.2vh 38vh;
+      grid-template-rows: 2.2vh 38vh;
+  -ms-grid-columns: 29.83vw 29.83vw 29.83vw;
+      grid-template-columns: 29.83vw 29.83vw 29.83vw;
+}
+
+.PText {
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  height: 45px;
+  width: 90vw;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #00a2ff;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 1;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/*#region The Unseeing Eye*/
+.GameOne {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 2;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  background-color: black;
+  margin-bottom: 30px;
+}
+
+.GameOne:hover .TUEOverlay {
+  opacity: 1;
+}
+
+.TUE {
+  height: auto;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.TUEImg {
+  height: 35vh;
+  width: auto;
+  margin-top: -1.75vh;
+  opacity: 1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.TUEOverlay {
+  position: absolute;
+  background: black;
+  background: rgba(255, 255, 255, 0.607);
+  color: #f1f1f199;
+  width: 27.75vw;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  opacity: 0;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: -11.25vh;
+}
+
+.P1Overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(109, 98, 98, 0.485);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.P1Overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.G1Popup {
+  text-align: center;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40vw;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+.G1Popup .CloseButton {
+  text-decoration: none;
+  color: red;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.G1Popup h2 {
+  font-size: xx-large;
+}
+
+/*#endregion RegionName*/
+/*#region TD*/
+.GameTwo {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  margin-bottom: 30px;
+}
+
+.GameTwo:hover .TDOverlay {
+  opacity: 1;
+}
+
+.TD {
+  height: auto;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.TDImg {
+  height: auto;
+  width: 100%;
+  margin-top: -1.75vh;
+}
+
+.TDOverlay {
+  position: absolute;
+  background: black;
+  background: rgba(255, 255, 255, 0.607);
+  color: #f1f1f199;
+  width: 27.75vw;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  opacity: 0;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: -11.5vh;
+  max-height: 5.1vh;
+}
+
+.P2Overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(109, 98, 98, 0.485);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.P2Overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.G2Popup {
+  text-align: center;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40vw;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+.G2Popup .CloseButton {
+  text-decoration: none;
+  color: red;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.G2Popup h2 {
+  font-size: xx-large;
+}
+
+/*#endregion TD*/
+/*#region IRT*/
+.GameThree {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 2;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  margin-bottom: 30px;
+}
+
+.GameThree:hover .IRTOverlay {
+  opacity: 1;
+}
+
+.IRT {
+  height: auto;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.IRTImg {
+  height: auto;
+  width: 100%;
+  margin-top: -1.75vh;
+}
+
+.IRTOverlay {
+  position: absolute;
+  background: black;
+  background: rgba(255, 255, 255, 0.607);
+  color: #f1f1f199;
+  width: 27.75vw;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  opacity: 0;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: -11.5vh;
+  max-height: 5.1vh;
+}
+
+.P3Overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(109, 98, 98, 0.485);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.P3Overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.G3Popup {
+  text-align: center;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 38vw;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+.G3Popup .CloseButton {
+  text-decoration: none;
+  color: red;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.G3Popup h2 {
+  font-size: xx-large;
+}
+
+/*#endregion*/
+.MusicContainer {
+  width: 90vw;
+  height: 100vh;
+  background-color: #616e75;
+  margin-top: 10vh;
+  margin-left: 4vw;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 25px;
+  -webkit-column-gap: 5;
+          column-gap: 5;
+  -ms-grid-rows: 2.2vh 2.2vh 38vh 2.2vh 38vh;
+      grid-template-rows: 2.2vh 2.2vh 38vh 2.2vh 38vh;
+  -ms-grid-columns: 29.83vw 29.83vw 29.83vw;
+      grid-template-columns: 29.83vw 29.83vw 29.83vw;
+}
+
+.MText {
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  height: 45px;
+  width: 90vw;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #00a2ff;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 1;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.GMHeader {
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  height: 45px;
+  width: 90vw;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #00a2ff;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 2;
+  margin-top: 3px;
+}
+
+.GameTrackOne {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+}
+
+.TUEOST {
+  width: 100%;
+  height: 100%;
+}
+
+.GameTrackTwo {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.IRTOST {
+  width: 100%;
+  height: 100%;
+}
+
+.GameTrackThree {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+}
+
+.QOTHOST {
+  width: 100%;
+  height: 100%;
+}
+
+.MPHeader {
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  height: 45px;
+  width: 90vw;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #00a2ff;
+  -ms-grid-row: 4;
+      grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.TrackOne {
+  -ms-grid-row: 5;
+      grid-row-start: 5;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+.TOne {
+  width: 100%;
+  height: 100%;
+}
+
+.TrackTwo {
+  -ms-grid-row: 5;
+      grid-row-start: 5;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.TTwo {
+  width: 100%;
+  height: 100%;
+}
+
+.TrackThree {
+  -ms-grid-row: 5;
+      grid-row-start: 5;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+}
+
+.TThree {
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background-color: #272525;
+}
+/*# sourceMappingURL=Main.css.map */

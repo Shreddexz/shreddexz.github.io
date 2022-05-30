@@ -1,0 +1,30 @@
+.aboutmecontainer{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin-top: 15vh;
+    margin-left: 30vw;
+    position: absolute;
+    width: 40%;
+    align-items: center;
+}
+
+.aboutmetitle{
+    position: relative;
+    color: $CalmBlue;
+    font-family: $Cinzel;
+    font-weight: bolder;
+    font-size: xx-large;
+    width: 100%;
+    text-align: center;
+}
+
+.aboutmetext{
+color: white;
+text-align: left;
+margin-top: 5vw;
+font-size: large;
+a{
+text-decoration: none;
+}
+}

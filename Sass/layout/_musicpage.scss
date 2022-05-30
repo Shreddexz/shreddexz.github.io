@@ -1,0 +1,114 @@
+.MusicContainer{
+    width: 90vw;
+    height: 100vh;
+    background-color: $CustomGrey;
+    margin-top: 10vh;
+    margin-left: 4vw;
+    display: grid;
+    row-gap: 25px;
+    column-gap: 5;
+    grid-template-rows: 2.2vh 2.2vh 38vh 2.2vh 38vh;
+    grid-template-columns: 29.83vw 29.83vw 29.83vw;
+}
+
+.MText{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    height: 45px;
+    width: 90vw;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: $CalmBlue;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.GMHeader{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    height: 45px;
+    width: 90vw;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: $CalmBlue;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    margin-top: 3px;
+}
+
+
+.GameTrackOne{
+    grid-row-start:3;
+}
+
+.TUEOST{
+    width: 100%;
+    height: 100%;
+}
+
+.GameTrackTwo{
+    grid-row-start: 3;
+    grid-column-start:2 ;
+}
+
+.IRTOST{
+    width: 100%;
+    height: 100%;
+}
+
+.GameTrackThree{
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+.QOTHOST{
+    width: 100%;
+    height: 100%;
+}
+
+.MPHeader{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    height: 45px;
+    width: 90vw;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: $CalmBlue;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.TrackOne{
+    grid-row-start:5;
+    grid-column-start: 1;
+}
+
+.TOne{
+    width: 100%;
+    height: 100%;               
+}
+
+.TrackTwo{
+    grid-row-start:5;
+    grid-column-start: 2;
+}
+
+.TTwo{
+    width: 100%;
+    height: 100%;               
+}
+
+.TrackThree{
+    grid-row-start:5;
+    grid-column-start: 3;
+}
+
+.TThree{
+    width: 100%;
+    height: 100%;               
+}
