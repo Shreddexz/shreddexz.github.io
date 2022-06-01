@@ -1,30 +1,46 @@
 .aboutmecontainer{
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
+    display: grid;
     margin-top: 15vh;
-    margin-left: 30vw;
-    position: absolute;
-    width: 40%;
-    align-items: center;
+    margin-left: 20%;
+    width: 60vw;
+    height: 70vh;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 30vh 30vh 30vh;
+}
+
+.Selfie{
+grid-column-start: 1;
+grid-column-end: 1;
+grid-row-start:1 ;
+grid-row-end: 3;
+width: 100%;
+height: auto;
 }
 
 .aboutmetitle{
-    position: relative;
     color: $CalmBlue;
     font-family: $Cinzel;
     font-weight: bolder;
     font-size: xx-large;
     width: 100%;
     text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start:1 ;
 }
 
 .aboutmetext{
 color: white;
 text-align: left;
-margin-top: 5vw;
 font-size: large;
-a{
-text-decoration: none;
-}
+grid-column-start: 2;
+grid-column-end: 4;
+grid-row-start:2 ;
+grid-row-end: 3;
+width:60%;
+margin: auto;
+margin-top: 5vh;
+    a{
+    text-decoration: none;
+    }
 }
