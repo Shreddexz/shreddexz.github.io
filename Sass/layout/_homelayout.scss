@@ -1,4 +1,94 @@
+.PageContainer{
+    // background-color: yellow;    
+    display: grid;
+    gap: 2%;
+    margin-top: 15vh;
+    margin-left: 20vw;
+    position: absolute;
+    width: 60vw;
+    height: 70vh;
+    align-items: center;
+    grid-template-columns: 47.5% 47.5%;
+    grid-template-rows: 47.5% 47.5%;
+}
 
+.AMC{
+    width: 100%;
+    height: 100%;
+    background-color: $CustomGrey;
+    p{
+        margin-left: 19%;
+        margin-top: 13%;
+            position: absolute;
+            color: white;
+            font-size: x-large;
+        }
+}
+
+.PJC{
+    width: 100%;
+    height: 100%;
+    grid-row-start:2 ;
+    grid-column-start: 1;
+    p{
+        margin-left: 19%;
+        margin-top: 12%;
+            position: absolute;
+            color: white;
+            font-size: x-large;
+        }
+}
+
+.MC{
+    width: 100%;
+    height: 100%;
+    grid-row-start:1 ;
+    grid-column-start: 2;
+    p{
+    margin-left: 19%;
+    margin-top: 13%;
+        position: absolute;
+        color: white;
+        font-size: x-large;
+    }
+}
+
+.CCVC{
+    width: 100%;
+    height: 100%;
+    grid-row-start:2 ;
+    grid-column-start: 2;
+    background-color: black;
+    p{
+        margin-left: 19%;
+        margin-top: 13%;
+            position: absolute;
+            color: white;
+            font-size: x-large;
+        }
+}
+
+.MusicImg{
+width: 100%;
+height: 100%;
+// opacity: 50%;
+}
+
+.ProjectImg{
+width: 100%;
+height: 100%;
+// opacity: 50%;
+}
+
+.ABMImg{
+width: 100%;
+height: 100%;
+}
+
+.CCVCImage{
+    width: 100%;
+    height: 100%;
+}
 
 
 
