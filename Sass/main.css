@@ -168,8 +168,8 @@
   margin-top: 10vh;
   margin-left: 4vw;
   background-color: #616e75;
-  -ms-grid-rows: 2.2vh 38vh;
-      grid-template-rows: 2.2vh 38vh;
+  -ms-grid-rows: 2.2vh 38vh 38vh;
+      grid-template-rows: 2.2vh 38vh 38vh;
   -ms-grid-columns: 29.83vw 29.83vw 29.83vw;
       grid-template-columns: 29.83vw 29.83vw 29.83vw;
 }
@@ -449,6 +449,178 @@
 }
 
 .G3Popup h2 {
+  font-size: xx-large;
+}
+
+/*#endregion*/
+/*#region QOTH*/
+.GameFour {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  margin-bottom: 30px;
+  margin-top: -5%;
+}
+
+.GameFour:hover .QOTHOverlay {
+  opacity: 1;
+}
+
+.QOTH {
+  height: auto;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.QOTHImg {
+  height: auto;
+  width: 100%;
+  margin-top: -1.75vh;
+}
+
+.QOTHOverlay {
+  position: absolute;
+  background: black;
+  background: rgba(255, 255, 255, 0.607);
+  color: #f1f1f199;
+  width: 27.75vw;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  opacity: 0;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: -11.5vh;
+  max-height: 5.1vh;
+}
+
+.P4Overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(109, 98, 98, 0.485);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.P4Overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.G4Popup {
+  text-align: center;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 38vw;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+.G4Popup .CloseButton {
+  text-decoration: none;
+  color: red;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.G4Popup h2 {
+  font-size: xx-large;
+}
+
+/*#endregion*/
+/*#region TLS*/
+.GameFive {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  margin-bottom: 35px;
+  margin-top: -5%;
+}
+
+.GameFive:hover .TLSOverlay {
+  opacity: 1;
+}
+
+.TLS {
+  height: auto;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.TLSImg {
+  height: auto;
+  width: 100%;
+  margin-top: -1.75vh;
+}
+
+.TLSOverlay {
+  position: absolute;
+  background: black;
+  background: rgba(255, 255, 255, 0.607);
+  color: #f1f1f199;
+  width: 27.75vw;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
+  opacity: 0;
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  margin-top: -11.5vh;
+  max-height: 5.1vh;
+}
+
+.P5Overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(109, 98, 98, 0.485);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.P5Overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.G5Popup {
+  text-align: center;
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 38vw;
+  position: relative;
+  -webkit-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+}
+
+.G5Popup .CloseButton {
+  text-decoration: none;
+  color: red;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.G5Popup h2 {
   font-size: xx-large;
 }
 
