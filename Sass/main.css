@@ -596,7 +596,7 @@
 @media screen and (max-width: 800px) {
   .MusicContainer {
     height: auto;
-    grid-template-rows: 2.2vh 2.2vh repeat(3, 38vh) 2.2vh repeat(3, 38vh);
+    grid-template-rows: 2.2vh 2.2vh repeat(3, 45vh) 2.2vh repeat(3, 45vh);
     grid-template-columns: 89vw;
   }
   .GameTrackOne {
