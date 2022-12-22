@@ -1,14 +1,14 @@
-.CIContainter{
-width: 40vw;
-height: 43%;
-display: flex;
-flex-direction: column;
-background-color: $CalmBlue;
-margin-left: 30vw;
-margin-top: 20px;
+.CIContainter {
+    width: 40vw;
+    height: 43%;
+    display: flex;
+    flex-direction: column;
+    background-color: $CalmBlue;
+    margin-left: 30vw;
+    margin-top: 20px;
 }
 
-.CIHeader{
+.CIHeader {
     color: white;
     height: 30px;
     text-align: center;
@@ -17,18 +17,36 @@ margin-top: 20px;
     font-weight: bold;
 }
 
-.CI-Image{
-width: 100%;
+.CI-Image {
+    width: 100%;
 }
 
-.linkedin{
+.linkedin {
     width: 50px;
     margin-top: 100px;
     padding-left: 48vw;
 }
 
-.CV{
+.CV {
     margin-left: 30vw;
     width: 40vw;
     height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    .CIContainter,.CV{
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+    .CV{
+        height: 90vh;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+ .CV{
+    height: 70vh;
+ }   
 }

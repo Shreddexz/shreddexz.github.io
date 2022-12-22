@@ -1,4 +1,4 @@
-.MusicContainer{
+.MusicContainer {
     width: 90vw;
     height: 95vh;
     background-color: $CustomGrey;
@@ -8,10 +8,10 @@
     row-gap: 25px;
     column-gap: 5;
     grid-template-rows: 2.2vh 2.2vh 38vh 2.2vh 38vh;
-    grid-template-columns: 29.83vw 29.83vw 29.83vw;
+    grid-template-columns: repeat(3, 29.83vw);
 }
 
-.MText{
+.MText {
     text-align: center;
     color: white;
     font-size: xx-large;
@@ -26,7 +26,7 @@
     font-weight: bold;
 }
 
-.GMHeader{
+.GMHeader {
     text-align: center;
     color: white;
     font-size: xx-large;
@@ -40,37 +40,31 @@
     margin-top: 3px;
 }
 
-
-.GameTrackOne{
-    grid-row-start:3;
-}
-
-.TUEOST{
+.TUEOST,
+.IRTOST,
+.QOTHOST,
+.TOne,
+.TTwo,
+.TThree {
     width: 100%;
     height: 100%;
 }
 
-.GameTrackTwo{
+.GameTrackOne {
     grid-row-start: 3;
-    grid-column-start:2 ;
 }
 
-.IRTOST{
-    width: 100%;
-    height: 100%;
+.GameTrackTwo {
+    grid-row-start: 3;
+    grid-column-start: 2;
 }
 
-.GameTrackThree{
+.GameTrackThree {
     grid-row-start: 3;
     grid-column-start: 3;
 }
 
-.QOTHOST{
-    width: 100%;
-    height: 100%;
-}
-
-.MPHeader{
+.MPHeader {
     text-align: center;
     color: white;
     font-size: xx-large;
@@ -83,32 +77,59 @@
     grid-row-end: 4;
 }
 
-.TrackOne{
-    grid-row-start:5;
+.TrackOne {
+    grid-row-start: 5;
     grid-column-start: 1;
 }
 
-.TOne{
-    width: 100%;
-    height: 100%;               
-}
-
-.TrackTwo{
-    grid-row-start:5;
+.TrackTwo {
+    grid-row-start: 5;
     grid-column-start: 2;
 }
 
-.TTwo{
-    width: 100%;
-    height: 100%;               
-}
-
-.TrackThree{
-    grid-row-start:5;
+.TrackThree {
+    grid-row-start: 5;
     grid-column-start: 3;
 }
 
-.TThree{
-    width: 100%;
-    height: 100%;               
+@media screen and (max-width:800px) {
+    .MusicContainer {
+        height: auto;
+        grid-template-rows: 2.2vh 2.2vh repeat(3, 38vh) 2.2vh repeat(3, 38vh);
+        grid-template-columns: 89vw;
+    }
+
+    .GameTrackOne {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .GameTrackTwo {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .GameTrackThree {
+        grid-row: 5;
+        grid-column: 1;
+    }
+
+    .MPHeader {
+        grid-row: 6;
+    }
+
+    .TrackOne {
+        grid-row: 7;
+        grid-column: 1;
+    }
+
+    .TrackTwo {
+        grid-row: 8;
+        grid-column: 1;
+    }
+
+    .TrackThree {
+        grid-row: 9;
+        grid-column: 1;
+    }
 }

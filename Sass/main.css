@@ -15,20 +15,14 @@
 .header-container {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .header-container a {
   text-decoration: none;
   color: inherit;
   font-size: larger;
 }
-
 .header-container a:hover {
   color: #00a2ff;
 }
@@ -60,28 +54,97 @@
   color: white;
 }
 
-.aboutmecontainer {
-  display: -ms-grid;
+.Hamburger {
+  position: fixed;
+  z-index: 99;
+  background-color: white;
+  cursor: pointer;
+  top: 3vh;
+  right: 1rem;
+  opacity: 0;
+}
+
+.Menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 90vw;
+  height: 50%;
+  list-style: none;
+  background-color: #00a2ff;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-110%);
+  justify-content: center;
+}
+.Menu:target {
+  transition: transform 0.2s;
+  transform: translateY(15%);
+}
+.Menu a {
+  margin-left: 20vw;
+  color: white;
+  font-size: x-large;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.Close {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .about-me,
+.projects,
+.music,
+.contact {
+    opacity: 0;
+  }
+  .Hamburger {
+    opacity: 1;
+  }
+}
+.aboutmecontainer > *:not(.Selfie, .imagecontainer) {
   display: grid;
   margin-top: 15vh;
   margin-left: 20%;
   width: 60vw;
   height: 70vh;
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
-  -ms-grid-rows: 30vh 30vh 30vh;
-      grid-template-rows: 30vh 30vh 30vh;
+  grid-template-columns: auto;
+  grid-template-rows: 5% 1fr;
+}
+
+.imagecontainer {
+  position: fixed;
+  width: 20%;
+  height: auto;
+  left: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.imagecontainer span {
+  color: white;
+  width: 100%;
+  opacity: 0;
 }
 
 .Selfie {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 1;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 3;
+  position: relative;
   width: 100%;
   height: auto;
+}
+
+.click {
+  color: white;
+  align-self: center;
+  opacity: 0;
 }
 
 .aboutmetitle {
@@ -91,42 +154,53 @@
   font-size: xx-large;
   width: 100%;
   text-align: center;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 4;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
+  grid-row-start: 1;
 }
 
 .aboutmetext {
   color: white;
   text-align: left;
   font-size: large;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 4;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 3;
-  width: 60%;
+  grid-row-start: 2;
+  width: 80%;
   margin: auto;
   margin-top: 5vh;
 }
-
 .aboutmetext a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  .aboutmetext {
+    margin-top: 10vh;
+  }
+  .aboutmecontainer span {
+    opacity: 1;
+  }
+  .click {
+    opacity: 1;
+    pointer-events: fill;
+  }
+  .imgparent:focus {
+    width: 400%;
+    height: auto;
+    margin-left: 6vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .aboutmetext {
+    margin-top: 10vh;
+  }
+}
 .CIContainter {
   width: 40vw;
   height: 43%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #00a2ff;
   margin-left: 30vw;
   margin-top: 20px;
@@ -157,21 +231,31 @@
   height: 100vh;
 }
 
+@media screen and (max-width: 768px) {
+  .CIContainter, .CV {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+  .CV {
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  .CV {
+    height: 70vh;
+  }
+}
 .GamesContainer {
   width: 90vw;
-  height: 80vh;
-  display: -ms-grid;
+  height: 85vh;
   display: grid;
-  row-gap: 25px;
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   margin-top: 10vh;
-  margin-left: 4vw;
+  margin-left: 5vw;
+  grid-template-rows: 5vh repeat(2, 35vh);
+  grid-template-columns: repeat(3, 1fr);
   background-color: #616e75;
-  -ms-grid-rows: 2.2vh 38vh 38vh;
-      grid-template-rows: 2.2vh 38vh 38vh;
-  -ms-grid-columns: 29.83vw 29.83vw 29.83vw;
-      grid-template-columns: 29.83vw 29.83vw 29.83vw;
 }
 
 .PText {
@@ -180,536 +264,239 @@
   font-size: xx-large;
   height: 45px;
   width: 90vw;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
   background-color: #00a2ff;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 1;
+  grid-row: 1;
   text-decoration: underline;
   font-weight: bold;
 }
 
-/*#region The Unseeing Eye*/
-.GameOne {
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 2;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  background-color: black;
-  margin-bottom: 30px;
-}
-
-.GameOne:hover .TUEOverlay {
-  opacity: 1;
-}
-
-.TUE {
-  height: auto;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-}
-
-.TUEImg {
-  height: 35vh;
-  width: auto;
-  margin-top: -1.75vh;
-  opacity: 1;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.TUEOverlay {
-  position: absolute;
-  background: black;
-  background: rgba(255, 255, 255, 0.607);
-  color: #f1f1f199;
-  width: 27.75vw;
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
-  opacity: 0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.25vh;
-}
-
-.P1Overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(109, 98, 98, 0.485);
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.P1Overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.G1Popup {
-  text-align: center;
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 40vw;
-  position: relative;
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
-}
-
-.G1Popup .CloseButton {
-  text-decoration: none;
-  color: red;
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-.G1Popup h2 {
-  font-size: xx-large;
-}
-
-/*#endregion RegionName*/
-/*#region TD*/
-.GameTwo {
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 2;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  margin-bottom: 30px;
-}
-
-.GameTwo:hover .TDOverlay {
-  opacity: 1;
-}
-
-.TD {
-  height: auto;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-}
-
-.TDImg {
-  height: auto;
-  width: 100%;
-  margin-top: -1.75vh;
-}
-
-.TDOverlay {
-  position: absolute;
-  background: black;
-  background: rgba(255, 255, 255, 0.607);
-  color: #f1f1f199;
-  width: 27.75vw;
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
-  opacity: 0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P2Overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(109, 98, 98, 0.485);
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.P2Overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.G2Popup {
-  text-align: center;
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 40vw;
-  position: relative;
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
-}
-
-.G2Popup .CloseButton {
-  text-decoration: none;
-  color: red;
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-.G2Popup h2 {
-  font-size: xx-large;
-}
-
-/*#endregion TD*/
-/*#region IRT*/
-.GameThree {
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 2;
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  margin-bottom: 30px;
-}
-
-.GameThree:hover .IRTOverlay {
-  opacity: 1;
-}
-
-.IRT {
-  height: auto;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-}
-
-.IRTImg {
-  height: auto;
-  width: 100%;
-  margin-top: -1.75vh;
-}
-
-.IRTOverlay {
-  position: absolute;
-  background: black;
-  background: rgba(255, 255, 255, 0.607);
-  color: #f1f1f199;
-  width: 27.75vw;
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
-  opacity: 0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P3Overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(109, 98, 98, 0.485);
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.P3Overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.G3Popup {
-  text-align: center;
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 38vw;
-  position: relative;
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
-}
-
-.G3Popup .CloseButton {
-  text-decoration: none;
-  color: red;
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-.G3Popup h2 {
-  font-size: xx-large;
-}
-
-/*#endregion*/
-/*#region QOTH*/
-.GameFour {
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  margin-bottom: 30px;
-  margin-top: -5%;
-}
-
-.GameFour:hover .QOTHOverlay {
-  opacity: 1;
-}
-
-.QOTH {
-  height: auto;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-}
-
-.QOTHImg {
-  height: auto;
-  width: 100%;
-  margin-top: -1.75vh;
-}
-
-.QOTHOverlay {
-  position: absolute;
-  background: black;
-  background: rgba(255, 255, 255, 0.607);
-  color: #f1f1f199;
-  width: 27.75vw;
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
-  opacity: 0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P4Overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(109, 98, 98, 0.485);
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.P4Overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.G4Popup {
-  text-align: center;
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 38vw;
-  position: relative;
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
-}
-
-.G4Popup .CloseButton {
-  text-decoration: none;
-  color: red;
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-.G4Popup h2 {
-  font-size: xx-large;
-}
-
-/*#endregion*/
-/*#region TLS*/
-.GameFive {
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  margin-bottom: 35px;
-  margin-top: -5%;
-}
-
-.GameFive:hover .TLSOverlay {
-  opacity: 1;
-}
-
-.TLS {
-  height: auto;
-  width: 100%;
-  text-decoration: none;
-  color: black;
-}
-
-.TLSImg {
-  height: auto;
-  width: 100%;
-  margin-top: -1.75vh;
-}
-
-.TLSOverlay {
-  position: absolute;
-  background: black;
-  background: rgba(255, 255, 255, 0.607);
-  color: #f1f1f199;
-  width: 27.75vw;
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
-  opacity: 0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P5Overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(109, 98, 98, 0.485);
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.P5Overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.G5Popup {
-  text-align: center;
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 38vw;
-  position: relative;
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
-}
-
-.G5Popup .CloseButton {
-  text-decoration: none;
-  color: red;
-  font-size: xx-large;
-  font-weight: bold;
-}
-
-.G5Popup h2 {
-  font-size: xx-large;
-}
-
-/*#endregion*/
-/*#region TLS*/
+.GameOne,
+.GameTwo,
+.GameThree,
+.GameFour,
+.GameFive,
 .GameSix {
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  margin-bottom: 35px;
-  margin-top: -5%;
-}
-
-.GameSix:hover .TTDOverlay {
-  opacity: 1;
-}
-
-.TTD {
-  height: auto;
+  position: relative;
   width: 100%;
+  background-color: black;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 56.25%;
+}
+
+.TUE,
+.TD,
+.IRT,
+.QOTH,
+.TLS,
+.TTD {
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: black;
 }
 
+.TUEImg,
+.TDImg,
+.IRTImg,
+.QOTHImg,
+.TLSImg,
 .TTDImg {
-  height: auto;
-  width: 100%;
-  margin-top: -1.75vh;
+  max-width: 100%;
+  max-height: 100%;
 }
 
+.TUEOverlay,
+.TDOverlay,
+.IRTOverlay,
+.QOTHOverlay,
+.TLSOverlay,
 .TTDOverlay {
   position: absolute;
-  background: black;
   background: rgba(255, 255, 255, 0.607);
-  color: #f1f1f199;
-  width: 27.75vw;
-  -webkit-transition: .6s ease;
-  transition: .6s ease;
+  color: rgba(241, 241, 241, 0.6);
+  width: 95%;
+  transition: 0.6s ease;
   opacity: 0;
   color: black;
   font-size: 20px;
   padding: 20px;
   text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P6Overlay {
-  position: fixed;
-  top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(109, 98, 98, 0.485);
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
+  z-index: 2;
 }
 
-.P6Overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
+.G1Popup,
+.G2Popup,
+.G3Popup,
+.G4Popup,
+.G5Popup,
 .G6Popup {
   text-align: center;
   margin: 70px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 38vw;
+  width: 50vw;
   position: relative;
-  -webkit-transition: all 5s ease-in-out;
-  transition: all 5s ease-in-out;
+  transition: all 500ms ease-in-out;
 }
-
+.G1Popup .CloseButton,
+.G2Popup .CloseButton,
+.G3Popup .CloseButton,
+.G4Popup .CloseButton,
+.G5Popup .CloseButton,
 .G6Popup .CloseButton {
   text-decoration: none;
   color: red;
   font-size: xx-large;
   font-weight: bold;
 }
-
+.G1Popup h2,
+.G2Popup h2,
+.G3Popup h2,
+.G4Popup h2,
+.G5Popup h2,
 .G6Popup h2 {
   font-size: xx-large;
 }
 
+.ProjectOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(109, 98, 98, 0.485);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.ProjectOverlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
+/*#region GameVariables*/
+.GameOne {
+  grid-column: 1/2;
+}
+.GameOne:hover .TUEOverlay {
+  opacity: 1;
+}
+
+.GameTwo {
+  grid-column: 2/3;
+}
+.GameTwo:hover .TDOverlay {
+  opacity: 1;
+}
+
+.GameThree {
+  grid-column: 3;
+}
+.GameThree:hover .IRTOverlay {
+  opacity: 1;
+}
+
+.GameFour {
+  grid-column: 1/2;
+  grid-row: 3;
+}
+.GameFour:hover .QOTHOverlay {
+  opacity: 1;
+}
+
+.GameFive {
+  grid-column: 2/3;
+  grid-row: 3;
+}
+.GameFive:hover .TLSOverlay {
+  opacity: 1;
+}
+
+.GameSix {
+  grid-column: 3;
+  grid-row: 3;
+}
+.GameSix:hover .TTDOverlay {
+  opacity: 1;
+}
+
+/*#endregion GameVariables*/
+/*#region Media 900px*/
+@media screen and (max-width: 900px) {
+  .GamesContainer {
+    height: auto;
+    grid-template-rows: 5vh repeat(3, 28vh);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .GameOne {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+  .GameTwo {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .GameThree {
+    grid-column: 1/2;
+    grid-row: 3;
+  }
+  .GameFour {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .GameFive {
+    grid-column: 1/2;
+    grid-row: 4;
+  }
+  .GameSix {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+/*#endregion*/
+/*#region 500px*/
+@media screen and (max-width: 500px) {
+  .GamesContainer {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+    height: auto;
+    grid-template-rows: 7vh repeat(6, 28vh);
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+  .GameOne {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .GameTwo {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .GameThree {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .GameFour {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  .GameFive {
+    grid-column: 1;
+    grid-row: 6;
+  }
+  .GameSix {
+    grid-column: 1;
+    grid-row: 7;
+  }
+}
 /*#endregion*/
 .MusicContainer {
   width: 90vw;
@@ -717,15 +504,12 @@
   background-color: #616e75;
   margin-top: 10vh;
   margin-left: 4vw;
-  display: -ms-grid;
   display: grid;
   row-gap: 25px;
-  -webkit-column-gap: 5;
-          column-gap: 5;
-  -ms-grid-rows: 2.2vh 2.2vh 38vh 2.2vh 38vh;
-      grid-template-rows: 2.2vh 2.2vh 38vh 2.2vh 38vh;
-  -ms-grid-columns: 29.83vw 29.83vw 29.83vw;
-      grid-template-columns: 29.83vw 29.83vw 29.83vw;
+  -moz-column-gap: 5;
+       column-gap: 5;
+  grid-template-rows: 2.2vh 2.2vh 38vh 2.2vh 38vh;
+  grid-template-columns: repeat(3, 29.83vw);
 }
 
 .MText {
@@ -734,12 +518,10 @@
   font-size: xx-large;
   height: 45px;
   width: 90vw;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
   background-color: #00a2ff;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
+  grid-row-start: 1;
   grid-row-end: 1;
   text-decoration: underline;
   font-weight: bold;
@@ -751,48 +533,36 @@
   font-size: xx-large;
   height: 45px;
   width: 90vw;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
   background-color: #00a2ff;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
+  grid-row-start: 2;
   grid-row-end: 2;
   margin-top: 3px;
 }
 
-.GameTrackOne {
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-}
-
-.TUEOST {
+.TUEOST,
+.IRTOST,
+.QOTHOST,
+.TOne,
+.TTwo,
+.TThree {
   width: 100%;
   height: 100%;
+}
+
+.GameTrackOne {
+  grid-row-start: 3;
 }
 
 .GameTrackTwo {
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-}
-
-.IRTOST {
-  width: 100%;
-  height: 100%;
+  grid-row-start: 3;
+  grid-column-start: 2;
 }
 
 .GameTrackThree {
-  -ms-grid-row: 3;
-      grid-row-start: 3;
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-}
-
-.QOTHOST {
-  width: 100%;
-  height: 100%;
+  grid-row-start: 3;
+  grid-column-start: 3;
 }
 
 .MPHeader {
@@ -801,53 +571,63 @@
   font-size: xx-large;
   height: 45px;
   width: 90vw;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  grid-column-start: 1;
   grid-column-end: 3;
   background-color: #00a2ff;
-  -ms-grid-row: 4;
-      grid-row-start: 4;
+  grid-row-start: 4;
   grid-row-end: 4;
 }
 
 .TrackOne {
-  -ms-grid-row: 5;
-      grid-row-start: 5;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-}
-
-.TOne {
-  width: 100%;
-  height: 100%;
+  grid-row-start: 5;
+  grid-column-start: 1;
 }
 
 .TrackTwo {
-  -ms-grid-row: 5;
-      grid-row-start: 5;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-}
-
-.TTwo {
-  width: 100%;
-  height: 100%;
+  grid-row-start: 5;
+  grid-column-start: 2;
 }
 
 .TrackThree {
-  -ms-grid-row: 5;
-      grid-row-start: 5;
-  -ms-grid-column: 3;
-      grid-column-start: 3;
+  grid-row-start: 5;
+  grid-column-start: 3;
 }
 
-.TThree {
-  width: 100%;
-  height: 100%;
+@media screen and (max-width: 800px) {
+  .MusicContainer {
+    height: auto;
+    grid-template-rows: 2.2vh 2.2vh repeat(3, 38vh) 2.2vh repeat(3, 38vh);
+    grid-template-columns: 89vw;
+  }
+  .GameTrackOne {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .GameTrackTwo {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  .GameTrackThree {
+    grid-row: 5;
+    grid-column: 1;
+  }
+  .MPHeader {
+    grid-row: 6;
+  }
+  .TrackOne {
+    grid-row: 7;
+    grid-column: 1;
+  }
+  .TrackTwo {
+    grid-row: 8;
+    grid-column: 1;
+  }
+  .TrackThree {
+    grid-row: 9;
+    grid-column: 1;
+  }
 }
-
 .PageContainer {
-  display: -ms-grid;
   display: grid;
   gap: 2%;
   margin-top: 15vh;
@@ -855,25 +635,23 @@
   position: absolute;
   width: 60vw;
   height: 70vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: 47.5% 47.5%;
-      grid-template-columns: 47.5% 47.5%;
-  -ms-grid-rows: 47.5% 47.5%;
-      grid-template-rows: 47.5% 47.5%;
+  align-items: center;
+  grid-template-columns: repeat(2, 47.5%);
+  grid-template-rows: repeat(2, 47.5%);
 }
 
 .AMC {
   width: 100%;
   height: 100%;
   background-color: #616e75;
+  position: relative;
 }
-
-.AMC p {
-  margin-left: 19%;
-  margin-top: 13%;
+.AMC span {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
   font-size: x-large;
 }
@@ -881,16 +659,14 @@
 .PJC {
   width: 100%;
   height: 100%;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
+  position: relative;
 }
-
-.PJC p {
-  margin-left: 19%;
-  margin-top: 12%;
+.PJC span {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
   font-size: x-large;
 }
@@ -898,16 +674,14 @@
 .MC {
   width: 100%;
   height: 100%;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+  position: relative;
 }
-
-.MC p {
-  margin-left: 19%;
-  margin-top: 13%;
+.MC span {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
   font-size: x-large;
 }
@@ -915,45 +689,37 @@
 .CCVC {
   width: 100%;
   height: 100%;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
   background-color: black;
+  position: relative;
 }
-
-.CCVC p {
-  margin-left: 19%;
-  margin-top: 13%;
+.CCVC span {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
   font-size: x-large;
 }
 
-.MusicImg {
-  width: 100%;
-  height: 100%;
-}
-
-.ProjectImg {
-  width: 100%;
-  height: 100%;
-}
-
-.ABMImg {
-  width: 100%;
-  height: 100%;
-}
-
+.MusicImg,
+.ProjectImg,
+.ABMImg,
 .CCVCImage {
   width: 100%;
   height: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+  .PageContainer {
+    margin-left: 35vw;
+    grid-template-columns: 47.5%;
+    grid-template-rows: repeat(4, auto);
+  }
+}
 html,
 body {
   padding: 0px;
   margin: 0px;
   background-color: #272525;
-}
-/*# sourceMappingURL=Main.css.map */
+}/*# sourceMappingURL=Main.css.map */
