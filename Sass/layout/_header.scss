@@ -1,4 +1,4 @@
-#header{
+#header {
     height: 75px;
     width: 100%;
     background: black;
@@ -9,22 +9,24 @@
     top: 0;
 }
 
-.header-container{
+.header-container {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    a{
+
+    a {
         text-decoration: none;
         color: inherit;
         font-size: larger;
-        &:hover{
+
+        &:hover {
             color: $CalmBlue;
         }
     }
 }
 
-.namehome{
+.namehome {
     color: $CalmBlue;
     margin-right: 23%;
     margin-left: 3%;
@@ -32,24 +34,83 @@
     font-weight: bold;
 }
 
-.about-me{
-color: white;
-margin-right: 3%;
-}
-
-.projects{
+.about-me {
     color: white;
     margin-right: 3%;
 }
 
-.music{
+.projects {
     color: white;
     margin-right: 3%;
 }
 
-.contact{
+.music {
+    color: white;
+    margin-right: 3%;
+}
+
+.contact {
     color: white;
 }
 
+.Hamburger {
+    position: fixed;
+    z-index: 99;
+    background-color: white;
+    cursor: pointer;
+    top: 3vh;
+    right: 1rem;
+    opacity: 0;
+}
 
+.Menu {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90vw;
+    height: 50%;
+    list-style: none;
+    background-color: $CalmBlue;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-110%);
+    justify-content: center;
 
+    &:target {
+        transition: transform .2s;
+        transform: translateY(15%);
+    }
+    
+    a {
+        margin-left: 20vw;
+        color: white;
+        font-size: x-large;
+        text-decoration: none;
+        z-index: 100;
+    }
+}
+
+.Close {
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    top: 1rem;
+    right: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+
+    .about-me,
+    .projects,
+    .music,
+    .contact {
+        opacity: 0;
+    }
+
+    .Hamburger {
+        opacity: 1;
+    }
+}

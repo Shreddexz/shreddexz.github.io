@@ -1,46 +1,100 @@
-.aboutmecontainer{
+.aboutmecontainer>*:not(.Selfie, .imagecontainer) {
     display: grid;
     margin-top: 15vh;
     margin-left: 20%;
     width: 60vw;
     height: 70vh;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 30vh 30vh 30vh;
+    grid-template-columns: auto;
+    grid-template-rows: 5% 1fr;
 }
 
-.Selfie{
-grid-column-start: 1;
-grid-column-end: 1;
-grid-row-start:1 ;
-grid-row-end: 3;
-width: 100%;
-height: auto;
+.imagecontainer {
+    position: fixed;
+    width: 20%;
+    height: auto;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        color: white;
+        width: 100%;
+        opacity: 0;
+    }
 }
 
-.aboutmetitle{
+.Selfie {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.click {
+    color: white;
+    align-self: center;
+    opacity: 0;
+}
+
+.aboutmetitle {
     color: $CalmBlue;
     font-family: $Cinzel;
     font-weight: bolder;
     font-size: xx-large;
     width: 100%;
     text-align: center;
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 4;
-    grid-row-start:1 ;
+    grid-row-start: 1;
 }
 
-.aboutmetext{
-color: white;
-text-align: left;
-font-size: large;
-grid-column-start: 2;
-grid-column-end: 4;
-grid-row-start:2 ;
-grid-row-end: 3;
-width:60%;
-margin: auto;
-margin-top: 5vh;
-    a{
-    text-decoration: none;
+.aboutmetext {
+    color: white;
+    text-align: left;
+    font-size: large;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    width: 80%;
+    margin: auto;
+    margin-top: 5vh;
+
+    a {
+        text-decoration: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .aboutmetext {
+        margin-top: 10vh;
+    }
+
+    .aboutmecontainer {
+        span {
+            opacity: 1;
+        }
+    }
+
+    .click {
+        opacity: 1;
+        pointer-events: fill;
+    }
+
+    .imgparent {
+        &:focus {
+            width: 400%;
+            height: auto;
+            margin-left: 6vw;
+        }
+    }
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .aboutmetext {
+        margin-top: 10vh;
     }
 }

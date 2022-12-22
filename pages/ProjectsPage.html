@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Sass/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Projects Page</title>
 </head>
 
@@ -18,11 +19,29 @@
             <div class="music"><a href="/pages/MusicPage.html">Music</a></div>
             <div class="contact"><a href="/pages/ContactPage.html">Contact & CV</a></div>
         </div>
-
+        <ul class="Menu" id="Menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="AboutMePage.html">About Me</a></li>
+            <li><a href="ProjectsPage.html">Projects</a></li>
+            <li><a href="MusicPage.html">Music</a></li>
+            <li><a href="ContactPage.html">Contact & CV</a></li>
+            <a class="Close" href="#">
+                <span class="material-icons">
+                    close
+                </span>
+            </a>
+        </ul>
+        <a class="Hamburger" href="#Menu">
+            <span class="material-icons">
+                menu
+            </span>
+        </a>
     </header>
 
     <div class="GamesContainer">
-        <a class="PText">Projects</a>
+        <div class="PText">
+            <a>Projects</a>
+        </div>
         <div class="GameOne">
             <p><a class="TUE" href="#Popup1">
                     <img class="TUEImg"
@@ -31,7 +50,7 @@
                     <div class="TUEOverlay">A horror game in which you "see" with sound <br>(Unity) [GGJ 2022]</div>
                 </a></p>
         </div>
-        <div id="Popup1" class="P1Overlay" href="#">
+        <div id="Popup1" class="ProjectOverlay" href="#">
             <div class="G1Popup">
                 <h2>The Unseeing Eye</h2>
                 <div class="G1Text">
@@ -54,7 +73,7 @@
                         viruses<br>(Unity)</div>
                 </a></p>
         </div>
-        <div id="Popup2" class="P2Overlay" href="#">
+        <div id="Popup2" class="ProjectOverlay" href="#">
             <div class="G2Popup">
                 <h2>Tower Defense</h2>
                 <div class="G2Text">
@@ -76,7 +95,7 @@
                         what happened<br>(Unity) [GGJ 2021]</div>
                 </a></p>
         </div>
-        <div id="Popup3" class="P3Overlay" href="#">
+        <div id="Popup3" class="ProjectOverlay" href="#">
             <div class="G3Popup">
                 <h2>I Remember This</h2>
                 <div class="G3Text">
@@ -100,7 +119,7 @@
                         [GGJ 2020]</div>
                 </a></p>
         </div>
-        <div id="Popup4" class="P4Overlay" href="#">
+        <div id="Popup4" class="ProjectOverlay" href="#">
             <div class="G4Popup">
                 <h2>Queen of the hill</h2>
                 <div class="G4Text">
@@ -123,7 +142,7 @@
                     </div>
                 </a></p>
         </div>
-        <div id="Popup5" class="P5Overlay" href="#">
+        <div id="Popup5" class="ProjectOverlay" href="#">
             <div class="G5Popup">
                 <h2>The Last Scientist</h2>
                 <div class="G5Text">
@@ -145,11 +164,12 @@
                     </div>
                 </a></p>
         </div>
-        <div id="Popup6" class="P6Overlay" href="#">
+        <div id="Popup6" class="ProjectOverlay" href="#">
             <div class="G6Popup">
                 <h2>Time to die</h2>
                 <div class="G6Text">
-                    This is an FPS game in which you have to survive as long as possible against an endless amount of enemies.
+                    This is an FPS game in which you have to survive as long as possible against an endless amount of
+                    enemies.
                 </div>
                 <a>you can find the project</a>
                 <a href="https://shreddexz.itch.io/time-to-die">here</a>

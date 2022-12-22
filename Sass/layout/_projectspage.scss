@@ -1,239 +1,118 @@
-.GamesContainer{
+.GamesContainer {
     width: 90vw;
-    height: 80vh;
+    height: 85vh;
     display: grid;
-    row-gap: 25px;
-    column-gap: 5px;
+    column-gap: 8px;
     margin-top: 10vh;
-    margin-left: 4vw;
+    margin-left: 5vw;
+    grid-template-rows: 5vh repeat(2,35vh);
+    grid-template-columns: repeat(3, 1fr);
     background-color: $CustomGrey;
-    grid-template-rows: 2.2vh 38vh 38vh;
-    grid-template-columns: 29.83vw 29.83vw 29.83vw;
 }
 
-.PText{
+.PText {
     text-align: center;
     color: white;
     font-size: xx-large;
     height: 45px;
     width: 90vw;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 6;
     background-color: $CalmBlue;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row: 1;
     text-decoration: underline;
     font-weight: bold;
 }
 
-/*#region The Unseeing Eye*/
-
-.GameOne{
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    background-color: rgb(0, 0, 0);
-    margin-bottom: 30px;
-    &:hover .TUEOverlay{
-        opacity: 1;
-    }
+.GameOne,
+.GameTwo,
+.GameThree,
+.GameFour,
+.GameFive,
+.GameSix {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    // margin-top: .8vh;
+    margin-bottom: calc(100% / (16/9));
 }
 
-.TUE{
-    height: auto;
+.TUE,
+.TD,
+.IRT,
+.QOTH,
+.TLS,
+.TTD {
     width: 100%;
+    height: 100%;
     text-decoration: none;
     color: black;
 }
 
-.TUEImg{
-    height: 35vh;
-    width: auto;
-    margin-top: -1.75vh;
-    opacity: 1;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.TUEImg,
+.TDImg,
+.IRTImg,
+.QOTHImg,
+.TLSImg,
+.TTDImg {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.TUEOverlay{
-  position: absolute; 
-  background: rgb(0, 0, 0);
-  background:rgba(255, 255, 255, 0.607) ;
-  color: #f1f1f199; 
-  width: 27.75vw;
-  transition: .6s ease;
-  opacity:0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.25vh;
-}
-
-.P1Overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $PopupBackground;
-    transition: opacity 500ms;
-    visibility: hidden;
+.TUEOverlay,
+.TDOverlay,
+.IRTOverlay,
+.QOTHOverlay,
+.TLSOverlay,
+.TTDOverlay {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.607);
+    color: #f1f1f199;
+    // width: 27.75vw;
+    width: 95%;
+    transition: .6s ease;
     opacity: 0;
-    &:target {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-.G1Popup{
-    text-align: center;
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 40vw;
-    position: relative;
-    transition: all 5s ease-in-out;
-    .CloseButton{
-     text-decoration: none;
-     color: red;
-     font-size: xx-large;
-     font-weight: bold;
-    }
-
-    h2{
-        font-size: xx-large;
-    }
-}
-
-/*#endregion RegionName*/
-
-/*#region TD*/
-.GameTwo{
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    // background-color: yellow;
-    margin-bottom: 30px;
-    &:hover .TDOverlay{
-        opacity: 1;
-    }
-}
-
-.TD{
-    height: auto;
-    width: 100%;
-    text-decoration: none;
-color: black;
-}
-
-.TDImg{
-    height: auto;
-    width: 100%;
-    margin-top: -1.75vh;
-}
-
-.TDOverlay{
-  position: absolute; 
-  background: rgb(0, 0, 0);
-  background:rgba(255, 255, 255, 0.607) ;
-  color: #f1f1f199; 
-  width: 27.75vw;
-  transition: .6s ease;
-  opacity:0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P2Overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $PopupBackground;
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-    &:target {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-.G2Popup{
-    text-align: center;
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 40vw;
-    position: relative;
-    transition: all 5s ease-in-out;
-    .CloseButton{
-     text-decoration: none;
-     color: red;
-     font-size: xx-large;
-     font-weight: bold;
-    }
-
-    h2{
-        font-size: xx-large;
-    }
-}
-
-/*#endregion TD*/ 
-
-/*#region IRT*/
-
-.GameThree{
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start:3;
-    // background-color: yellow;
-    margin-bottom: 30px;
-    &:hover .IRTOverlay{
-        opacity: 1;
-    }
-}
-
-.IRT{
-    height: auto;
-    width: 100%;
-    text-decoration: none;
     color: black;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    z-index: 2;
 }
 
-.IRTImg{
-    height: auto;
-    width: 100%;
-    margin-top: -1.75vh;
+.G1Popup,
+.G2Popup,
+.G3Popup,
+.G4Popup,
+.G5Popup,
+.G6Popup {
+    text-align: center;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50vw;
+    position: relative;
+    transition: all 500ms ease-in-out;
+
+    .CloseButton {
+        text-decoration: none;
+        color: red;
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: xx-large;
+    }
 }
 
-.IRTOverlay{
-  position: absolute; 
-  background: rgb(0, 0, 0);
-  background:rgba(255, 255, 255, 0.607) ;
-  color: #f1f1f199; 
-  width: 27.75vw;
-  transition: .6s ease;
-  opacity:0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P3Overlay{
-    position: fixed;
+.ProjectOverlay {
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -242,273 +121,148 @@ color: black;
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+
     &:target {
         visibility: visible;
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+/*#region GameVariables*/
+
+.GameOne {
+    grid-column: 1/2;
+
+    &:hover .TUEOverlay {
         opacity: 1;
     }
 }
 
-.G3Popup{
-    text-align: center;
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 38vw;
-    position: relative;
-    transition: all 5s ease-in-out;
-    .CloseButton{
-     text-decoration: none;
-     color: red;
-     font-size: xx-large;
-     font-weight: bold;
+.GameTwo {
+    grid-column: 2/3;
+
+    &:hover .TDOverlay {
+        opacity: 1;
+    }
+}
+
+.GameThree {
+    grid-column: 3;
+
+    &:hover .IRTOverlay {
+        opacity: 1;
+    }
+}
+
+.GameFour {
+    grid-column: 1/2;
+    grid-row: 3;
+
+    &:hover .QOTHOverlay {
+        opacity: 1;
+    }
+}
+
+.GameFive {
+    grid-column: 2/3;
+    grid-row: 3;
+
+    &:hover .TLSOverlay {
+        opacity: 1;
+    }
+}
+
+.GameSix {
+    grid-column: 3;
+    grid-row: 3;
+
+    &:hover .TTDOverlay {
+        opacity: 1;
+    }
+}
+
+/*#endregion GameVariables*/
+
+/*#region Media 900px*/
+@media screen and (max-width:900px) {
+
+    .GamesContainer {
+        height: auto;
+        grid-template-rows: 5vh repeat(3, 28vh);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    h2{
-        font-size: xx-large;
+    .GameOne {
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+
+    .GameTwo {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .GameThree {
+        grid-column: 1/2;
+        grid-row: 3;
+    }
+
+    .GameFour {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .GameFive {
+        grid-column: 1/2;
+        grid-row: 4;
+    }
+
+    .GameSix {
+        grid-column: 2;
+        grid-row: 4;
     }
 }
 /*#endregion*/
 
-/*#region QOTH*/
-
-.GameFour{
-    grid-row-start: 3;
-    // grid-row-end: 3;
-    grid-column-start:1;
-    // background-color: yellow;
-    margin-bottom: 30px;
-    margin-top: -5%;
-    &:hover .QOTHOverlay{
-        opacity: 1;
-    }
-}
-
-.QOTH{
-    height: auto;
-    width: 100%;
-    text-decoration: none;
-    color: black;
-}
-
-.QOTHImg{
-    height: auto;
-    width: 100%;
-    margin-top: -1.75vh;
-}
-
-.QOTHOverlay{
-  position: absolute; 
-  background: rgb(0, 0, 0);
-  background:rgba(255, 255, 255, 0.607) ;
-  color: #f1f1f199; 
-  width: 27.75vw;
-  transition: .6s ease;
-  opacity:0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P4Overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $PopupBackground;
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-    &:target {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-.G4Popup{
-    text-align: center;
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 38vw;
-    position: relative;
-    transition: all 5s ease-in-out;
-    .CloseButton{
-     text-decoration: none;
-     color: red;
-     font-size: xx-large;
-     font-weight: bold;
+/*#region 500px*/
+@media screen and (max-width:500px) {
+    .GamesContainer {
+        column-gap: 0px;
+        height: auto;
+        grid-template-rows: 7vh repeat(6, 28vh);
+        grid-template-columns: 1fr;
+        row-gap: 15px;
     }
 
-    h2{
-        font-size: xx-large;
-    }
-}
-/*#endregion*/
-
-/*#region TLS*/
-
-.GameFive{
-    grid-row-start: 3;
-    // grid-row-end: 3;
-    grid-column-start:2;
-    // background-color: yellow;
-    margin-bottom: 35px;
-    margin-top: -5%;
-    &:hover .TLSOverlay{
-        opacity: 1;
-    }
-}
-
-.TLS{
-    height: auto;
-    width: 100%;
-    text-decoration: none;
-    color: black;
-}
-
-.TLSImg{
-    height: auto;
-    width: 100%;
-    margin-top: -1.75vh;
-}
-
-.TLSOverlay{
-  position: absolute; 
-  background: rgb(0, 0, 0);
-  background:rgba(255, 255, 255, 0.607) ;
-  color: #f1f1f199; 
-  width: 27.75vw;
-  transition: .6s ease;
-  opacity:0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P5Overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $PopupBackground;
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-    &:target {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-.G5Popup{
-    text-align: center;
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 38vw;
-    position: relative;
-    transition: all 5s ease-in-out;
-    .CloseButton{
-     text-decoration: none;
-     color: red;
-     font-size: xx-large;
-     font-weight: bold;
+    .GameOne{
+        grid-column: 1;
+        grid-row: 2;
     }
 
-    h2{
-        font-size: xx-large;
-    }
-}
-/*#endregion*/
-
-/*#region TLS*/
-
-.GameSix{
-    grid-row-start: 3;
-    // grid-row-end: 3;
-    grid-column-start:3;
-    // background-color: yellow;
-    margin-bottom: 35px;
-    margin-top: -5%;
-    &:hover .TTDOverlay{
-        opacity: 1;
-    }
-}
-
-.TTD{
-    height: auto;
-    width: 100%;
-    text-decoration: none;
-    color: black;
-}
-
-.TTDImg{
-    height: auto;
-    width: 100%;
-    margin-top: -1.75vh;
-}
-
-.TTDOverlay{
-  position: absolute; 
-  background: rgb(0, 0, 0);
-  background:rgba(255, 255, 255, 0.607) ;
-  color: #f1f1f199; 
-  width: 27.75vw;
-  transition: .6s ease;
-  opacity:0;
-  color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  margin-top: -11.5vh;
-  max-height: 5.1vh;
-}
-
-.P6Overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $PopupBackground;
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-    &:target {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-.G6Popup{
-    text-align: center;
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 38vw;
-    position: relative;
-    transition: all 5s ease-in-out;
-    .CloseButton{
-     text-decoration: none;
-     color: red;
-     font-size: xx-large;
-     font-weight: bold;
+    .GameTwo{
+        grid-column: 1;
+        grid-row: 3;
     }
 
-    h2{
-        font-size: xx-large;
+    .GameThree{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .GameFour{
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .GameFive{
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    .GameSix{
+        grid-column: 1;
+        grid-row: 7;
     }
 }
 /*#endregion*/

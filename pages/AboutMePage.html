@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me Page</title>
     <link rel="stylesheet" href="/Sass/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>About Me Page</title>
 </head>
 
 <body>
@@ -18,29 +19,60 @@
             <div class="music"><a href="/pages/MusicPage.html">Music</a></div>
             <div class="contact"><a href="/pages/ContactPage.html">Contact & CV</a></div>
         </div>
-
+        <ul class="Menu" id="Menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="AboutMePage.html">About Me</a></li>
+            <li><a href="ProjectsPage.html">Projects</a></li>
+            <li><a href="MusicPage.html">Music</a></li>
+            <li><a href="ContactPage.html">Contact & CV</a></li>
+            <a class="Close" href="#">
+                <span class="material-icons">
+                    close
+                </span>
+            </a>
+        </ul>
+        <a class="Hamburger" href="#Menu">
+            <span class="material-icons">
+                menu
+            </span>
+        </a>
     </header>
 
     <div class="aboutmecontainer">
-        <img class="Selfie" src="https://cdn.discordapp.com/attachments/411221053633855519/981186729568518144/20220531_135919.jpg" alt="Picture of me">
+        <div class="imagecontainer" id="imgcontainer">
+            <a tabindex="0" class="imgparent">
+                <img class="Selfie"
+                    src="https://cdn.discordapp.com/attachments/411221053633855519/981186729568518144/20220531_135919.jpg"
+                    alt="Picture of me">
+                <a class="click">(click to enlarge)</a>
+            </a>
+        </div>
         <div class="ABM">
             <div class="aboutmetitle">
                 <a>Hello, my name is Omorian</a>
             </div>
             <div class="aboutmetext">
-                <a>I am a Game Development student from the Netherlands, I am currently studying at Noorderpoort in Groningen.<br>
-                    I have been making games in Unity for 2.5 years, and i have recently started working in Unreal, using blueprints to make the functionality.
+                <a>I am a Game Development student from the Netherlands, I am currently studying at Noorderpoort in
+                    Groningen.<br>
+                    I have been making games in Unity for 3.5 years, and i have recently started working in Unreal,
+                    using blueprints to make the functionality.
                     <br>
                     <br>
-                    Since i have primarily worked with Unity and C#, I have become pretty well versed at working with those. <br>
-                    Programming-wise I don't specialize in anything, and instead I usually do whatever task is at hand, and I like to experiment with different things to see what works. <br>
+                    Since i have primarily worked with Unity and C#, I have become pretty well versed at working with
+                    those. <br>
+                    Programming-wise I don't specialize in anything, and instead I usually do whatever task is at hand,
+                    and I like to experiment with different things to see what works. <br>
                     <br>
                     <br>
-                    In my past time I like to make music, either by playing guitar, or by making electronic music on my computer, and i have used those skills to work as a sound designer in the game jams that I have participated in. <br>
-                    While working on the game jam projects, I have provided both sound effects and music that were fitting for the games, which you can find on </a><a href="/pages/MusicPage.html" style="color: #00a2ff;">my music page</a>
-                </div>
+                    In my past time I like to make music, either by playing guitar, or by making electronic music on my
+                    computer, and i have used those skills to work as a sound designer in the game jams that I have
+                    participated in. <br>
+                    While working on the game jam projects, I have provided both sound effects and music that were
+                    fitting for the games, which you can find on </a><a href="/pages/MusicPage.html"
+                    style="color: #00a2ff;">my music page</a>
             </div>
-            </div>
-        </body>
+        </div>
+    </div>
+</body>
 
 </html>

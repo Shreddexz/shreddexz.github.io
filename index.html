@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="Sass/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -17,33 +18,50 @@
             <div class="music"><a href="pages/MusicPage.html">Music</a></div>
             <div class="contact"><a href="/pages/ContactPage.html">Contact & CV</a></div>
         </div>
+        <ul class="Menu" id="Menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/pages/AboutMePage.html">About Me</a></li>
+            <li><a href="/pages/ProjectsPage.html">Projects</a></li>
+            <li><a href="pages/MusicPage.html">Music</a></li>
+            <li><a href="/pages/ContactPage.html">Contact & CV</a></li>
+            <a class="Close" href="#">
+                <span class="material-icons">
+                    close
+                </span>
+            </a>
+        </ul>
+        <a class="Hamburger" href="#Menu">
+            <span class="material-icons">
+                menu
+            </span>
+        </a>
     </header>
 
     <div class="PageContainer">
         <div class="AMC">
 <a href="/pages/AboutMePage.html">
-    <p>About Me Page</p>
+    <span>About Me Page</span>
     <img class="ABMImg" src="https://cdn.discordapp.com/attachments/973888571339575347/981836688525504562/ABMImg.png" alt="">
 </a>
         </div>
 
         <div class="PJC">
             <a href="/pages/ProjectsPage.html">
-                <p>Projects Page</p>
+                <span>Projects Page</span>
                 <img class="ProjectImg" src="https://cdn.discordapp.com/attachments/973888571339575347/981538625223291000/unknown.png" alt="">
             </a>
         </div>
 
         <div class="MC">
             <a class="MPC" href="/pages/MusicPage.html">
-                <p>Music Page</p>
+                <span>Music Page</span>
                 <img class="MusicImg" src="https://cdn.discordapp.com/attachments/973888571339575347/981536042102439996/unknown.png" alt="">
             </a>
         </div>
         
         <div class="CCVC">
 <a href="/pages/ContactPage.html">
-    <p>Contact & CV</p>
+    <span>Contact & CV</span>
     <img class="CCVCImage" src="https://cdn.discordapp.com/attachments/973888571339575347/981838315437293578/ContactImage.png" alt="">
 </a>
         </div>
