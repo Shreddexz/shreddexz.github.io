@@ -15,14 +15,20 @@
 .header-container {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header-container a {
   text-decoration: none;
   color: inherit;
   font-size: larger;
 }
+
 .header-container a:hover {
   color: #00a2ff;
 }
@@ -75,15 +81,29 @@
   height: 50%;
   list-style: none;
   background-color: #00a2ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  transform: translateY(-110%);
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .Menu:target {
-  transition: transform 0.2s;
-  transform: translateY(15%);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
 }
+
 .Menu a {
   margin-left: 20vw;
   color: white;
@@ -103,23 +123,27 @@
 
 @media screen and (max-width: 500px) {
   .about-me,
-.projects,
-.music,
-.contact {
+  .projects,
+  .music,
+  .contact {
     opacity: 0;
   }
   .Hamburger {
     opacity: 1;
   }
 }
+
 .aboutmecontainer > *:not(.Selfie, .imagecontainer) {
+  display: -ms-grid;
   display: grid;
   margin-top: 15vh;
   margin-left: 20%;
   width: 60vw;
   height: 70vh;
-  grid-template-columns: auto;
-  grid-template-rows: 5% 1fr;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 5% 1fr;
+      grid-template-rows: 5% 1fr;
 }
 
 .imagecontainer {
@@ -127,9 +151,15 @@
   width: 20%;
   height: auto;
   left: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .imagecontainer span {
   color: white;
   width: 100%;
@@ -144,7 +174,9 @@
 
 .click {
   color: white;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   opacity: 0;
 }
 
@@ -155,22 +187,27 @@
   font-size: xx-large;
   width: 100%;
   text-align: center;
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
   grid-column-end: 4;
-  grid-row-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
 }
 
 .aboutmetext {
   color: white;
   text-align: left;
   font-size: large;
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
   grid-column-end: 4;
-  grid-row-start: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
   width: 80%;
   margin: auto;
   margin-top: 5vh;
 }
+
 .aboutmetext a {
   text-decoration: none;
 }
@@ -192,19 +229,26 @@
     margin-left: 6vw;
   }
 }
+
 @media screen and (max-width: 500px) {
   .aboutmetext {
     margin-top: 10vh;
   }
 }
+
 .CIContainter {
-  width: 40vw;
+  width: 60vw;
   height: 43%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #00a2ff;
-  margin-left: 30vw;
-  margin-top: 20px;
+  margin-left: 20vw;
+  margin-top: 15vh;
 }
 
 .CIHeader {
@@ -222,8 +266,7 @@
 
 .linkedin {
   width: 50px;
-  margin-top: 100px;
-  padding-left: 48vw;
+  margin-left: 48vw;
 }
 
 .CV {
@@ -241,21 +284,27 @@
     height: 90vh;
   }
 }
+
 @media screen and (max-width: 500px) {
   .CV {
     height: 70vh;
   }
 }
+
 .GamesContainer {
   width: 90vw;
   height: 85vh;
+  display: -ms-grid;
   display: grid;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 20px;
   margin-top: 10vh;
   margin-left: 5vw;
-  grid-template-rows: 5vh repeat(2, 35vh);
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 5vh (35vh)[2];
+      grid-template-rows: 5vh repeat(2, 35vh);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   background-color: #616e75;
 }
 
@@ -265,12 +314,66 @@
   font-size: xx-large;
   height: 45px;
   width: 90vw;
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
   grid-column-end: 6;
   background-color: #00a2ff;
+  -ms-grid-row: 1;
   grid-row: 1;
   text-decoration: underline;
   font-weight: bold;
+}
+
+.question {
+  position: relative;
+  height: 45px;
+  width: 45px;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 3;
+  cursor: pointer;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  opacity: 0;
+}
+
+.questionPanel {
+  position: fixed;
+  width: 100%;
+  background-color: #00a2ff;
+  text-align: center;
+  z-index: 91;
+  -webkit-transform: translateY(-180%);
+          transform: translateY(-180%);
+}
+
+.questionPanel p {
+  color: white;
+}
+
+.questionPanel h1 {
+  color: black;
+}
+
+.questionPanel .CloseButton {
+  text-decoration: none;
+  color: black;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.questionPanel:target {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
 }
 
 .GameOne,
@@ -284,9 +387,14 @@
   background-color: black;
   padding-bottom: 56.25%;
   overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 56.25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.2vh;
+  margin-bottom: calc(100% / (16/9));
 }
 
 .TUE,
@@ -319,9 +427,10 @@
 .TTDOverlay {
   position: absolute;
   background: rgba(255, 255, 255, 0.607);
-  color: rgba(241, 241, 241, 0.6);
+  color: #f1f1f199;
   width: 95%;
-  transition: 0.6s ease;
+  -webkit-transition: .6s ease;
+  transition: .6s ease;
   opacity: 0;
   color: black;
   font-size: 20px;
@@ -344,8 +453,10 @@
   border-radius: 5px;
   width: 50vw;
   position: relative;
+  -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+
 .G1Popup .CloseButton,
 .G2Popup .CloseButton,
 .G3Popup .CloseButton,
@@ -357,6 +468,7 @@
   font-size: xx-large;
   font-weight: bold;
 }
+
 .G1Popup h2,
 .G2Popup h2,
 .G3Popup h2,
@@ -373,11 +485,13 @@
   left: 0;
   right: 0;
   background: rgba(109, 98, 98, 0.485);
+  -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
   z-index: 1;
 }
+
 .ProjectOverlay:target {
   visibility: visible;
   opacity: 1;
@@ -386,46 +500,65 @@
 
 /*#region GameVariables*/
 .GameOne {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-column: 1/2;
 }
+
 .GameOne:hover .TUEOverlay {
   opacity: 1;
 }
 
 .GameTwo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
+
 .GameTwo:hover .TDOverlay {
   opacity: 1;
 }
 
 .GameThree {
+  -ms-grid-column: 3;
   grid-column: 3;
 }
+
 .GameThree:hover .IRTOverlay {
   opacity: 1;
 }
 
 .GameFour {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-column: 1/2;
+  -ms-grid-row: 3;
   grid-row: 3;
 }
+
 .GameFour:hover .QOTHOverlay {
   opacity: 1;
 }
 
 .GameFive {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -ms-grid-row: 3;
   grid-row: 3;
 }
+
 .GameFive:hover .TLSOverlay {
   opacity: 1;
 }
 
 .GameSix {
+  -ms-grid-column: 3;
   grid-column: 3;
+  -ms-grid-row: 3;
   grid-row: 3;
 }
+
 .GameSix:hover .TTDOverlay {
   opacity: 1;
 }
@@ -433,85 +566,110 @@
 /*#endregion GameVariables*/
 /*#region Media 900px*/
 @media screen and (max-width: 900px) {
+  .question {
+    opacity: 1;
+  }
   .GamesContainer {
     height: auto;
-    grid-template-rows: 5vh repeat(3, 28vh);
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 5vh (28vh)[3];
+        grid-template-rows: 5vh repeat(3, 28vh);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .GameOne {
+    grid-row: auto;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
-    grid-row: 2;
   }
   .GameTwo {
+    grid-row: auto;
+    -ms-grid-column: 2;
     grid-column: 2;
-    grid-row: 2;
   }
   .GameThree {
+    grid-row: auto;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
-    grid-row: 3;
   }
   .GameFour {
+    grid-row: auto;
+    -ms-grid-column: 2;
     grid-column: 2;
-    grid-row: 3;
   }
   .GameFive {
+    grid-row: auto;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1/2;
-    grid-row: 4;
   }
   .GameSix {
+    grid-row: auto;
+    -ms-grid-column: 2;
     grid-column: 2;
-    grid-row: 4;
   }
 }
+
 /*#endregion*/
 /*#region 500px*/
 @media screen and (max-width: 500px) {
   .GamesContainer {
-    -moz-column-gap: 0px;
-         column-gap: 0px;
+    -webkit-column-gap: 0px;
+            column-gap: 0px;
     height: auto;
-    grid-template-rows: 7vh repeat(6, 28vh);
-    grid-template-columns: 1fr;
+    -ms-grid-rows: 7vh (28vh)[6];
+        grid-template-rows: 7vh repeat(6, 28vh);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     row-gap: 15px;
   }
   .GameOne {
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
-    grid-row: 2;
   }
   .GameTwo {
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
-    grid-row: 3;
   }
   .GameThree {
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
-    grid-row: 4;
   }
   .GameFour {
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
-    grid-row: 5;
   }
   .GameFive {
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
-    grid-row: 6;
   }
   .GameSix {
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
-    grid-row: 7;
   }
 }
+
 /*#endregion*/
 .MusicContainer {
   width: 90vw;
-  height: 95vh;
+  height: auto;
   background-color: #616e75;
   margin-top: 10vh;
-  margin-left: 4vw;
+  margin-left: 5vw;
+  display: -ms-grid;
   display: grid;
   row-gap: 25px;
-  -moz-column-gap: 5;
-       column-gap: 5;
-  grid-template-rows: 2.2vh 2.2vh 38vh 2.2vh 38vh;
-  grid-template-columns: repeat(3, 29.83vw);
+  -ms-grid-rows: 2.2vh 2.2vh 38vh 38vh 2.2vh 38vh;
+      grid-template-rows: 2.2vh 2.2vh 38vh 38vh 2.2vh 38vh;
+  -ms-grid-columns: (29.83vw)[3];
+      grid-template-columns: repeat(3, 29.83vw);
 }
 
 .MText {
@@ -520,10 +678,12 @@
   font-size: xx-large;
   height: 45px;
   width: 90vw;
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
   grid-column-end: 3;
   background-color: #00a2ff;
-  grid-row-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
   grid-row-end: 1;
   text-decoration: underline;
   font-weight: bold;
@@ -535,10 +695,12 @@
   font-size: xx-large;
   height: 45px;
   width: 90vw;
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
   grid-column-end: 3;
   background-color: #00a2ff;
-  grid-row-start: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
   grid-row-end: 2;
   margin-top: 3px;
 }
@@ -546,25 +708,45 @@
 .TUEOST,
 .IRTOST,
 .QOTHOST,
+.SGST,
+.SFST,
 .TOne,
 .TTwo,
 .TThree {
+  margin-top: 10px;
   width: 100%;
   height: 100%;
 }
 
 .GameTrackOne {
-  grid-row-start: 3;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
 }
 
 .GameTrackTwo {
-  grid-row-start: 3;
-  grid-column-start: 2;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
 }
 
 .GameTrackThree {
-  grid-row-start: 3;
-  grid-column-start: 3;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+}
+
+.SfinxInternshipTracks {
+  -ms-grid-row: 4;
+      grid-row-start: 4;
+}
+
+.SpiritFox {
+  -ms-grid-row: 4;
+      grid-row-start: 4;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
 }
 
 .MPHeader {
@@ -573,73 +755,105 @@
   font-size: xx-large;
   height: 45px;
   width: 90vw;
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
   grid-column-end: 3;
   background-color: #00a2ff;
-  grid-row-start: 4;
-  grid-row-end: 4;
+  -ms-grid-row: 5;
+      grid-row-start: 5;
+  grid-row-end: 5;
 }
 
 .TrackOne {
-  grid-row-start: 5;
-  grid-column-start: 1;
+  -ms-grid-row: 6;
+      grid-row-start: 6;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
 }
 
 .TrackTwo {
-  grid-row-start: 5;
-  grid-column-start: 2;
+  -ms-grid-row: 6;
+      grid-row-start: 6;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
 }
 
 .TrackThree {
-  grid-row-start: 5;
-  grid-column-start: 3;
+  -ms-grid-row: 6;
+      grid-row-start: 6;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
 }
 
 @media screen and (max-width: 800px) {
   .MusicContainer {
     height: auto;
-    grid-template-rows: 2.2vh 2.2vh repeat(3, 45vh) 2.2vh repeat(3, 45vh);
-    grid-template-columns: 89vw;
+    -ms-grid-rows: 2.2vh 2.2vh (45vh)[5] 2.2vh (45vh)[3];
+        grid-template-rows: 2.2vh 2.2vh repeat(5, 45vh) 2.2vh repeat(3, 45vh);
+    -ms-grid-columns: 89vw;
+        grid-template-columns: 89vw;
   }
   .GameTrackOne {
-    grid-row: 3;
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .GameTrackTwo {
-    grid-row: 4;
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .GameTrackThree {
-    grid-row: 5;
+    grid-row: auto;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .SfinxInternshipTracks {
+    grid-row: auto;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .SpiritFox {
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .MPHeader {
-    grid-row: 6;
+    grid-row: auto;
   }
   .TrackOne {
-    grid-row: 7;
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .TrackTwo {
-    grid-row: 8;
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   .TrackThree {
-    grid-row: 9;
+    grid-row: auto;
+    -ms-grid-column: 1;
     grid-column: 1;
   }
 }
+
 .PageContainer {
+  display: -ms-grid;
   display: grid;
   gap: 2%;
-  margin-top: 15vh;
+  margin-top: 20vh;
   margin-left: 20vw;
   position: absolute;
   width: 60vw;
   height: 70vh;
-  align-items: center;
-  grid-template-columns: repeat(2, 47.5%);
-  grid-template-rows: repeat(2, 47.5%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (47.5%)[2];
+      grid-template-columns: repeat(2, 47.5%);
+  -ms-grid-rows: (47.5%)[2];
+      grid-template-rows: repeat(2, 47.5%);
 }
 
 .AMC {
@@ -648,11 +862,13 @@
   background-color: #616e75;
   position: relative;
 }
+
 .AMC span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   font-size: x-large;
@@ -663,11 +879,13 @@
   height: 100%;
   position: relative;
 }
+
 .PJC span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   font-size: x-large;
@@ -678,11 +896,13 @@
   height: 100%;
   position: relative;
 }
+
 .MC span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   font-size: x-large;
@@ -694,11 +914,13 @@
   background-color: black;
   position: relative;
 }
+
 .CCVC span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   font-size: x-large;
@@ -715,13 +937,17 @@
 @media screen and (max-width: 1200px) {
   .PageContainer {
     margin-left: 35vw;
-    grid-template-columns: 47.5%;
-    grid-template-rows: repeat(4, auto);
+    -ms-grid-columns: 47.5%;
+        grid-template-columns: 47.5%;
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
   }
 }
+
 html,
 body {
   padding: 0px;
   margin: 0px;
   background-color: #272525;
-}/*# sourceMappingURL=Main.css.map */
+}
+/*# sourceMappingURL=Main.css.map */
