@@ -36,6 +36,8 @@
     justify-self: center;
     align-self: center;
     opacity: 0;
+    text-decoration: none;
+    color: white;
 }
 
 .questionPanel {
@@ -313,6 +315,13 @@
     .GameSix {
         grid-row: auto;
         grid-column: 1;
+    }
+
+    .questionPanel{
+        &:target {
+            transition: transform .2s;
+            transform: translateY(-5%);
+        }
     }
 }
 

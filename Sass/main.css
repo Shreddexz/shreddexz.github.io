@@ -269,6 +269,13 @@
   margin-left: 48vw;
 }
 
+.linkedinText {
+  margin-left: 46.8vw;
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+
 .CV {
   margin-left: 30vw;
   width: 40vw;
@@ -340,6 +347,8 @@
       -ms-grid-row-align: center;
       align-self: center;
   opacity: 0;
+  text-decoration: none;
+  color: white;
 }
 
 .questionPanel {
@@ -653,6 +662,14 @@
     grid-row: auto;
     -ms-grid-column: 1;
     grid-column: 1;
+  }
+  .questionPanel:target {
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
   }
 }
 
