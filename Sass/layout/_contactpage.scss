@@ -1,11 +1,11 @@
 .CIContainter {
-    width: 40vw;
+    width: 60vw;
     height: 43%;
     display: flex;
     flex-direction: column;
     background-color: $CalmBlue;
-    margin-left: 30vw;
-    margin-top: 20px;
+    margin-left: 20vw;
+    margin-top: 15vh;
 }
 
 .CIHeader {
@@ -23,8 +23,14 @@
 
 .linkedin {
     width: 50px;
-    margin-top: 100px;
-    padding-left: 48vw;
+    margin-left: 48vw;
+}
+
+.linkedinText{
+    margin-left: 46.8vw;
+    text-decoration: none;
+    color: white;
+    font-size: large;
 }
 
 .CV {
