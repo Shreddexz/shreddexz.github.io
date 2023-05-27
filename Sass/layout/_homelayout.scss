@@ -34,6 +34,7 @@
     // grid-row-start: 2;
     // grid-column-start: 1;
     position: relative;
+    background-color: black;
 
     span {
         position: absolute;
@@ -52,6 +53,7 @@
     // grid-row-start: 1;
     // grid-column-start: 2;
     position: relative;
+    background-color: $CustomGrey;
 
     span {
         position: absolute;
@@ -90,9 +92,12 @@
     border-radius: $cornerRadius;
     overflow: hidden;
     transition: $animTime;
-    &:hover{
-        transition:$animTime;
+    &:hover {
+        transition: $animTime;
         transform: scale(1.05);
+        span {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -103,6 +108,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: $animTime;
+    &:hover {
+        transition: $animTime;
+        opacity: 0.25;
+    }
 }
 
 @media screen and (max-width: 1200px) {

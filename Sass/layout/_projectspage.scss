@@ -237,6 +237,12 @@
 @media screen and (max-width: 900px) {
     .question {
         opacity: 1;
+        transition: $animTime;
+
+        &:hover {
+            color: black;
+            transition: $animTime;
+        }
     }
 
     .GamesContainer {
