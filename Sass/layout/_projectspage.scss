@@ -65,7 +65,7 @@
     }
 
     &:target {
-        transition: transform .2s;
+        transition: transform 0.2s;
         transform: translateY(-20%);
     }
 }
@@ -84,7 +84,9 @@
     justify-content: center;
     align-items: center;
     margin-top: 1.2vh;
-    margin-bottom: calc(100% / (16/9));
+    margin-bottom: calc(100% / (16 / 9));
+    border-radius: $cornerRadius;
+    overflow: hidden;
 }
 
 .TUE,
@@ -120,7 +122,7 @@
     color: #f1f1f199;
     // width: 27.75vw;
     width: 95%;
-    transition: .6s ease;
+    transition: 0.6s ease;
     opacity: 0;
     color: black;
     font-size: 20px;
@@ -232,8 +234,7 @@
 /*#endregion GameVariables*/
 
 /*#region Media 900px*/
-@media screen and (max-width:900px) {
-
+@media screen and (max-width: 900px) {
     .question {
         opacity: 1;
     }
@@ -273,12 +274,21 @@
         grid-row: auto;
         grid-column: 2;
     }
+
+    .GameOne,
+    .GameTwo,
+    .GameThree,
+    .GameFour,
+    .GameFive,
+    .GameSix {
+        margin-left: 6vw;
+    }
 }
 
 /*#endregion*/
 
 /*#region 500px*/
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
     .GamesContainer {
         column-gap: 0px;
         height: auto;
@@ -317,11 +327,20 @@
         grid-column: 1;
     }
 
-    .questionPanel{
+    .questionPanel {
         &:target {
-            transition: transform .2s;
+            transition: transform 0.2s;
             transform: translateY(-5%);
         }
+    }
+
+    .GameOne,
+    .GameTwo,
+    .GameThree,
+    .GameFour,
+    .GameFive,
+    .GameSix {
+        margin-left: 5vw;
     }
 }
 

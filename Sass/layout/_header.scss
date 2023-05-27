@@ -19,9 +19,11 @@
         text-decoration: none;
         color: inherit;
         font-size: larger;
+        transition: $animTime;
 
         &:hover {
             color: $CalmBlue;
+            transition: $animTime;
         }
     }
 }
@@ -80,16 +82,22 @@
     justify-content: center;
 
     &:target {
-        transition: transform .2s;
+        transition: transform 0.2s;
         transform: translateY(15%);
     }
-    
+
     a {
         margin-left: 20vw;
         color: white;
         font-size: x-large;
         text-decoration: none;
         z-index: 100;
+        transition: $animTime;
+
+        &:hover {
+            color: $DarkModeColor;
+            transition: $animTime;
+        }
     }
 }
 
@@ -103,12 +111,12 @@
 }
 
 @media screen and (max-width: 500px) {
-
     .about-me,
     .projects,
     .music,
     .contact {
         opacity: 0;
+        pointer-events: none;
     }
 
     .Hamburger {

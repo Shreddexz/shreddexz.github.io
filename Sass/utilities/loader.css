@@ -1,0 +1,15 @@
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: blanchedalmond;
+}
+
+.loader ::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid red;
+  border-top: yellow;
+}
+/*# sourceMappingURL=loader.css.map */
