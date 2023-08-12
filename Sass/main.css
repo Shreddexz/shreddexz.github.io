@@ -641,28 +641,83 @@
   flex-direction: column; }
 
 .introContainer {
-  height: 40em;
-  width: 80em;
+  --introHeight: 20em;
+  height: 90vh;
+  width: 120em;
   display: flex;
   flex-direction: row-reverse;
-  background-color: #616e75;
+  background-color: #00a2ff;
   justify-content: center;
   align-content: center;
-  border-radius: 2em; }
+  align-self: center; }
 
 .introContainer > * {
   padding-top: 4em; }
 
 .selfie {
   height: 80%;
-  width: auto; }
+  width: auto;
+  padding-right: 2em; }
 
 .introTextContainer {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-top: 20vh;
+  padding-right: 2em;
+  padding-left: 2em; }
 
-.introTextContainer .introHeader, .introTextContainer .introSubHeader {
-  color: #00a2ff; }
+.introTextContainer .introHeader {
+  color: black;
+  font-size: 5em; }
+
+.introTextContainer .introSubHeader {
+  color: white;
+  font-size: 3em; }
+
+.introTextContainer .aboutMeButton {
+  align-self: center;
+  justify-self: center;
+  background-color: #ff7200;
+  font-size: large;
+  color: white;
+  width: 16em;
+  height: 3em;
+  border: none;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  font-weight: bold;
+  text-decoration: none; }
+
+.introTextContainer .aboutMeButton .abmt {
+  width: 90%;
+  align-self: center;
+  padding-left: 2em; }
+
+.introTextContainer .aboutMeButton .material-icons {
+  align-self: center;
+  margin-right: 2em; }
+
+.introTextContainer .aboutMeButton:hover {
+  cursor: pointer;
+  background-color: lightblue;
+  border: 0.1em solid black; }
+
+.introTextContainer .aboutMeButton:hover > * {
+  color: black; }
+
+.projectsContainer {
+  height: 90vh;
+  width: 120em;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #008cb3;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  margin-top: 2em;
+  color: white; }
 
 html,
 body {

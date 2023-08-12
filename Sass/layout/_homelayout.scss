@@ -1,19 +1,26 @@
+$gap-size:2em;
+
 .homeContainer{
     padding-top:75px;
+    //margin-top: $gap-size;
     height: 120em;
     display:flex;
     flex-direction: column;
 }
 
 .introContainer{
-    height: 40em;
-    width: 80em;
+    --introHeight: 20em;
+    //height: var(--introHeight);
+    height: 90vh;
+    width: 120em; 
     display: flex;
     flex-direction: row-reverse;
-    background-color:$CustomGrey;
+    background-color:$primary;
     justify-content: center;
     align-content:center;
-    border-radius: 2em;
+    align-self: center;
+    //border: 0.5em solid $tertiary;
+    //border-radius: 2em;
     &>*{
         padding-top: 4em;
     }
@@ -22,13 +29,74 @@
 .selfie{
     height: 80%;
     width: auto;
+    padding-right: $gap-size;
 }
 
 .introTextContainer{
     display: flex;
     flex-direction: column;
+    padding-top: 20vh;
+    padding-right: $gap-size;
+    padding-left: $gap-size;
 
-    .introHeader, .introSubHeader{
-        color: $CalmBlue
+    .introHeader{
+        color: black;
+        font-size: 5em;
     }
+
+    .introSubHeader{
+        color: white;
+        font-size: 3em;
+    }
+
+    .aboutMeButton{
+        align-self: center;
+        justify-self: center;
+        background-color: $quaternary;
+        font-size: large;
+        color: white;
+        width: 16em;
+        height: 3em;
+        border: none;
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        font-weight: bold;
+        text-decoration: none;
+        .abmt{
+            width: 90%;
+            align-self: center;
+            padding-left: $gap-size;
+        }
+
+        .material-icons{
+            align-self: center;
+            margin-right: $gap-size;
+        }
+
+        &:hover{
+            cursor: pointer;
+                background-color: lightblue;
+                border: 0.1em solid black;
+
+            &>*{
+                color: black;
+            }
+        }
+    }
+}
+
+
+.projectsContainer{
+    height: 90vh;
+    width: 120em; 
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:$secondary;
+    justify-content: center;
+    align-content:center;
+    align-self: center;
+    margin-top: $gap-size;
+    color: white;
 }
