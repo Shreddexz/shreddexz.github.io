@@ -1,124 +1,34 @@
-.PageContainer {
-    display: grid;
-    gap: 2%;
-    margin-top: 20vh;
-    margin-left: 20vw;
-    position: absolute;
-    width: 60vw;
-    height: 70vh;
-    align-items: center;
-    grid-template-columns: repeat(2, 47.5%);
-    grid-template-rows: repeat(2, 47.5%);
+.homeContainer{
+    padding-top:75px;
+    height: 120em;
+    display:flex;
+    flex-direction: column;
 }
 
-.AMC {
-    width: 100%;
-    height: 100%;
-    background-color: $CustomGrey;
-    position: relative;
-
-    span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        font-size: x-large;
+.introContainer{
+    height: 40em;
+    width: 80em;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:$CustomGrey;
+    justify-content: center;
+    align-content:center;
+    border-radius: 2em;
+    &>*{
+        padding-top: 4em;
     }
 }
 
-.PJC {
-    width: 100%;
-    height: 100%;
-    // grid-row-start: 2;
-    // grid-column-start: 1;
-    position: relative;
-    background-color: black;
-
-    span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        font-size: x-large;
-    }
+.selfie{
+    height: 80%;
+    width: auto;
 }
 
-.MC {
-    width: 100%;
-    height: 100%;
-    // grid-row-start: 1;
-    // grid-column-start: 2;
-    position: relative;
-    background-color: $CustomGrey;
+.introTextContainer{
+    display: flex;
+    flex-direction: column;
 
-    span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        font-size: x-large;
-    }
-}
-
-.CCVC {
-    width: 100%;
-    height: 100%;
-    // grid-row-start: 2;
-    // grid-column-start: 2;
-    background-color: black;
-    position: relative;
-
-    span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        font-size: x-large;
-    }
-}
-
-.MC,
-.PJC,
-.AMC,
-.CCVC {
-    border-radius: $cornerRadius;
-    overflow: hidden;
-    transition: $animTime;
-    &:hover {
-        transition: $animTime;
-        transform: scale(1.05);
-        span {
-            text-decoration: underline;
-        }
-    }
-}
-
-.MusicImg,
-.ProjectImg,
-.ABMImg,
-.CCVCImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: $animTime;
-    &:hover {
-        transition: $animTime;
-        opacity: 0.25;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .PageContainer {
-        margin-left: 35vw;
-        grid-template-columns: 47.5%;
-        grid-template-rows: repeat(4, auto);
+    .introHeader, .introSubHeader{
+        color: $CalmBlue
     }
 }
