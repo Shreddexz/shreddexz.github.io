@@ -8,72 +8,89 @@
 <meta name="theme-color" content="#00a2ff">
 <meta name="twitter:card" src="/Images/portfolio_selfie.jpg">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="Sass/main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="Sass/main.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
 
-<body>
-    <header class="header" id="header">
-        <div class="header-container">
-            <div class="namehome"><a href="index.html">Omorian Clifford</a></div>
-            <div class="about-me"><a href="/pages/AboutMePage.html">About me</a></div>
-            <div class="projects"><a href="/pages/ProjectsPage.html">Projects</a></div>
-            <div class="music"><a href="pages/MusicPage.html">Music</a></div>
-            <div class="contact"><a href="/pages/ContactPage.html">Contact & CV</a></div>
-        </div>
-        <ul class="Menu" id="Menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="/pages/AboutMePage.html">About Me</a></li>
-            <li><a href="/pages/ProjectsPage.html">Projects</a></li>
-            <li><a href="pages/MusicPage.html">Music</a></li>
-            <li><a href="/pages/ContactPage.html">Contact & CV</a></li>
-            <a class="Close" href="#">
+    <body>
+        <header class="header" id="header">
+            <div class="header-container">
+                <div class="namehome"><a href="index.html">Omorian Clifford</a></div>
+                <div class="about-me"><a href="/pages/AboutMePage.html">About me</a></div>
+                <div class="projects"><a href="/pages/ProjectsPage.html">Projects</a></div>
+                <div class="music"><a href="pages/MusicPage.html">Music</a></div>
+                <div class="contact"><a href="/pages/ContactPage.html">Contact & CV</a></div>
+            </div>
+            <ul class="Menu" id="Menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/pages/AboutMePage.html">About Me</a></li>
+                <li><a href="/pages/ProjectsPage.html">Projects</a></li>
+                <li><a href="pages/MusicPage.html">Music</a></li>
+                <li><a href="/pages/ContactPage.html">Contact & CV</a></li>
+                <a class="Close" href="#">
+                    <span class="material-icons">
+                        close
+                    </span>
+                </a>
+            </ul>
+            <a class="Hamburger" href="#Menu">
                 <span class="material-icons">
-                    close
+                    menu
                 </span>
             </a>
-        </ul>
-        <a class="Hamburger" href="#Menu">
-            <span class="material-icons">
-                menu
-            </span>
-        </a>
-    </header>
+        </header>
 
-    <div class="PageContainer">
-        <div class="AMC">
-            <a href="/pages/AboutMePage.html">
-                <span>About Me Page</span>
-                <img class="ABMImg" src="Images/ABMImg.png" alt="">
-            </a>
-        </div>
+        <div class="homeContainer">
+            <div class="introContainer">
+                <img class="selfie"
+                     src="https://cdn.discordapp.com/attachments/411221053633855519/981186729568518144/20220531_135919.jpg"
+                     alt="Picture of me">
+                <div class="introTextContainer">
+                    <h1 class="container introHeader">Hello, my name is Omorian</h1>
+                    <h3 class="introSubHeader">I am a game development student from the Netherlands <br>with a passion for programming and sound design/music production.</h3>
+                    <a class="button aboutMeButton" href="/pages/AboutMePage.html">
+                        <span class="abmt">Learn more about me</span>
+                        <span class="material-icons">
+                            double_arrow
+                        </span>
+                    </a>
+                </div>
+            </div>
 
-        <div class="PJC">
-            <a href="/pages/ProjectsPage.html">
-                <span>Projects Page</span>
-                <img class="ProjectImg" src="Images/unreal.png" alt="">
-            </a>
+            <div class="container projectsContainer">
+                <h1>Programming Projects</h1>
+                <div class="progProjects">
+                    <div class="projectCarousel">
+                        <a class="prog project1" href="https://shreddexz.itch.io/time-to-die">
+                            <img src="https://cdn.discordapp.com/attachments/973888571339575347/992532642014707762/TTD_Img2.png"
+                                 alt="Cover art for the game 'Time to die'"> 
+                            <span class="itemDesc TTD_T"> 
+                                <p>
+                                An endless shooter with audio visualization
+                                </p>
+                                <p class="material-icons">
+                                arrow_outward
+                                </p>
+                            </span>
+                        </a>
+                        <div class="carousel-actions">
+                            <button id="carousel-button-prev" aria-label="Previous"><</button>
+                            <button id="carousel-button-next" aria-label="Next">></button>
+                        </div>
+                        <div class="carousel-dots">
+                            <input class="dot selected-dot" type="radio" name="dot" checked />
+                            <input class="dot" type="radio" name="dot" />
+                            <input class="dot" type="radio" name="dot" />
+                        </div>
+                    </div> 
+                </div>
+            </div>
         </div>
-
-        <div class="MC">
-            <a class="MPC" href="/pages/MusicPage.html">
-                <span>Music Page</span>
-                <img class="MusicImg" src="Images/daw.png" alt="">
-            </a>
-        </div>
-
-        <div class="CCVC">
-            <a href="/pages/ContactPage.html">
-                <span>Contact & CV</span>
-                <img class="CCVCImage" src="Images/ContactImage.png" alt="">
-            </a>
-        </div>
-    </div>
-</body>
+    </body>
 
 </html>

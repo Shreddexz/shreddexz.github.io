@@ -1,124 +1,140 @@
-.PageContainer {
-    display: grid;
-    gap: 2%;
-    margin-top: 20vh;
-    margin-left: 20vw;
-    position: absolute;
-    width: 60vw;
-    height: 70vh;
-    align-items: center;
-    grid-template-columns: repeat(2, 47.5%);
-    grid-template-rows: repeat(2, 47.5%);
+$gap-size:2em;
+$windowHeight:90vh;
+$windowWidth:90vw;
+
+.homeContainer{
+    padding-top:75px;
+    //margin-top: $gap-size;
+    height: 120em;
+    display:flex;
+    flex-direction: column;
+    gap: $gap-size;
 }
 
-.AMC {
-    width: 100%;
-    height: 100%;
-    background-color: $CustomGrey;
-    position: relative;
-
-    span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        font-size: x-large;
+.introContainer{
+    --introHeight: 20em;
+    //height: var(--introHeight);
+    height: $windowHeight;
+    width: $windowWidth; 
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:$primary;
+    justify-content: center;
+    align-content:center;
+    align-self: center;
+    //border: 0.5em solid $tertiary;
+    //border-radius: 2em;
+    &>*{
+        padding-top: 4em;
     }
 }
 
-.PJC {
-    width: 100%;
-    height: 100%;
-    // grid-row-start: 2;
-    // grid-column-start: 1;
-    position: relative;
-    background-color: black;
-
-    span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        font-size: x-large;
-    }
+.selfie{
+    height: 80%;
+    width: auto;
+    padding-right: $gap-size;
 }
 
-.MC {
-    width: 100%;
-    height: 100%;
-    // grid-row-start: 1;
-    // grid-column-start: 2;
-    position: relative;
-    background-color: $CustomGrey;
+.introTextContainer{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-right: $gap-size;
+    padding-left: $gap-size;
 
-    span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        font-size: x-large;
+    .introHeader{
+        color: black;
+        font-size: 5em;
     }
-}
 
-.CCVC {
-    width: 100%;
-    height: 100%;
-    // grid-row-start: 2;
-    // grid-column-start: 2;
-    background-color: black;
-    position: relative;
-
-    span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+    .introSubHeader{
         color: white;
-        font-size: x-large;
+        font-size: 2em;
+        margin-top: -5vh;
     }
-}
 
-.MC,
-.PJC,
-.AMC,
-.CCVC {
-    border-radius: $cornerRadius;
-    overflow: hidden;
-    transition: $animTime;
-    &:hover {
-        transition: $animTime;
-        transform: scale(1.05);
-        span {
-            text-decoration: underline;
+    .aboutMeButton{
+        align-self: center;
+        justify-self: center;
+        margin-top: 5vh;
+        background-color: $quaternary;
+        font-size: large;
+        color: white;
+        width: 16em;
+        height: 3em;
+        border: none;
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        font-weight: bold;
+        text-decoration: none;
+        .abmt{
+            width: 90%;
+            align-self: center;
+            padding-left: $gap-size;
+        }
+
+        .material-icons{
+            align-self: center;
+            margin-right: $gap-size;
+        }
+
+        &:hover{
+            cursor: pointer;
+            background-color: lightblue;
+            border: 0.1em solid black;
+
+            &>*{
+                color: black;
+            }
         }
     }
 }
 
-.MusicImg,
-.ProjectImg,
-.ABMImg,
-.CCVCImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: $animTime;
-    &:hover {
-        transition: $animTime;
-        opacity: 0.25;
+
+.projectsContainer{
+    height: $windowHeight;
+    width: $windowWidth; 
+    padding-top: $gap-size;
+    display: flex;
+    flex-direction: column;
+    background-color:$secondary;
+    justify-content: center;
+    align-content:center;
+    align-self: center;
+    color: white;
+
+    &>*{
+        align-self:center;
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .PageContainer {
-        margin-left: 35vw;
-        grid-template-columns: 47.5%;
-        grid-template-rows: repeat(4, auto);
+.projectCarousel{
+
+    background-color: red;
+    display: block;
+}
+
+.prog{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction:column;
+    text-decoration: none;
+
+    &>*{
+        align-self:center;
+    }
+
+    .TTD_T{
+        color: white;
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: row;
+
+        .material-icons{
+            color: black;
+        }
     }
 }
