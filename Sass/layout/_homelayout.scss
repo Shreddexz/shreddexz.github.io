@@ -92,7 +92,6 @@ $windowWidth:90vw;
     }
 }
 
-
 .projectsContainer{
     height: $windowHeight;
     width: $windowWidth; 
@@ -110,31 +109,39 @@ $windowWidth:90vw;
     }
 }
 
-.projectCarousel{
-
-    background-color: red;
-    display: block;
+.progProjects{
+    align-content: center;
+    justify-items: center;
 }
 
-.prog{
-    height: 80%;
-    width: 80%;
+.carousel{
+    // background-color: red;
     display: flex;
-    flex-direction:column;
-    text-decoration: none;
-
+    flex-direction: row;
+    align-content: center;
+    justify-items: center;
     &>*{
         align-self:center;
     }
+}
 
-    .TTD_T{
-        color: white;
-        font-size: 1.5em;
-        display: flex;
-        flex-direction: row;
+.prog{
+    // height: 80%;
+    // width: 80%;
+    display: flex;
+    flex-direction:column;
+    text-decoration: none;
+    color: white;
+    transition: $animTime;
 
-        .material-icons{
-            color: black;
-        }
+    &>*{
+        align-self:center;
+        text-decoration: none;
+    }
+
+    &:hover{
+        color: black;
+        text-decoration: underline;
+        transition: $animTime;
     }
 }

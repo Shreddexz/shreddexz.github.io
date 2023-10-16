@@ -725,28 +725,34 @@
 .projectsContainer > * {
   align-self: center; }
 
-.projectCarousel {
-  background-color: red;
-  display: block; }
+.progProjects {
+  align-content: center;
+  justify-items: center; }
 
-.prog {
-  height: 80%;
-  width: 80%;
+.carousel {
   display: flex;
-  flex-direction: column;
-  text-decoration: none; }
+  flex-direction: row;
+  align-content: center;
+  justify-items: center; }
 
-.prog > * {
+.carousel > * {
   align-self: center; }
 
-.prog .TTD_T {
-  color: white;
-  font-size: 1.5em;
+.prog {
   display: flex;
-  flex-direction: row; }
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s; }
 
-.prog .TTD_T .material-icons {
-  color: black; }
+.prog > * {
+  align-self: center;
+  text-decoration: none; }
+
+.prog:hover {
+  color: black;
+  text-decoration: underline;
+  transition: 0.2s; }
 
 html,
 body {
