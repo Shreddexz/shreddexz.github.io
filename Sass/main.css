@@ -144,7 +144,8 @@
   font-weight: bolder;
   font-size: xx-large;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: -1px; }
 
 .aboutmetext {
   color: white;
@@ -634,26 +635,43 @@
     grid-row: auto;
     grid-column: 1; } }
 
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  overflow: visible; }
+
 .homeContainer {
   padding-top: 75px;
-  height: 120em;
   display: flex;
   flex-direction: column;
-  gap: 2em; }
+  gap: 2em;
+  align-content: center;
+  align-items: center; }
+
+.container {
+  scroll-snap-align: start;
+  margin-top: 0px;
+  padding-top: 75px;
+  position: relative; }
+
+.container .proxBar {
+  top: 0px;
+  width: 100%;
+  height: 1px;
+  position: absolute; }
+
+.container > *:not(.proxBar) {
+  padding-top: 2rem; }
 
 .introContainer {
   --introHeight: 20em;
-  height: 90vh;
+  height: 100vh;
   width: 90vw;
   display: flex;
   flex-direction: row-reverse;
   background-color: #00a2ff;
   justify-content: center;
-  align-content: center;
-  align-self: center; }
-
-.introContainer > * {
-  padding-top: 4em; }
+  align-content: center; }
 
 .selfie {
   height: 80%;
@@ -669,55 +687,71 @@
 
 .introTextContainer .introHeader {
   color: black;
-  font-size: 5em; }
+  font-size: 5em;
+  letter-spacing: -1px; }
 
 .introTextContainer .introSubHeader {
   color: white;
   font-size: 2em;
-  margin-top: -5vh; }
+  margin-top: -5vh;
+  letter-spacing: 0.3px; }
 
-.introTextContainer .aboutMeButton {
+.introTextContainer .button {
   align-self: center;
   justify-self: center;
-  margin-top: 5vh;
-  background-color: #ff7200;
-  font-size: large;
   color: white;
-  width: 16em;
-  height: 3em;
+  width: 30vw;
+  height: 8vw;
+  margin-top: 1rem;
   border: none;
   border-radius: 0.5em;
   display: flex;
   flex-direction: row;
   text-align: left;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: auto;
+  transition: all 0.2s; }
 
-.introTextContainer .aboutMeButton .abmt {
+.introTextContainer .button span {
   width: 90%;
   align-self: center;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.3px;
   padding-left: 2em; }
 
-.introTextContainer .aboutMeButton .material-icons {
+.introTextContainer .button .material-icons {
   align-self: center;
-  margin-right: 2em; }
+  margin-right: 2em;
+  font-size: 2rem; }
 
-.introTextContainer .aboutMeButton:hover {
+.introTextContainer .button:hover {
   cursor: pointer;
-  background-color: lightblue;
-  border: 0.1em solid black; }
+  border: 0.1em solid black;
+  transition: all 0.2s; }
 
-.introTextContainer .aboutMeButton:hover > * {
+.introTextContainer .button:hover > * {
   color: black; }
 
+.introTextContainer .aboutMeButton {
+  margin-top: 5vh;
+  background-color: #00952d; }
+
+.introTextContainer .projectsButton {
+  background-color: #008cb3; }
+
+.introTextContainer .musicButton {
+  background-color: #b35000; }
+
 .projectsContainer {
-  height: 90vh;
   width: 90vw;
+  min-height: 100vh;
+  height: auto;
   padding-top: 2em;
   display: flex;
   flex-direction: column;
   background-color: #008cb3;
-  justify-content: center;
   align-content: center;
   align-self: center;
   color: white; }
@@ -726,33 +760,420 @@
   align-self: center; }
 
 .progProjects {
-  align-content: center;
-  justify-items: center; }
-
-.carousel {
+  width: 80%;
+  height: 80%;
   display: flex;
   flex-direction: row;
-  align-content: center;
-  justify-items: center; }
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 2em; }
 
-.carousel > * {
-  align-self: center; }
-
-.prog {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: white;
-  transition: 0.2s; }
-
-.prog > * {
+.progProjects .button {
   align-self: center;
+  justify-self: center;
+  color: white;
+  width: 15vw;
+  height: 8vh;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: auto;
+  transition: all 0.2s;
+  background-color: #00a2ff;
+  flex-basis: 50%;
+  margin: 2em; }
+
+.progProjects .button span {
+  width: 90%;
+  align-self: center;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.3px;
+  padding-left: 2em; }
+
+.progProjects .button .material-icons {
+  align-self: center;
+  margin-right: 2em;
+  font-size: 2rem; }
+
+.progProjects .button:hover {
+  cursor: pointer;
+  border: 0.1em solid black;
+  transition: all 0.2s; }
+
+.progProjects .button:hover > * {
+  color: black; }
+
+.proj {
+  width: 30vw;
+  height: calc(30vw / (16/9));
+  position: relative;
+  animation-direction: normal;
   text-decoration: none; }
 
-.prog:hover {
-  color: black;
+.proj img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+  background-color: black;
+  border-radius: 0.5em;
+  transition: 0.2s;
+  z-index: 10; }
+
+.proj figcaption {
+  position: relative;
+  color: white;
+  text-align: center;
+  font-size: x-large; }
+
+.proj > * {
+  text-decoration: none; }
+
+.proj .hoverBorder {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  background-color: #bff1ff;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+  border-radius: 0.5em;
+  z-index: 5; }
+
+.proj:hover {
   text-decoration: underline;
   transition: 0.2s; }
+
+.proj:hover figcaption {
+  color: black; }
+
+.musicContainer {
+  height: 100vh;
+  width: 90vw;
+  padding-top: 2em;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #b35000;
+  align-self: center;
+  color: white; }
+
+.musicContainer > * {
+  align-self: center; }
+
+.tracks {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em; }
+
+.tracks .button {
+  justify-self: center;
+  color: white;
+  width: 15vw;
+  height: 8vh;
+  border: none;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: auto;
+  transition: all 0.2s;
+  background-color: #00a2ff;
+  flex-basis: 50%;
+  margin: 2em; }
+
+.tracks .button span {
+  width: 90%;
+  align-self: center;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.3px;
+  padding-left: 2em; }
+
+.tracks .button .material-icons {
+  align-self: center;
+  margin-right: 2em;
+  font-size: 2rem; }
+
+.tracks .button:hover {
+  cursor: pointer;
+  border: 0.1em solid black;
+  transition: all 0.2s; }
+
+.tracks .button:hover > * {
+  color: black; }
+
+.track {
+  width: 20vw;
+  height: 20vw;
+  flex-shrink: 0; }
+
+.song {
+  width: 100%;
+  height: 100%; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    opacity: 0;
+    transition: all 1.2s; }
+  .show {
+    opacity: 1; }
+  .proj .hoverBorder {
+    animation: calc(1 * (0.2s)) a_borderOut forwards; }
+  .proj:hover {
+    transition: calc(2 * (0.2s)); }
+  .proj:hover img {
+    width: 105%;
+    height: 105%;
+    transition: calc(2 * (0.2s)); }
+  .proj:hover .hoverBorder {
+    animation-direction: normal;
+    animation: calc(2 * (0.2s)) linear a_borderHeight forwards, calc(1 * (0.2s)) ease-out a_borderWidth forwards; }
+  @keyframes a_borderHeight {
+    from {
+      height: 10%;
+      top: 0; }
+    to {
+      height: calc(100% + (2 * 5px));
+      top: -5px; } }
+  @keyframes a_borderWidth {
+    0%, 40% {
+      width: 10%; }
+    from {
+      width: 10%;
+      left: 0; }
+    to {
+      width: calc(100% + (2 * 5px));
+      left: -5px; } }
+  @keyframes a_borderOut {
+    0%, 40% {
+      width: calc(100% + (2 * 5px)); }
+    from {
+      width: calc(100% + (2 * 5px));
+      height: calc(100% + (2 * 5px));
+      top: -5px;
+      left: -5px; }
+    to {
+      width: 10%;
+      height: 10%;
+      top: 0;
+      left: 0; } } }
+
+@media screen and (max-width: 3841px) {
+  .introTextContainer .introHeader {
+    font-size: 5rem; }
+  .introTextContainer .introSubHeader {
+    font-size: 4rem;
+    padding-top: 75px; }
+  .introTextContainer .button .material-icons {
+    margin-right: 2em; }
+  .introTextContainer .button span, .introTextContainer .button .material-icons {
+    font-size: 3.5rem; }
+  .projectsContainer {
+    font-size: x-large; }
+  .projectsContainer .button span, .projectsContainer .button .material-icons {
+    font-size: 3.5rem; }
+  .proj figcaption, .proj .material-icons {
+    font-size: 2.5rem; }
+  .musicContainer {
+    font-size: x-large; }
+  .musicContainer .button {
+    margin-top: -20vh; }
+  .musicContainer .button span, .musicContainer .button .material-icons {
+    font-size: 3.5rem; } }
+
+@media screen and (max-width: 2560px) {
+  .introTextContainer .introHeader {
+    margin-top: -5.5rem;
+    font-size: 3rem; }
+  .introTextContainer .introSubHeader {
+    margin-top: -6rem;
+    font-size: 2rem; }
+  .introTextContainer .button .material-icons {
+    margin-right: 10%; }
+  .introTextContainer .button span, .introTextContainer .button .material-icons {
+    font-size: 1.5rem; }
+  .projectsContainer {
+    font-size: medium; }
+  .projectsContainer .button span, .projectsContainer .button .material-icons {
+    font-size: 1.5rem; }
+  .proj figcaption, .proj .material-icons {
+    font-size: medium; }
+  .musicContainer {
+    font-size: medium; }
+  .musicContainer .button {
+    margin-top: -20vh; }
+  .musicContainer .button span, .musicContainer .button .material-icons {
+    font-size: 1.5rem; } }
+
+@media screen and (max-width: 1280px) {
+  .introTextContainer .introHeader {
+    margin-top: -5.5rem;
+    font-size: 3rem; }
+  .introTextContainer .introSubHeader {
+    margin-top: -6rem;
+    font-size: 2rem; }
+  .introTextContainer .button .material-icons {
+    margin-right: 10%; }
+  .introTextContainer .button span, .introTextContainer .button .material-icons {
+    font-size: 1.5rem; }
+  .projectsContainer {
+    font-size: medium; }
+  .projectsContainer .button span, .projectsContainer .button .material-icons {
+    font-size: 1.5rem; }
+  .proj figcaption, .proj .material-icons {
+    font-size: medium; } }
+
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 100%; }
+  .selfie {
+    height: 70%; }
+  .introTextContainer .introHeader {
+    font-size: 2rem; }
+  .introTextContainer .introSubHeader {
+    margin-top: 0.5em;
+    font-size: 1.5rem; }
+  .introTextContainer .button {
+    width: 20vw;
+    height: 8vw; }
+  .introTextContainer .button span {
+    padding-left: 15px; }
+  .introTextContainer .button .material-icons {
+    margin-right: 5px; }
+  .projectsContainer .button {
+    margin-top: 6rem; }
+  .proj {
+    width: 35vw;
+    height: calc(35vw / (16 / 9)); }
+  .musicContainer {
+    height: auto;
+    padding-bottom: 2em; }
+  .musicContainer .button {
+    flex-basis: 100%;
+    width: 30%;
+    align-self: center; }
+  .musicContainer .tracks {
+    flex-direction: column;
+    place-content: center; }
+  .musicContainer .track {
+    width: 30vw;
+    height: 30vw; } }
+
+@media screen and (max-width: 811px) {
+  .selfie {
+    position: absolute;
+    right: 2em;
+    bottom: 20vh;
+    width: 35%;
+    height: auto; }
+  .introContainer .introHeader {
+    text-align: center; }
+  .introContainer .aboutMeButton {
+    padding-top: -10vh; }
+  .introContainer .button {
+    width: 40vw;
+    margin-left: -45vw; }
+  .projectsContainer .button {
+    margin-top: 8rem; }
+  .musicContainer {
+    height: 95vh; }
+  .musicContainer .button {
+    position: absolute;
+    flex-basis: 100%;
+    width: 30%;
+    align-self: center;
+    bottom: 0px; }
+  .musicContainer .button .material-icons {
+    margin-right: 1rem; }
+  .musicContainer .tracks {
+    flex-direction: column;
+    place-content: center;
+    margin-top: -5vh; }
+  .musicContainer .track {
+    width: 30vw;
+    height: 30vw; } }
+
+@media screen and (max-width: 501px) {
+  .introContainer {
+    padding-top: 0px; }
+  .introContainer .introHeader {
+    text-align: center; }
+  .introContainer .button {
+    width: 40vw;
+    margin-left: -45vw; }
+  .introContainer .button span, .introContainer .button .material-icons {
+    font-size: x-small;
+    align-self: center;
+    justify-self: center;
+    overflow: visible;
+    opacity: 1; } }
+
+@media screen and (max-width: 361px) {
+  .selfie {
+    position: absolute;
+    right: .1rem;
+    bottom: 23.3vh; }
+  .introContainer {
+    padding-top: 0px; }
+  .introContainer .introHeader {
+    text-align: center; }
+  .introContainer .aboutMeButton {
+    margin-top: 10vh; }
+  .introContainer .button {
+    width: 40vw;
+    margin-left: -45vw; }
+  .introContainer .button span, .introContainer .button .material-icons {
+    font-size: x-small;
+    align-self: center;
+    justify-self: center;
+    overflow: visible; }
+  .progProjects {
+    width: 100%;
+    height: auto; }
+  .progProjects .button {
+    margin-top: 2em; }
+  .progProjects .button span, .progProjects .button .material-icons {
+    font-size: medium;
+    overflow: visible;
+    opacity: 1; }
+  .proj {
+    width: calc((2 * 30vw));
+    height: calc((2 * 30vw) / (16/9)); }
+  .proj figcaption, .proj .material-icons {
+    font-size: small; }
+  .musicContainer {
+    height: 110vh; }
+  .musicContainer .button {
+    width: calc((2.5 * 20vw));
+    align-self: center;
+    margin-top: -50vh; }
+  .musicContainer .button .material-icons {
+    margin-right: 1rem; }
+  .musicContainer .button span, .musicContainer .button .material-icons {
+    font-size: small;
+    opacity: 1; }
+  .musicContainer .tracks {
+    flex-direction: row;
+    place-content: center;
+    margin-top: 20vh;
+    width: calc((2.5 * 20vw));
+    height: calc((2.5 * 20vw)); }
+  .musicContainer .track {
+    width: 100%;
+    height: 100%; } }
 
 html,
 body {

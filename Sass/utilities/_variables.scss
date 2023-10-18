@@ -8,10 +8,15 @@ $PopupBackground: rgba(109, 98, 98, 0.485);
 $primary: #00a2ff;
 $secondary: #008cb3;
 $tertiary: #bff1ff;
-$quaternary: #ff7200;
+$quaternary: #00952d;
 $quinary: #b35000;
 
 $cornerRadius: 0.5em;
 
-$animTime:0.2s;
+$animTime: 0.2s;
+$fadeTime: 1.2s;
 
+$h_letterSpacing: -1px;
+$h_lineSpacing: .2rem;
+$p_letterSpacing: .3px;
+$p_lineSpacing: .1rem;
