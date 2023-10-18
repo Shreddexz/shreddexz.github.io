@@ -1,79 +1,164 @@
 <html lang="en">
-<meta property="og:title" content="Omorian Clifford's Portfolio" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.omorianclifford.com/" />
-<meta property="og:image" src="/Images/portfolio_selfie.jpg" />
-<meta property="og:description"
-    content="The portfolio website of Omorian Clifford, a Game Development student and music producer/sound designer" />
-<meta name="theme-color" content="#00a2ff">
-<meta name="twitter:card" src="/Images/portfolio_selfie.jpg">
+    <meta property="og:title" content="Omorian Clifford's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.omorianclifford.com/" />
+    <meta property="og:image" src="/Images/portfolio_selfie.jpg" />
+    <meta property="og:description"
+        content="The portfolio website of Omorian Clifford, a Game Development student and music producer/sound designer" />
+    <meta name="theme-color" content="#00a2ff">
+    <meta name="twitter:card" src="/Images/portfolio_selfie.jpg">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="Sass/main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="Sass/main.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script defer src="Javascript/fade.js"></script>
+    </head>
 
-<body>
-    <header class="header" id="header">
-        <div class="header-container">
-            <div class="namehome"><a href="index.html">Omorian Clifford</a></div>
-            <div class="about-me"><a href="/pages/AboutMePage.html">About me</a></div>
-            <div class="projects"><a href="/pages/ProjectsPage.html">Projects</a></div>
-            <div class="music"><a href="pages/MusicPage.html">Music</a></div>
-            <div class="contact"><a href="/pages/ContactPage.html">Contact & CV</a></div>
-        </div>
-        <ul class="Menu" id="Menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="/pages/AboutMePage.html">About Me</a></li>
-            <li><a href="/pages/ProjectsPage.html">Projects</a></li>
-            <li><a href="pages/MusicPage.html">Music</a></li>
-            <li><a href="/pages/ContactPage.html">Contact & CV</a></li>
-            <a class="Close" href="#">
+    <body>
+        <header class="header" id="header">
+            <div class="header-container">
+                <div class="namehome"><a href="index.html">Omorian Clifford</a></div>
+                <div class="about-me"><a href="/pages/AboutMePage.html">About me</a></div>
+                <div class="projects"><a href="/pages/ProjectsPage.html">Projects</a></div>
+                <div class="music"><a href="pages/MusicPage.html">Music</a></div>
+                <div class="contact"><a href="/pages/ContactPage.html">Contact & CV</a></div>
+            </div>
+            <ul class="Menu" id="Menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/pages/AboutMePage.html">About Me</a></li>
+                <li><a href="/pages/ProjectsPage.html">Projects</a></li>
+                <li><a href="pages/MusicPage.html">Music</a></li>
+                <li><a href="/pages/ContactPage.html">Contact & CV</a></li>
+                <a class="Close" href="#">
+                    <span class="material-icons">
+                        close
+                    </span>
+                </a>
+            </ul>
+            <a class="Hamburger" href="#Menu">
                 <span class="material-icons">
-                    close
+                    menu
                 </span>
             </a>
-        </ul>
-        <a class="Hamburger" href="#Menu">
-            <span class="material-icons">
-                menu
-            </span>
-        </a>
-    </header>
+        </header>
 
-    <div class="PageContainer">
-        <div class="AMC">
-            <a href="/pages/AboutMePage.html">
-                <span>About Me Page</span>
-                <img class="ABMImg" src="Images/ABMImg.png" alt="">
-            </a>
+        <div class="homeContainer">
+            <div class="container introContainer hidden">
+                <div class="proxBar"></div>
+                <img class="selfie"
+                    src="Images/portfolio_selfie.jpg"
+                    alt="Picture of me">
+                <div class="introTextContainer">
+                    <h1 class="container introHeader">Hello, my name is Omorian</h1>
+                    <h3 class="introSubHeader">I am a game developer from the Netherlands <br>with a passion for programming and sound design/music production.</h3>
+                    <a class="button aboutMeButton" href="/pages/AboutMePage.html">
+                        <span class="abmt">Learn more about me</span>
+                        <i class="material-icons">
+                            keyboard_double_arrow_right
+                        </i>
+                    </a>
+
+                    <a class="button projectsButton" href="#projectsContainer">
+                        <span class="projects">Programming projects</span>
+                        <i class="material-icons">
+                            keyboard_double_arrow_down
+                        </i>
+                    </a>
+
+                    <a class="button musicButton" href="#musicContainer">
+                        <span class="projects">Soundtracks / songs</span>
+                        <i class="material-icons">
+                            keyboard_double_arrow_down
+                        </i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container projectsContainer hidden" id="projectsContainer">
+                <div class="proxBar"></div>
+                <h1>Programming Projects</h1>
+                <div class="progProjects">
+                    <figure class="proj TTD">
+                        <a class="" href="https://shreddexz.itch.io/time-to-die" target="_blank">
+                            <img src="Images/TTD_Img2.png"/>
+                            <figcaption> An endless shooter with audio visualization
+                                <i class="material-icons">arrow_outward</i>
+                            </figcaption>
+                        </a>
+                        <div class="hoverBorder"></div>
+                    </figure>
+
+                    <figure class="proj TUE">
+                        <a class="" href="https://jusawichan.itch.io/the-unseeing-eye" target="_blank">
+                            <img src="Images/tue.png"/>
+                            <figcaption> A horror game in which you "see" with sound [GGJ 2022]
+                                <i class="material-icons">arrow_outward</i>
+                            </figcaption>
+                        </a>
+                        <div class="hoverBorder"></div>
+                    </figure>
+
+                    <figure class="proj IRT">
+                        <a class="" href="https://jusawichan.itch.io/i-remember-this" target="_blank">
+                            <img src="Images/irt.png"/>
+                            <figcaption>You wake up in a crashed car, and have to figure out
+                        what happened [GGJ 2021]
+                                <i class="material-icons">arrow_outward</i>
+                            </figcaption>
+                        </a>
+                        <div class="hoverBorder"></div>
+                    </figure>
+
+                    <figure class="proj TLS">
+                        <a class="" href="https://shreddexz.itch.io/the-last-scientist" target="_blank">
+                            <img src="Images/tls.png"/>
+                            <figcaption>
+                    You wake up in a dark room, and you have no idea what happened.
+                    <br> You are alone and have to figure it out by yourself.
+                                <i class="material-icons">arrow_outward</i>
+                            </figcaption>
+                        </a>
+                        <div class="hoverBorder"></div>
+                    </figure>
+
+                    <a class="button projectsButton" href="/pages/ProjectsPage.html">
+                        <span class="projects">More projects</span>
+                        <i class="material-icons">
+                            keyboard_double_arrow_right
+                        </i>
+                    </a>
+                </div> <!-- closing tag for project container -->
+            </div>
+
+            <div class="container musicContainer hidden" id="musicContainer">
+                <div class="proxBar"></div>
+                <h1>Soundtracks / songs</h1>
+                <div class="tracks">
+                    <div class="track spiritFox">
+                        <iframe class="song" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1440776236&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    </div>
+                    
+                    <div class="track internship">
+                        <iframe class="song" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1564467463%3Fsecret_token%3Ds-6UkMSG8oT0P&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    </div>
+
+
+                    <div class="track the-unseeing-eye">
+                        <iframe class="song" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1388165524&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    </div>
+
+                    <a class="button musicButton" href="/pages/MusicPage.html">
+                        <span class="projects">More songs</span>
+                        <i class="material-icons">
+                            keyboard_double_arrow_right
+                        </i>
+                    </a>
+                </div> <!-- closing tag for music container -->
+            </div>
         </div>
-
-        <div class="PJC">
-            <a href="/pages/ProjectsPage.html">
-                <span>Projects Page</span>
-                <img class="ProjectImg" src="Images/unreal.png" alt="">
-            </a>
-        </div>
-
-        <div class="MC">
-            <a class="MPC" href="/pages/MusicPage.html">
-                <span>Music Page</span>
-                <img class="MusicImg" src="Images/daw.png" alt="">
-            </a>
-        </div>
-
-        <div class="CCVC">
-            <a href="/pages/ContactPage.html">
-                <span>Contact & CV</span>
-                <img class="CCVCImage" src="Images/ContactImage.png" alt="">
-            </a>
-        </div>
-    </div>
-</body>
-
+    </body>
 </html>
