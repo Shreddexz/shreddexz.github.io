@@ -99,12 +99,14 @@ html{
             font-size: 2rem;
             letter-spacing: $p_letterSpacing;
             padding-left: $gapSize;
+            opacity: 1;
         }
 
         .material-icons{
             align-self: center;
             margin-right: $gapSize;
             font-size: 2rem;
+            opacity: 1;
         }
 
         &:hover{
@@ -185,12 +187,14 @@ html{
             font-size: 2rem;
             letter-spacing: $p_letterSpacing;
             padding-left: $gapSize;
+            opacity: 1;
         }
 
         .material-icons{
             align-self: center;
             margin-right: $gapSize;
             font-size: 2rem;
+            opacity: 1;
         }
 
         &:hover{
@@ -306,12 +310,14 @@ html{
             font-size: 2rem;
             letter-spacing: $p_letterSpacing;
             padding-left: $gapSize;
+            opacity: 1;
         }
 
         .material-icons{
             align-self: center;
             margin-right: $gapSize;
             font-size: 2rem;
+            opacity: 1;
         }
 
         &:hover{
@@ -620,8 +626,9 @@ html{
 @media screen and (max-width: 811px) {
     .selfie{
         position: absolute;
+        top: 24vh;
         right: $gapSize;
-        bottom: 20vh;
+        align-self: center;
         width: 35%;
         height: auto;
     }
@@ -629,6 +636,9 @@ html{
     .introContainer{
         .introHeader{
             text-align: center;
+        }
+         .introSubHeader{
+            margin-top: -4rem;
         }
 
         .aboutMeButton{
@@ -676,17 +686,28 @@ html{
 }
 
 @media screen and (max-width: 501px){
+    .selfie{
+        top: 22vh;
+        align-self: center;
+        right: initial;
+        margin-left: 7vw;
+    }
 
     .introContainer{
         padding-top: 0px;
+        align-content: center;
+        justify-content: center;
         .introHeader{
             text-align: center;
         }
 
+        .aboutMeButton{
+            margin-top: 30vh;
+        }
+
         .button{
             width: 40vw;
-            margin-left: -45vw;
-
+            margin-left: initial;
             span, .material-icons{
                 font-size: x-small;
                 align-self: center;

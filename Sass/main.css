@@ -877,14 +877,16 @@ html {
   text-align: center;
   font-size: 2rem;
   letter-spacing: 0.3px;
-  padding-left: 2em; }
+  padding-left: 2em;
+  opacity: 1; }
 
 .introTextContainer .button .material-icons {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
   margin-right: 2em;
-  font-size: 2rem; }
+  font-size: 2rem;
+  opacity: 1; }
 
 .introTextContainer .button:hover {
   cursor: pointer;
@@ -982,14 +984,16 @@ html {
   text-align: center;
   font-size: 2rem;
   letter-spacing: 0.3px;
-  padding-left: 2em; }
+  padding-left: 2em;
+  opacity: 1; }
 
 .progProjects .button .material-icons {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
   margin-right: 2em;
-  font-size: 2rem; }
+  font-size: 2rem;
+  opacity: 1; }
 
 .progProjects .button:hover {
   cursor: pointer;
@@ -1121,14 +1125,16 @@ html {
   text-align: center;
   font-size: 2rem;
   letter-spacing: 0.3px;
-  padding-left: 2em; }
+  padding-left: 2em;
+  opacity: 1; }
 
 .tracks .button .material-icons {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
   margin-right: 2em;
-  font-size: 2rem; }
+  font-size: 2rem;
+  opacity: 1; }
 
 .tracks .button:hover {
   cursor: pointer;
@@ -1341,12 +1347,17 @@ html {
 @media screen and (max-width: 811px) {
   .selfie {
     position: absolute;
+    top: 24vh;
     right: 2em;
-    bottom: 20vh;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
     width: 35%;
     height: auto; }
   .introContainer .introHeader {
     text-align: center; }
+  .introContainer .introSubHeader {
+    margin-top: -4rem; }
   .introContainer .aboutMeButton {
     padding-top: -10vh; }
   .introContainer .button {
@@ -1379,13 +1390,27 @@ html {
     height: 30vw; } }
 
 @media screen and (max-width: 501px) {
+  .selfie {
+    top: 22vh;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    right: initial;
+    margin-left: 7vw; }
   .introContainer {
-    padding-top: 0px; }
+    padding-top: 0px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .introContainer .introHeader {
     text-align: center; }
+  .introContainer .aboutMeButton {
+    margin-top: 30vh; }
   .introContainer .button {
     width: 40vw;
-    margin-left: -45vw; }
+    margin-left: initial; }
   .introContainer .button span, .introContainer .button .material-icons {
     font-size: x-small;
     -ms-flex-item-align: center;
