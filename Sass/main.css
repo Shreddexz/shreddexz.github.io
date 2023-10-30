@@ -259,7 +259,6 @@
   display: grid;
   -webkit-column-gap: 8px;
   column-gap: 8px;
-  row-gap: 20px;
   margin-top: 10vh;
   margin-left: 5vw;
   -ms-grid-rows: 5vh 35vh [2];
@@ -850,8 +849,8 @@ html {
   align-self: center;
   justify-self: center;
   color: white;
-  width: 30vw;
-  height: 8vw;
+  width: 15vw;
+  height: 4vw;
   margin-top: 1rem;
   border: none;
   border-radius: 0.5em;
@@ -898,7 +897,7 @@ html {
   color: black; }
 
 .introTextContainer .aboutMeButton {
-  margin-top: 5vh;
+  margin-top: 15vh;
   background-color: #00952d; }
 
 .introTextContainer .projectsButton {
@@ -1335,13 +1334,13 @@ html {
     -ms-grid-row-align: center;
     align-self: center; }
   .musicContainer .tracks {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-flex-direction: row;
+    flex-direction: row;
     place-content: center; }
   .musicContainer .track {
-    width: 30vw;
+    width: 100%;
     height: 30vw; } }
 
 @media screen and (max-width: 811px) {
@@ -1379,19 +1378,17 @@ html {
   .musicContainer .button .material-icons {
     margin-right: 1rem; }
   .musicContainer .tracks {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     place-content: center;
-    margin-top: -5vh; }
-  .musicContainer .track {
-    width: 30vw;
-    height: 30vw; } }
+    margin-top: -5vh; } }
+
+@media screen and (max-width: 541px) {
+  .proj figcaption {
+    width: 200%;
+    margin-left: -50%; } }
 
 @media screen and (max-width: 501px) {
   .selfie {
-    top: 22vh;
+    top: 40vh;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
@@ -1403,7 +1400,11 @@ html {
     align-content: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
   .introContainer .introHeader {
     text-align: center; }
   .introContainer .aboutMeButton {
@@ -1419,13 +1420,26 @@ html {
     -ms-grid-column-align: center;
     justify-self: center;
     overflow: visible;
-    opacity: 1; } }
+    opacity: 1; }
+  .projectsContainer .button span, .projectsContainer .button .material-icons {
+    padding-left: 5%; }
+  .musicContainer {
+    height: calc(100vh * 2); }
+  .musicContainer .button span, .musicContainer .button .material-icons {
+    padding-left: 5%;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center; }
+  .musicContainer .tracks {
+    margin-top: 0px; }
+  .musicContainer .track {
+    height: 20rem; } }
 
 @media screen and (max-width: 361px) {
   .selfie {
     position: absolute;
     right: .1rem;
-    bottom: 23.3vh; }
+    top: 58vh; }
   .introContainer {
     padding-top: 0px; }
   .introContainer .introHeader {
@@ -1478,10 +1492,7 @@ html {
     place-content: center;
     margin-top: 20vh;
     width: calc((2.5 * 20vw));
-    height: calc((2.5 * 20vw)); }
-  .musicContainer .track {
-    width: 100%;
-    height: 100%; } }
+    height: calc((2.5 * 20vw)); } }
 
 html,
 body {
