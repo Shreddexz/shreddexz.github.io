@@ -23,7 +23,7 @@ html{
 .container{
     scroll-snap-align: start;
     margin-top: 0px;
-    padding-top: 75px;
+    padding-top: 25px;
     position: relative;
 
     .proxBar{
@@ -43,22 +43,99 @@ html{
     height: $windowHeight;
     width: $windowWidth; 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     background-color: $primary;
     justify-content: center;
     align-content:center;
-}
+    place-content: center;
 
-.selfie{
-    height: 80%;
-    width: auto;
-    padding-right: $gapSize;
+    .contentWrapper{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 8rem;
+        width: 80%;
+        height: 50%;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        align-content: center;
+
+        .buttonWrapper{
+            align-content: center;
+            justify-content: center;
+            width: 15vw;
+
+            .button{
+                align-self: center;
+                justify-self: center;
+                color: white;
+                width: 15vw;
+                height: 4vw;
+                margin-top: 1rem;
+                border: none;
+                border-radius: 0.5em;
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+                font-weight: bold;
+                text-decoration: none;
+                font-size: auto;
+                transition: all $animTime;
+
+                span{
+                    width: 90%;
+                    align-self: center;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    letter-spacing: $p_letterSpacing;
+                    padding-left: $gapSize;
+                    opacity: 1;
+                }
+
+                .material-icons{
+                    align-self: center;
+                    margin-right: $gapSize;
+                    font-size: 1.5rem;
+                    opacity: 1;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    border: 0.1em solid black;
+                    transition: all $animTime;
+
+                    &>*{
+                        color: black;
+                    }
+                }
+            }
+
+            .aboutMeButton{
+                margin-top: 15vh;
+                background-color: $quaternary;
+            }
+
+            .projectsButton{
+                background-color: $secondary;
+            }
+
+            .musicButton{
+                background-color: $quinary;
+            }
+        }
+
+        .selfie{
+            aspect-ratio: 3 / 4;
+            height: 50vh;
+            width: auto;
+        }
+    }
 }
 
 .introTextContainer{
     display: flex;
     flex-direction: column;
-    padding-top: 5vh;
+    margin-top: -10vh;
     padding-right: $gapSize;
     padding-left: $gapSize;
 
@@ -66,6 +143,7 @@ html{
         color: black;
         font-size: 5em;
         letter-spacing: $h_letterSpacing;
+        align-self: center;
     }
 
     .introSubHeader{
@@ -73,65 +151,10 @@ html{
         font-size: 2em;
         margin-top: -5vh;
         letter-spacing: $p_letterSpacing;
-    }
-
-    .button{
         align-self: center;
-        justify-self: center;
-        color: white;
-        width: 15vw;
-        height: 4vw;
-        margin-top: 1rem;
-        border: none;
-        border-radius: 0.5em;
-        display: flex;
-        flex-direction: row;
-        text-align: left;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: auto;
-        transition: all $animTime;
-
-        span{
-            width: 90%;
-            align-self: center;
-            text-align: center;
-            font-size: 2rem;
-            letter-spacing: $p_letterSpacing;
-            padding-left: $gapSize;
-            opacity: 1;
-        }
-
-        .material-icons{
-            align-self: center;
-            margin-right: $gapSize;
-            font-size: 2rem;
-            opacity: 1;
-        }
-
-        &:hover{
-            cursor: pointer;
-            border: 0.1em solid black;
-            transition: all $animTime;
-
-            &>*{
-                color: black;
-            }
-        }
+        text-align: center;
     }
 
-    .aboutMeButton{
-        margin-top: 15vh;
-        background-color: $quaternary;
-    }
-
-    .projectsButton{
-        background-color: $secondary;
-    }
-
-    .musicButton{
-        background-color: $quinary;
-    }
 }
 
 .projectsContainer{
@@ -624,31 +647,42 @@ html{
 }
 
 @media screen and (max-width: 811px) {
-    .selfie{
-        position: absolute;
-        top: 24vh;
-        right: $gapSize;
-        align-self: center;
-        width: 35%;
-        height: auto;
-    }
+    // .selfie{
+    //     position: absolute;
+    //     top: 24vh;
+    //     right: $gapSize;
+    //     align-self: center;
+    //     width: 35%;
+    //     height: auto;
+    // }
 
     .introContainer{
         .introHeader{
             text-align: center;
         }
-         .introSubHeader{
+        .introSubHeader{
             margin-top: -4rem;
         }
 
-        .aboutMeButton{
-            padding-top: -10vh;
+        .contentWrapper{
+            width: 100%;
+
+            .buttonWrapper{
+                justify-self: center;
+
+                .button{
+                    width: 40vw;
+                    height: 4rem;
+                }
+            }
+
+            .selfie{
+                height: 30vh;
+                align-self: center;
+                margin-left: 8rem;
+            }
         }
 
-        .button{
-            width: 40vw;
-            margin-left: -45vw;
-        }
     }
 
     .projectsContainer{
@@ -673,20 +707,44 @@ html{
 
 
         .tracks{
-            // flex-direction: row;
             place-content: center;
             margin-top: -5vh;
         }
-
-        // .track{
-        //     width: 100%;
-        //     height: 30vw;
-        // }
     }
 }
 
 @media screen and (max-width: 541px) {
-.proj{
+    .introContainer{
+        .introHeader{
+            // margin-top: 75px;
+        }
+
+        .contentWrapper{
+            flex-direction: column;
+            gap: 0px;
+
+            .buttonWrapper{
+                align-self: center;
+                justify-self: center;
+                margin-right: 25vw;
+
+                .button{
+                    span, .material-icons{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .selfie{
+                margin-left: 0px;
+                // margin-top: -50vh;
+                top: 5rem;
+                height: 15rem; 
+            }
+        }
+    }
+
+    .proj{
         figcaption{
             width: 200%;
             margin-left: -50%;
@@ -703,28 +761,12 @@ html{
     }
 
     .introContainer{
-        padding-top: 0px;
+        padding-top: 75px;
         align-content: center;
         justify-content: center;
         flex-direction: column;
         .introHeader{
             text-align: center;
-        }
-
-        .aboutMeButton{
-            margin-top: 30vh;
-        }
-
-        .button{
-            width: 40vw;
-            margin-left: initial;
-            span, .material-icons{
-                font-size: x-small;
-                align-self: center;
-                justify-self: center;
-                overflow: visible;
-                opacity: 1;
-            }
         }
     }
 
@@ -737,7 +779,7 @@ html{
     }
 
     .musicContainer{
-        height: calc(#{$windowHeight} * 2);
+        height: calc(#{$windowHeight} * 1.5);
 
         .button{
             span, .material-icons{
@@ -747,7 +789,7 @@ html{
         }
 
         .tracks{
-            margin-top: 0px;
+            padding-top: 0px;
         }
 
         .track{
