@@ -83,20 +83,24 @@ html{
                 transition: all $animTime;
 
                 span{
-                    width: 90%;
+                    width: 80%;
                     align-self: center;
                     text-align: center;
                     font-size: 1.5rem;
                     letter-spacing: $p_letterSpacing;
-                    padding-left: $gapSize;
+                    // padding-left: $gapSize;
+                    word-wrap: break-word;
                     opacity: 1;
                 }
 
                 .material-icons{
                     align-self: center;
-                    margin-right: $gapSize;
                     font-size: 1.5rem;
                     opacity: 1;
+                }
+
+                span,.material-icons{
+                    margin: 0 auto;
                 }
 
                 &:hover{

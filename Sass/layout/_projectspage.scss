@@ -1,353 +1,168 @@
+$projectWidth: 25vw;
+$zoomMulti: 1.1;
+
 .GamesContainer {
     width: 90vw;
-    height: 85vh;
-    display: grid;
-    column-gap: 8px;
-    // row-gap: 20px;
-    margin-top: 10vh;
-    margin-left: 5vw;
-    grid-template-rows: 5vh repeat(2, 35vh);
-    grid-template-columns: repeat(3, 1fr);
-    background-color: $CustomGrey;
-}
+    height: 100% auto;
+    display: flex;
+    background-color: $primary;
+    margin: 0 auto;
+    margin-top: 56px;
+    padding-bottom: 50px;
 
-.PText {
-    text-align: center;
-    color: white;
-    font-size: xx-large;
-    height: 45px;
-    width: 90vw;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    background-color: $CalmBlue;
-    grid-row: 1;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.question {
-    position: relative;
-    height: 45px;
-    width: 45px;
-    grid-row: 1;
-    grid-column-start: 3;
-    grid-column-end: 3;
-    cursor: pointer;
-    justify-self: center;
-    align-self: center;
-    opacity: 0;
-    text-decoration: none;
-    color: white;
-}
-
-.questionPanel {
-    // margin-top: 10vh;
-    position: fixed;
-    width: 100%;
-    background-color: $CalmBlue;
-    text-align: center;
-    z-index: 91;
-    transform: translateY(-180%);
-
-    p {
+    h1{
+        font-family: $headerFont;
         color: white;
+        position: absolute;
+        width: 90vw;
+        text-align: center;
+        top: 60px;
+        z-index: 50;
     }
 
-    h1 {
-        color: black;
-    }
+    .contentContainer{
+        width: auto;
+        height: 80vh auto;
+        margin: 0 auto;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
 
-    .CloseButton {
-        text-decoration: none;
-        color: black;
-        font-size: x-large;
-        font-weight: bold;
-    }
-
-    &:target {
-        transition: transform 0.2s;
-        transform: translateY(-20%);
-    }
-}
-
-.GameOne,
-.GameTwo,
-.GameThree,
-.GameFour,
-.GameFive,
-.GameSix {
-    position: relative;
-    width: 100%;
-    background-color: black;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.2vh;
-    margin-bottom: calc(100% / (16 / 9));
-    border-radius: $cornerRadius;
-    overflow: hidden;
-}
-
-.TUE,
-.TD,
-.IRT,
-.QOTH,
-.TLS,
-.TTD {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: black;
-}
-
-.TUEImg,
-.TDImg,
-.IRTImg,
-.QOTHImg,
-.TLSImg,
-.TTDImg {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.TUEOverlay,
-.TDOverlay,
-.IRTOverlay,
-.QOTHOverlay,
-.TLSOverlay,
-.TTDOverlay {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.607);
-    color: #f1f1f199;
-    // width: 27.75vw;
-    width: 95%;
-    transition: 0.6s ease;
-    opacity: 0;
-    color: black;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-    bottom: 0;
-    z-index: 2;
-}
-
-.G1Popup,
-.G2Popup,
-.G3Popup,
-.G4Popup,
-.G5Popup,
-.G6Popup {
-    text-align: center;
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 50vw;
-    position: relative;
-    transition: all 500ms ease-in-out;
-
-    .CloseButton {
-        text-decoration: none;
-        color: red;
-        font-size: xx-large;
-        font-weight: bold;
-    }
-
-    h2 {
-        font-size: xx-large;
-    }
-}
-
-.ProjectOverlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $PopupBackground;
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1;
-
-    &:target {
-        visibility: visible;
-        opacity: 1;
-        z-index: 2;
-    }
-}
-
-/*#region GameVariables*/
-
-.GameOne {
-    grid-column: 1/2;
-
-    &:hover .TUEOverlay {
-        opacity: 1;
-    }
-}
-
-.GameTwo {
-    grid-column: 2/3;
-
-    &:hover .TDOverlay {
-        opacity: 1;
-    }
-}
-
-.GameThree {
-    grid-column: 3;
-
-    &:hover .IRTOverlay {
-        opacity: 1;
-    }
-}
-
-.GameFour {
-    grid-column: 1/2;
-    grid-row: 3;
-
-    &:hover .QOTHOverlay {
-        opacity: 1;
-    }
-}
-
-.GameFive {
-    grid-column: 2/3;
-    grid-row: 3;
-
-    &:hover .TLSOverlay {
-        opacity: 1;
-    }
-}
-
-.GameSix {
-    grid-column: 3;
-    grid-row: 3;
-
-    &:hover .TTDOverlay {
-        opacity: 1;
-    }
-}
-
-/*#endregion GameVariables*/
-
-/*#region Media 900px*/
-@media screen and (max-width: 900px) {
-    .question {
-        opacity: 1;
-        transition: $animTime;
-
-        &:hover {
-            color: black;
+        .Game{
+            width: 100%;
+            height: calc(#{$projectWidth} / (16 / 9));
+            border-radius: $cornerRadius;
+            border: 0.1em solid black;
+            overflow: hidden;
             transition: $animTime;
+            box-shadow: $dropShadow;
+
+            &:hover{
+                border: 0.1em solid white;
+                transition: $animTime;
+                scale: $zoomMulti;
+            }
+
+            .content{
+                transition: $animTime;
+                display: flex;
+                flex-direction: row;
+                background-color: $secondary;
+                width: 100%;
+                height: 100%;
+
+                &:hover{
+                    background-color: $quaternary;
+                }
+
+                pointer-events: auto;
+
+                a{
+                    width: calc(2 * #{projectWidth});
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+                    text-decoration: none;
+                    &:hover{
+                        .description{
+                            color: black;
+                            transition: $animTime;
+                            h2{
+                                color: white;
+                                transition: $animTime;
+                            }
+                        }
+                    }
+                }
+
+                .description{
+                    width: auto;
+                    height: 90%;
+                    margin-top: calc(#{$projectWidth} / (16 / 9) / 3);
+                    color: white;
+                    display: inline;
+                    font-family: $textFont;
+                    letter-spacing: $p_letterSpacing;
+                    transition: $animTime;
+                    overflow: hidden;
+
+                    h2{
+                        font-family: $titleFont;
+                        margin: 0;
+                        color: black;
+                        transition: $animTime;
+                        letter-spacing: $h_letterSpacing;
+                    }
+                }
+
+
+                .image{
+                    background-color: black;
+                    width: $projectWidth;
+                    height: calc(#{$projectWidth} / (16 / 9));
+                    object-fit: cover;
+                    transition: $animTime;
+                    border-radius: 0 $cornerRadius $cornerRadius 0;
+                }
+            }
         }
-    }
-
-    .GamesContainer {
-        height: auto;
-        grid-template-rows: 5vh repeat(3, 28vh);
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .GameOne {
-        grid-row: auto;
-        grid-column: 1/2;
-    }
-
-    .GameTwo {
-        grid-row: auto;
-        grid-column: 2;
-    }
-
-    .GameThree {
-        grid-row: auto;
-        grid-column: 1/2;
-    }
-
-    .GameFour {
-        grid-row: auto;
-        grid-column: 2;
-    }
-
-    .GameFive {
-        grid-row: auto;
-        grid-column: 1/2;
-    }
-
-    .GameSix {
-        grid-row: auto;
-        grid-column: 2;
-    }
-
-    .GameOne,
-    .GameTwo,
-    .GameThree,
-    .GameFour,
-    .GameFive,
-    .GameSix {
-        margin-left: 6vw;
     }
 }
 
-/*#endregion*/
+@media screen and (max-width: 1280px) {
+.GamesContainer{
+        .contentContainer{
+            .Game{
+                width: 95%;
+                height: calc(1.5 * #{$projectWidth} / (16 / 9));
+                align-self: center;
 
-/*#region 500px*/
-@media screen and (max-width: 500px) {
-    .GamesContainer {
-        column-gap: 0px;
-        height: auto;
-        grid-template-rows: 7vh repeat(6, 28vh);
-        grid-template-columns: 1fr;
-        row-gap: 15px;
-    }
+                .content{
+                    height: 100%;
+                    .description{
+                        width: clamp(20vw, auto, 50vw);
+                        font-size: 2.2vmin;
+                        margin-top: calc(#{$projectWidth} / (16 / 9) / 6);
+                    }
 
-    .GameOne {
-        grid-row: auto;
-        grid-column: 1;
-    }
-
-    .GameTwo {
-        grid-row: auto;
-        grid-column: 1;
-    }
-
-    .GameThree {
-        grid-row: auto;
-        grid-column: 1;
-    }
-
-    .GameFour {
-        grid-row: auto;
-        grid-column: 1;
-    }
-
-    .GameFive {
-        grid-row: auto;
-        grid-column: 1;
-    }
-
-    .GameSix {
-        grid-row: auto;
-        grid-column: 1;
-    }
-
-    .questionPanel {
-        &:target {
-            transition: transform 0.2s;
-            transform: translateY(-5%);
+                    .image{
+                        width: calc(1.5 * #{$projectWidth});
+                        height: calc(1.5 * #{$projectWidth} / (16 / 9));
+                        flex-shrink: 0;
+                    }
+                }
+            }
         }
-    }
-
-    .GameOne,
-    .GameTwo,
-    .GameThree,
-    .GameFour,
-    .GameFive,
-    .GameSix {
-        margin-left: 5vw;
     }
 }
 
-/*#endregion*/
+@media screen and (max-width: 1000px){
+.GamesContainer{
+        .contentContainer{
+            .Game{
+                height: calc(2 * #{$projectWidth} / (16 / 9));
+                align-self: center;
+
+                .content{
+                    height: 100%;
+                    // height: clamp(2 * #{$projectWidth} / (16 / 9), 100%, 100%);
+                    .description{
+                        width: clamp(20vw, auto, 50vw);
+                        font-size: 2.2vmin;
+                        margin-top: calc(#{$projectWidth} / (16 / 9) / 6);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .image{
+                        width: calc(2 * #{$projectWidth});
+                        height: calc(2 * #{$projectWidth} / (16 / 9));
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+}
