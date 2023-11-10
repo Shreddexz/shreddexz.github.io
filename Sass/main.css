@@ -222,294 +222,132 @@
 
 .GamesContainer {
   width: 90vw;
-  height: 85vh;
-  display: grid;
-  -moz-column-gap: 8px;
-  column-gap: 8px;
-  margin-top: 10vh;
-  margin-left: 5vw;
-  grid-template-rows: 5vh repeat(2, 35vh);
-  grid-template-columns: repeat(3, 1fr);
-  background-color: #616e75; }
+  height: 100% auto;
+  display: flex;
+  background-color: #00a2ff;
+  margin: 0 auto;
+  margin-top: 56px;
+  padding-bottom: 50px; }
 
-.PText {
-  text-align: center;
+.GamesContainer h1 {
+  font-family: "Dela Gothic One", cursive;
   color: white;
-  font-size: xx-large;
-  height: 45px;
+  position: absolute;
   width: 90vw;
-  grid-column-start: 1;
-  grid-column-end: 6;
-  background-color: #00a2ff;
-  grid-row: 1;
-  text-decoration: underline;
-  font-weight: bold; }
-
-.question {
-  position: relative;
-  height: 45px;
-  width: 45px;
-  grid-row: 1;
-  grid-column-start: 3;
-  grid-column-end: 3;
-  cursor: pointer;
-  justify-self: center;
-  align-self: center;
-  opacity: 0;
-  text-decoration: none;
-  color: white; }
-
-.questionPanel {
-  position: fixed;
-  width: 100%;
-  background-color: #00a2ff;
   text-align: center;
-  z-index: 91;
-  transform: translateY(-180%); }
+  top: 60px;
+  z-index: 50; }
 
-.questionPanel p {
-  color: white; }
+.GamesContainer .contentContainer {
+  width: auto;
+  height: 80vh auto;
+  margin: 0 auto;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem; }
 
-.questionPanel h1 {
-  color: black; }
-
-.questionPanel .CloseButton {
-  text-decoration: none;
-  color: black;
-  font-size: x-large;
-  font-weight: bold; }
-
-.questionPanel:target {
-  transition: transform 0.2s;
-  transform: translateY(-20%); }
-
-.GameOne,
-.GameTwo,
-.GameThree,
-.GameFour,
-.GameFive,
-.GameSix {
-  position: relative;
+.GamesContainer .contentContainer .Game {
   width: 100%;
-  background-color: black;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.2vh;
-  margin-bottom: 56.25%;
+  height: calc(25vw / (16 / 9));
   border-radius: 0.5em;
-  overflow: hidden; }
+  border: 0.1em solid black;
+  overflow: hidden;
+  transition: 0.2s;
+  box-shadow: 0px 8px 20px 0px; }
 
-.TUE,
-.TD,
-.IRT,
-.QOTH,
-.TLS,
-.TTD {
+.GamesContainer .contentContainer .Game:hover {
+  border: 0.1em solid white;
+  transition: 0.2s;
+  scale: 1.1; }
+
+.GamesContainer .contentContainer .Game .content {
+  transition: 0.2s;
+  display: flex;
+  flex-direction: row;
+  background-color: #008cb3;
   width: 100%;
   height: 100%;
-  text-decoration: none;
-  color: black; }
+  pointer-events: auto; }
 
-.TUEImg,
-.TDImg,
-.IRTImg,
-.QOTHImg,
-.TLSImg,
-.TTDImg {
-  max-width: 100%;
-  max-height: 100%; }
+.GamesContainer .contentContainer .Game .content:hover {
+  background-color: #00952d; }
 
-.TUEOverlay,
-.TDOverlay,
-.IRTOverlay,
-.QOTHOverlay,
-.TLSOverlay,
-.TTDOverlay {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.607);
-  color: rgba(241, 241, 241, 0.6);
-  width: 95%;
-  transition: 0.6s ease;
-  opacity: 0;
+.GamesContainer .contentContainer .Game .content a {
+  width: calc(2 * projectWidth);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-decoration: none; }
+
+.GamesContainer .contentContainer .Game .content a:hover .description {
   color: black;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-  bottom: 0;
-  z-index: 2; }
+  transition: 0.2s; }
 
-.G1Popup,
-.G2Popup,
-.G3Popup,
-.G4Popup,
-.G5Popup,
-.G6Popup {
-  text-align: center;
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 50vw;
-  position: relative;
-  transition: all 500ms ease-in-out; }
+.GamesContainer .contentContainer .Game .content a:hover .description h2 {
+  color: white;
+  transition: 0.2s; }
 
-.G1Popup .CloseButton,
-.G2Popup .CloseButton,
-.G3Popup .CloseButton,
-.G4Popup .CloseButton,
-.G5Popup .CloseButton,
-.G6Popup .CloseButton {
-  text-decoration: none;
-  color: red;
-  font-size: xx-large;
-  font-weight: bold; }
+.GamesContainer .contentContainer .Game .content .description {
+  width: auto;
+  height: 90%;
+  margin-top: calc(25vw / (16 / 9) / 3);
+  color: white;
+  display: inline;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.3px;
+  transition: 0.2s;
+  overflow: hidden; }
 
-.G1Popup h2,
-.G2Popup h2,
-.G3Popup h2,
-.G4Popup h2,
-.G5Popup h2,
-.G6Popup h2 {
-  font-size: xx-large; }
+.GamesContainer .contentContainer .Game .content .description h2 {
+  font-family: "Cinzel", serif;
+  margin: 0;
+  color: black;
+  transition: 0.2s;
+  letter-spacing: -1px; }
 
-.ProjectOverlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(109, 98, 98, 0.485);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 1; }
+.GamesContainer .contentContainer .Game .content .image {
+  background-color: black;
+  width: 25vw;
+  height: calc(25vw / (16 / 9));
+  object-fit: cover;
+  transition: 0.2s;
+  border-radius: 0 0.5em 0.5em 0; }
 
-.ProjectOverlay:target {
-  visibility: visible;
-  opacity: 1;
-  z-index: 2; }
+@media screen and (max-width: 1280px) {
+  .GamesContainer .contentContainer .Game {
+    width: 95%;
+    height: calc(1.5 * 25vw / (16 / 9));
+    align-self: center; }
+  .GamesContainer .contentContainer .Game .content {
+    height: 100%; }
+  .GamesContainer .contentContainer .Game .content .description {
+    width: clamp(20vw, auto, 50vw);
+    font-size: 2.2vmin;
+    margin-top: calc(25vw / (16 / 9) / 6); }
+  .GamesContainer .contentContainer .Game .content .image {
+    width: calc(1.5 * 25vw);
+    height: calc(1.5 * 25vw / (16 / 9));
+    flex-shrink: 0; } }
 
-/*#region GameVariables*/
-.GameOne {
-  grid-column: 1/2; }
+@media screen and (max-width: 1000px) {
+  .GamesContainer .contentContainer .Game {
+    height: calc(2 * 25vw / (16 / 9));
+    align-self: center; }
+  .GamesContainer .contentContainer .Game .content {
+    height: 100%; }
+  .GamesContainer .contentContainer .Game .content .description {
+    width: clamp(20vw, auto, 50vw);
+    font-size: 2.2vmin;
+    margin-top: calc(25vw / (16 / 9) / 6);
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .GamesContainer .contentContainer .Game .content .image {
+    width: calc(2 * 25vw);
+    height: calc(2 * 25vw / (16 / 9));
+    flex-shrink: 0; } }
 
-.GameOne:hover .TUEOverlay {
-  opacity: 1; }
-
-.GameTwo {
-  grid-column: 2/3; }
-
-.GameTwo:hover .TDOverlay {
-  opacity: 1; }
-
-.GameThree {
-  grid-column: 3; }
-
-.GameThree:hover .IRTOverlay {
-  opacity: 1; }
-
-.GameFour {
-  grid-column: 1/2;
-  grid-row: 3; }
-
-.GameFour:hover .QOTHOverlay {
-  opacity: 1; }
-
-.GameFive {
-  grid-column: 2/3;
-  grid-row: 3; }
-
-.GameFive:hover .TLSOverlay {
-  opacity: 1; }
-
-.GameSix {
-  grid-column: 3;
-  grid-row: 3; }
-
-.GameSix:hover .TTDOverlay {
-  opacity: 1; }
-
-/*#endregion GameVariables*/
-/*#region Media 900px*/
-@media screen and (max-width: 900px) {
-  .question {
-    opacity: 1;
-    transition: 0.2s; }
-  .question:hover {
-    color: black;
-    transition: 0.2s; }
-  .GamesContainer {
-    height: auto;
-    grid-template-rows: 5vh repeat(3, 28vh);
-    grid-template-columns: repeat(2, 1fr); }
-  .GameOne {
-    grid-row: auto;
-    grid-column: 1/2; }
-  .GameTwo {
-    grid-row: auto;
-    grid-column: 2; }
-  .GameThree {
-    grid-row: auto;
-    grid-column: 1/2; }
-  .GameFour {
-    grid-row: auto;
-    grid-column: 2; }
-  .GameFive {
-    grid-row: auto;
-    grid-column: 1/2; }
-  .GameSix {
-    grid-row: auto;
-    grid-column: 2; }
-  .GameOne,
-  .GameTwo,
-  .GameThree,
-  .GameFour,
-  .GameFive,
-  .GameSix {
-    margin-left: 6vw; } }
-
-/*#endregion*/
-/*#region 500px*/
-@media screen and (max-width: 500px) {
-  .GamesContainer {
-    -moz-column-gap: 0px;
-    column-gap: 0px;
-    height: auto;
-    grid-template-rows: 7vh repeat(6, 28vh);
-    grid-template-columns: 1fr;
-    row-gap: 15px; }
-  .GameOne {
-    grid-row: auto;
-    grid-column: 1; }
-  .GameTwo {
-    grid-row: auto;
-    grid-column: 1; }
-  .GameThree {
-    grid-row: auto;
-    grid-column: 1; }
-  .GameFour {
-    grid-row: auto;
-    grid-column: 1; }
-  .GameFive {
-    grid-row: auto;
-    grid-column: 1; }
-  .GameSix {
-    grid-row: auto;
-    grid-column: 1; }
-  .questionPanel:target {
-    transition: transform 0.2s;
-    transform: translateY(-5%); }
-  .GameOne,
-  .GameTwo,
-  .GameThree,
-  .GameFour,
-  .GameFive,
-  .GameSix {
-    margin-left: 5vw; } }
-
-/*#endregion*/
 .MusicContainer {
   width: 90vw;
   height: auto;
@@ -709,19 +547,21 @@ html {
   transition: all 0.2s; }
 
 .introContainer .contentWrapper .buttonWrapper .button span {
-  width: 90%;
+  width: 80%;
   align-self: center;
   text-align: center;
   font-size: 1.5rem;
   letter-spacing: 0.3px;
-  padding-left: 2em;
+  word-wrap: break-word;
   opacity: 1; }
 
 .introContainer .contentWrapper .buttonWrapper .button .material-icons {
   align-self: center;
-  margin-right: 2em;
   font-size: 1.5rem;
   opacity: 1; }
+
+.introContainer .contentWrapper .buttonWrapper .button span, .introContainer .contentWrapper .buttonWrapper .button .material-icons {
+  margin: 0 auto; }
 
 .introContainer .contentWrapper .buttonWrapper .button:hover {
   cursor: pointer;
@@ -742,7 +582,7 @@ html {
   background-color: #b35000; }
 
 .introContainer .contentWrapper .selfie {
-  aspect-ratio: 3/4;
+  aspect-ratio: 3 / 4;
   height: 50vh;
   width: auto; }
 
@@ -845,7 +685,6 @@ html {
   width: 100%;
   height: 100%;
   position: relative;
-  -o-object-fit: cover;
   object-fit: cover;
   background-color: black;
   border-radius: 0.5em;
@@ -1085,7 +924,7 @@ html {
     margin-top: 6rem; }
   .proj {
     width: 35vw;
-    height: 19.6875vw; }
+    height: calc(35vw / (16 / 9)); }
   .musicContainer {
     height: auto;
     padding-bottom: 2em; }
@@ -1178,7 +1017,7 @@ html {
 @media screen and (max-width: 361px) {
   .selfie {
     position: absolute;
-    right: 0.1rem;
+    right: .1rem;
     top: 58vh; }
   .introContainer {
     padding-top: 0px; }
@@ -1204,14 +1043,14 @@ html {
     overflow: visible;
     opacity: 1; }
   .proj {
-    width: calc(2 * 30vw);
-    height: calc((2 * 30vw) / 1.7777777778); }
+    width: calc((2 * 30vw));
+    height: calc((2 * 30vw) / (16/9)); }
   .proj figcaption, .proj .material-icons {
     font-size: small; }
   .musicContainer {
     height: 110vh; }
   .musicContainer .button {
-    width: calc(2.5 * 20vw);
+    width: calc((2.5 * 20vw));
     align-self: center;
     margin-top: -50vh; }
   .musicContainer .button .material-icons {
@@ -1223,13 +1062,11 @@ html {
     flex-direction: row;
     place-content: center;
     margin-top: 20vh;
-    width: calc(2.5 * 20vw);
-    height: calc(2.5 * 20vw); } }
+    width: calc((2.5 * 20vw));
+    height: calc((2.5 * 20vw)); } }
 
 html,
 body {
   padding: 0px;
   margin: 0px;
   background-color: #272525; }
-
-/*# sourceMappingURL=Main.css.map */
