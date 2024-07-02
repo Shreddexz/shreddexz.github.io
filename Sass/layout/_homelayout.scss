@@ -1,9 +1,7 @@
-$gapSize:2em;
 $windowHeight:100vh;
 $windowWidth:90vw;
 $projWidth: 30vw;
 $trackWidth: 20vw;
-$hBorderSize: 5px;
 
 html{
     scroll-behavior: smooth;
@@ -22,12 +20,12 @@ html{
 
 .container{
     scroll-snap-align: start;
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 25px;
     position: relative;
 
     .proxBar{
-        top: 0px;
+        top: 0;
         width: 100%;
         height: 1px;
         position: absolute;
@@ -144,6 +142,7 @@ html{
     padding-left: $gapSize;
 
     .introHeader{
+      padding-top: 75px;
         color: black;
         font-size: 5em;
         letter-spacing: $h_letterSpacing;
@@ -193,7 +192,7 @@ html{
         color: white;
         width: 15vw;
         height: 8vh;
-        margin-top: 1rem;
+        //margin-top: 1rem;
         border: none;
         border-radius: 0.5em;
         display: flex;
@@ -201,7 +200,7 @@ html{
         text-align: left;
         font-weight: bold;
         text-decoration: none;
-        font-size: auto;
+        font-size: initial;
         transition: all $animTime;
         background-color: $primary;
         flex-basis: 50%;
