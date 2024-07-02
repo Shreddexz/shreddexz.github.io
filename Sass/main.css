@@ -181,38 +181,164 @@
   flex-direction: column;
   background-color: #00a2ff;
   margin-left: 20vw;
-  margin-top: 15vh; }
+  margin-top: 15vh;
+  overflow: visible; }
 
-.CIHeader {
-  color: white;
-  height: 30px;
-  text-align: center;
-  font-size: x-large;
-  text-decoration: underline;
-  font-weight: bold; }
-
-.CI-Image {
-  width: 100%; }
-
-.linkedin {
-  width: 50px;
-  margin-left: 48vw; }
-
-.linkedinText {
-  margin-left: 46.8vw;
-  text-decoration: none;
-  color: white;
-  font-size: large; }
+.contactContent {
+  margin-top: calc(75px + 3rem);
+  width: 70vw;
+  height: 40vw;
+  margin-left: 15vw;
+  display: flex;
+  flex-direction: row;
+  overflow: visible; }
 
 .CV {
-  margin-left: 30vw;
-  width: 40vw;
-  height: 100vh; }
+  width: 30vw;
+  height: calc(30vw * var(1.414)); }
+
+form {
+  --border-Size: 0.1em;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  justify-content: center;
+  gap: 1vh 0;
+  border: 0.2em double #00a2ff;
+  font-size: large;
+  background-image: url("/Images/stars.jpg");
+  background-position: center;
+  background-size: cover; }
+
+form label {
+  --label-width: 60%;
+  color: white;
+  text-align: right;
+  width: var(--label-width);
+  margin-left: calc(50% - (var(--label-width) / 2));
+  text-wrap: nowrap; }
+
+form input, form textarea {
+  color: white;
+  background-color: transparent;
+  border: 0.2em solid #00a2ff;
+  height: 2rem;
+  width: 15rem; }
+
+form ::placeholder {
+  color: white;
+  opacity: 0.7; }
+
+form input, form textarea, form button {
+  position: relative;
+  border-radius: 0.5em; }
+
+form button {
+  transition: all 0.2s;
+  width: 15%;
+  margin-left: calc(50% - 7.5%);
+  border: 0.2em solid #00a2ff;
+  color: white;
+  background-color: black; }
+
+form button:hover {
+  background-color: #00a2ff;
+  color: black;
+  border: 0.2em solid white;
+  cursor: pointer; }
+
+.divider {
+  height: 80vh;
+  width: 10vw; }
+
+@media screen and (max-width: 1920px) {
+  form label {
+    font-size: medium;
+    --label-width: 90%;
+    color: white;
+    text-align: right;
+    width: var(--label-width);
+    margin-left: calc((var(--label-width) / 2) - 50%); } }
+
+@media screen and (max-width: 1440px) {
+  form {
+    align-content: center; }
+  form label {
+    text-align: center;
+    --label-width: 50%;
+    text-wrap: stable;
+    width: var(--label-width);
+    margin-left: 0; } }
+
+@media screen and (max-width: 1280px) {
+  form {
+    align-content: center; }
+  form label {
+    text-align: center;
+    --label-width: 80%;
+    text-wrap: stable;
+    width: var(--label-width);
+    margin-left: 11%; } }
+
+@media screen and (max-width: 1279px) {
+  .contactContent {
+    flex-direction: column-reverse;
+    text-wrap: wrap;
+    height: auto; }
+  .contactContent form {
+    gap: 1vh 0;
+    flex-shrink: 0;
+    width: 70%;
+    height: 40vh; }
+  .contactContent form label {
+    --label-width: 90%;
+    font-size: medium;
+    color: white;
+    text-align: right;
+    width: var(--label-width);
+    margin-left: calc(26% - (var(--label-width) / 2)); }
+  .divider {
+    width: 0;
+    height: 2em; }
+  .CV {
+    width: 50vw;
+    height: 100vh;
+    place-self: center;
+    flex-shrink: 0; } }
+
+@media screen and (max-width: 990px) {
+  .contactContent form label {
+    --label-width: 90%;
+    width: var(--label-width);
+    margin-left: 0; } }
+
+@media screen and (max-width: 800px) {
+  .contactContent form label {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    --label-width: auto;
+    width: var(--label-width);
+    align-self: center; }
+  .CV {
+    height: 85vh; } }
 
 @media screen and (max-width: 768px) {
+  .contactContent form {
+    width: 100%; }
+  .contactContent form label {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    --label-width: ;
+    width: var(--label-width);
+    align-self: center; }
   .CIContainter, .CV {
     width: 80vw;
-    margin-left: 10vw; }
+    place-content: center; }
   .CV {
     height: 90vh; } }
 
@@ -489,12 +615,12 @@ html {
 
 .container {
   scroll-snap-align: start;
-  margin-top: 0px;
+  margin-top: 0;
   padding-top: 25px;
   position: relative; }
 
 .container .proxBar {
-  top: 0px;
+  top: 0;
   width: 100%;
   height: 1px;
   position: absolute; }
@@ -594,6 +720,7 @@ html {
   padding-left: 2em; }
 
 .introTextContainer .introHeader {
+  padding-top: 75px;
   color: black;
   font-size: 5em;
   letter-spacing: -1px;
@@ -637,7 +764,6 @@ html {
   color: white;
   width: 15vw;
   height: 8vh;
-  margin-top: 1rem;
   border: none;
   border-radius: 0.5em;
   display: flex;
@@ -645,7 +771,7 @@ html {
   text-align: left;
   font-weight: bold;
   text-decoration: none;
-  font-size: auto;
+  font-size: initial;
   transition: all 0.2s;
   background-color: #00a2ff;
   flex-basis: 50%;

@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta property="og:title" content="Omorian Clifford's Portfolio" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.omorianclifford.com/pages/ContactPage" />
-<meta property="og:image" src="/Images/portfolio_selfie.jpg" />
-<meta property="og:description"
-    content="The portfolio website of Omorian Clifford, a Game Development student and music producer/sound designer" />
-<meta name="theme-color" content="#00a2ff">
-<meta name="twitter:card" src="/Images/portfolio_selfie.jpg">
+    <meta property="og:title" content="Omorian Clifford's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.omorianclifford.com/pages/ContactPage" />
+    <meta property="og:image" src="/Images/portfolio_selfie.jpg" />
+    <meta property="og:description"
+        content="The portfolio website of Omorian Clifford, a Game Development student and music producer/sound designer" />
+    <meta name="theme-color" content="#00a2ff">
+    <meta name="twitter:card" src="/Images/portfolio_selfie.jpg">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Sass/main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Contact Page</title>
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Sass/main.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Contact Page</title>
+    </head>
 
-<body>
-    <header class="header" id="header">
-        <div class="header-container">
-            <div class="namehome"><a href="/index.html">Omorian Clifford</a></div>
-            <div class="about-me"><a href="/pages/AboutMePage.html">About me</a></div>
-            <div class="projects"><a href="/pages/ProjectsPage.html">Projects</a></div>
-            <div class="music"><a href="/pages/MusicPage.html">Music</a></div>
-            <div class="contact"><a href="/pages/ContactPage.html" style="color: #00a2ff;">Contact & CV</a></div>
-        </div>
-        <ul class="Menu" id="Menu">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="AboutMePage.html">About Me</a></li>
-            <li><a href="ProjectsPage.html">Projects</a></li>
-            <li><a href="MusicPage.html">Music</a></li>
-            <li><a href="ContactPage.html">Contact & CV</a></li>
-            <a class="Close" href="#">
+    <body>
+        <header class="header" id="header">
+            <div class="header-container">
+                <div class="namehome"><a href="/index.html">Omorian Clifford</a></div>
+                <div class="about-me"><a href="/pages/AboutMePage.html">About me</a></div>
+                <div class="projects"><a href="/pages/ProjectsPage.html">Projects</a></div>
+                <div class="music"><a href="/pages/MusicPage.html">Music</a></div>
+                <div class="contact"><a href="/pages/ContactPage.html" style="color: #00a2ff;">Contact & CV</a></div>
+            </div>
+            <ul class="Menu" id="Menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="AboutMePage.html">About Me</a></li>
+                <li><a href="ProjectsPage.html">Projects</a></li>
+                <li><a href="MusicPage.html">Music</a></li>
+                <li><a href="ContactPage.html">Contact & CV</a></li>
+                <a class="Close" href="#">
+                    <span class="material-icons">
+                        close
+                    </span>
+                </a>
+            </ul>
+            <a class="Hamburger" href="#Menu">
                 <span class="material-icons">
-                    close
+                    menu
                 </span>
             </a>
-        </ul>
-        <a class="Hamburger" href="#Menu">
-            <span class="material-icons">
-                menu
-            </span>
-        </a>
-    </header>
-<!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="omorianclifford" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://nl.linkedin.com/in/omorianclifford?trk=profile-badge">Omorian Clifford</a></div> -->
-              
-    <div class="CIContainter">
-        <div class="CIHeader">
-            <a>Contact Information</a>
+        </header>
+
+        <div class="contactContent">
+            <iframe src="/pages/Files/CV - Omorian Clifford.pdf" class="CV"></iframe>
+            <div class="divider"></div>
+            <form
+                    class="mailForm"
+                    action="https://formspree.io/f/xzzpprkn"
+                    method="POST" >
+                <label for="email">
+                    Your email:
+                    <input id="email" type="email" name="email"
+                           placeholder="your_email@email.com">
+                </label>
+                <label for="subject">
+                    Subject:
+                    <input type="text" id="subject" name="subject"
+                           placeholder="Hello there">
+                </label>
+                <label for="message">
+                    Your message:
+                    <textarea name="message" id="message"
+                              placeholder="I have found your portfolio website :)"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button class="submitButton" type="submit">Send</button>
+            </form>
         </div>
-        <img class="CI-Image" src="/Images/CIScreen.png" alt="">
-    </div>
 
-    <!-- replace below with badge? -->
-    <p>
-        <a class="linkedinText" href="https://www.linkedin.com/in/omorianclifford/">My Linkedin</a>
-        <a href="https://www.linkedin.com/in/omorianclifford/">
-            <img class="linkedin" src="/Images/LI-In-Bug.png" alt="My Linkedin">
-        </a>
-    </p>
-
-    <iframe src="/pages/Files/CV - Omorian Clifford.pdf" frameborder="0" class="CV"></iframe>
-</body>
+    </body>
 
 </html>
