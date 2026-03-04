@@ -9,45 +9,52 @@
   padding: 0px;
   position: fixed;
   z-index: 80;
-  top: 0; }
+  top: 0;
+}
 
 .header-container {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center; }
-
+  align-items: center;
+}
 .header-container a {
   text-decoration: none;
   color: inherit;
   font-size: larger;
-  transition: 0.2s; }
-
+  transition: 0.2s;
+}
 .header-container a:hover {
   color: #00a2ff;
-  transition: 0.2s; }
+  transition: 0.2s;
+}
 
 .namehome {
   color: #00a2ff;
   margin-right: 23%;
   margin-left: 3%;
   font-size: x-large;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .about-me {
   color: white;
-  margin-right: 3%; }
+  margin-right: 3%;
+}
 
 .projects {
   color: white;
-  margin-right: 3%; }
+  margin-right: 3%;
+}
 
 .music {
   color: white;
-  margin-right: 3%; }
+  margin-right: 3%;
+}
 
 .contact {
-  color: white; }
+  color: white;
+}
 
 .Hamburger {
   position: fixed;
@@ -56,7 +63,8 @@
   cursor: pointer;
   top: 3vh;
   right: 1rem;
-  opacity: 0; }
+  opacity: 0;
+}
 
 .Menu {
   position: fixed;
@@ -72,23 +80,24 @@
   display: flex;
   flex-direction: column;
   transform: translateY(-110%);
-  justify-content: center; }
-
+  justify-content: center;
+}
 .Menu:target {
   transition: transform 0.2s;
-  transform: translateY(15%); }
-
+  transform: translateY(15%);
+}
 .Menu a {
   margin-left: 20vw;
   color: white;
   font-size: x-large;
   text-decoration: none;
   z-index: 100;
-  transition: 0.2s; }
-
+  transition: 0.2s;
+}
 .Menu a:hover {
   color: #272525;
-  transition: 0.2s; }
+  transition: 0.2s;
+}
 
 .Close {
   position: absolute;
@@ -96,7 +105,8 @@
   color: white;
   top: 1rem;
   right: 1rem;
-  z-index: 100; }
+  z-index: 100;
+}
 
 @media screen and (max-width: 500px) {
   .about-me,
@@ -104,16 +114,19 @@
   .music,
   .contact {
     opacity: 0;
-    pointer-events: none; }
+    pointer-events: none;
+  }
   .Hamburger {
-    opacity: 1; } }
-
+    opacity: 1;
+  }
+}
 .aboutmecontainer > *:not(.Selfie, .imagecontainer) {
   display: block;
   margin-top: 15vh;
   margin-left: 20%;
   width: 60vw;
-  height: 70vh; }
+  height: 70vh;
+}
 
 .imagecontainer {
   position: fixed;
@@ -121,22 +134,25 @@
   height: auto;
   left: 2%;
   display: flex;
-  flex-direction: column; }
-
+  flex-direction: column;
+}
 .imagecontainer span {
   color: white;
   width: 100%;
-  opacity: 0; }
+  opacity: 0;
+}
 
 .Selfie {
   position: relative;
   width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 .click {
   color: white;
   align-self: center;
-  opacity: 0; }
+  opacity: 0;
+}
 
 .aboutmetitle {
   color: #00a2ff;
@@ -145,35 +161,42 @@
   font-size: xx-large;
   width: 100%;
   text-align: center;
-  letter-spacing: -1px; }
+  letter-spacing: -1px;
+}
 
 .aboutmetext {
   color: white;
   text-align: left;
   font-size: large;
   width: 80%;
-  margin: auto; }
-
+  margin: auto;
+}
 .aboutmetext a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 @media screen and (max-width: 768px) {
   .aboutmetext {
-    margin-top: 10vh; }
+    margin-top: 10vh;
+  }
   .aboutmecontainer span {
-    opacity: 1; }
+    opacity: 1;
+  }
   .click {
     opacity: 1;
-    pointer-events: fill; }
+    pointer-events: fill;
+  }
   .imgparent:focus {
     width: 400%;
     height: auto;
-    margin-left: 6vw; } }
-
+    margin-left: 6vw;
+  }
+}
 @media screen and (max-width: 500px) {
   .aboutmetext {
-    margin-top: 5vh; } }
-
+    margin-top: 5vh;
+  }
+}
 .CIContainter {
   width: 60vw;
   height: 43%;
@@ -182,7 +205,8 @@
   background-color: #00a2ff;
   margin-left: 20vw;
   margin-top: 15vh;
-  overflow: visible; }
+  overflow: visible;
+}
 
 .contactContent {
   margin-top: calc(75px + 3rem);
@@ -191,11 +215,13 @@
   margin-left: 15vw;
   display: flex;
   flex-direction: row;
-  overflow: visible; }
+  overflow: visible;
+}
 
 .CV {
   width: 30vw;
-  height: calc(30vw * var(1.414)); }
+  height: calc(30vw * var(1.414));
+}
 
 form {
   --border-Size: 0.1em;
@@ -211,48 +237,50 @@ form {
   font-size: large;
   background-image: url("/Images/stars.jpg");
   background-position: center;
-  background-size: cover; }
-
+  background-size: cover;
+}
 form label {
   --label-width: 60%;
   color: white;
   text-align: right;
   width: var(--label-width);
-  margin-left: calc(50% - (var(--label-width) / 2));
-  text-wrap: nowrap; }
-
+  margin-left: calc(50% - var(--label-width) / 2);
+  text-wrap: nowrap;
+}
 form input, form textarea {
   color: white;
   background-color: transparent;
   border: 0.2em solid #00a2ff;
   height: 2rem;
-  width: 15rem; }
-
+  width: 15rem;
+}
 form ::placeholder {
   color: white;
-  opacity: 0.7; }
-
+  opacity: 0.7;
+}
 form input, form textarea, form button {
   position: relative;
-  border-radius: 0.5em; }
-
+  border-radius: 0.5em;
+}
 form button {
   transition: all 0.2s;
   width: 15%;
-  margin-left: calc(50% - 7.5%);
+  margin-left: 42.5%;
   border: 0.2em solid #00a2ff;
   color: white;
-  background-color: black; }
-
+  background-color: black;
+}
 form button:hover {
   background-color: #00a2ff;
   color: black;
   border: 0.2em solid white;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .divider {
   height: 80vh;
-  width: 10vw; }
+  width: 10vw;
+}
 
 @media screen and (max-width: 1920px) {
   form label {
@@ -261,60 +289,71 @@ form button:hover {
     color: white;
     text-align: right;
     width: var(--label-width);
-    margin-left: calc((var(--label-width) / 2) - 50%); } }
-
+    margin-left: calc(var(--label-width) / 2 - 50%);
+  }
+}
 @media screen and (max-width: 1440px) {
   form {
-    align-content: center; }
+    align-content: center;
+  }
   form label {
     text-align: center;
     --label-width: 50%;
     text-wrap: stable;
     width: var(--label-width);
-    margin-left: 0; } }
-
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 1280px) {
   form {
-    align-content: center; }
+    align-content: center;
+  }
   form label {
     text-align: center;
     --label-width: 80%;
     text-wrap: stable;
     width: var(--label-width);
-    margin-left: 11%; } }
-
+    margin-left: 11%;
+  }
+}
 @media screen and (max-width: 1279px) {
   .contactContent {
     flex-direction: column-reverse;
     text-wrap: wrap;
-    height: auto; }
+    height: auto;
+  }
   .contactContent form {
     gap: 1vh 0;
     flex-shrink: 0;
     width: 70%;
-    height: 40vh; }
+    height: 40vh;
+  }
   .contactContent form label {
     --label-width: 90%;
     font-size: medium;
     color: white;
     text-align: right;
     width: var(--label-width);
-    margin-left: calc(26% - (var(--label-width) / 2)); }
+    margin-left: calc(26% - var(--label-width) / 2);
+  }
   .divider {
     width: 0;
-    height: 2em; }
+    height: 2em;
+  }
   .CV {
     width: 50vw;
     height: 100vh;
     place-self: center;
-    flex-shrink: 0; } }
-
+    flex-shrink: 0;
+  }
+}
 @media screen and (max-width: 990px) {
   .contactContent form label {
     --label-width: 90%;
     width: var(--label-width);
-    margin-left: 0; } }
-
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 800px) {
   .contactContent form label {
     text-align: center;
@@ -322,30 +361,37 @@ form button:hover {
     flex-direction: column;
     --label-width: auto;
     width: var(--label-width);
-    align-self: center; }
+    align-self: center;
+  }
   .CV {
-    height: 85vh; } }
-
+    height: 85vh;
+  }
+}
 @media screen and (max-width: 768px) {
   .contactContent form {
-    width: 100%; }
+    width: 100%;
+  }
   .contactContent form label {
     text-align: center;
     display: flex;
     flex-direction: column;
-    --label-width: ;
+    --label-width: auto;
     width: var(--label-width);
-    align-self: center; }
+    align-self: center;
+  }
   .CIContainter, .CV {
     width: 80vw;
-    place-content: center; }
+    place-content: center;
+  }
   .CV {
-    height: 90vh; } }
-
+    height: 90vh;
+  }
+}
 @media screen and (max-width: 500px) {
   .CV {
-    height: 70vh; } }
-
+    height: 70vh;
+  }
+}
 .GamesContainer {
   width: 90vw;
   height: 100% auto;
@@ -353,8 +399,8 @@ form button:hover {
   background-color: #00a2ff;
   margin: 0 auto;
   margin-top: 56px;
-  padding-bottom: 50px; }
-
+  padding-bottom: 50px;
+}
 .GamesContainer h1 {
   font-family: "Dela Gothic One", cursive;
   color: white;
@@ -362,8 +408,8 @@ form button:hover {
   width: 90vw;
   text-align: center;
   top: 60px;
-  z-index: 50; }
-
+  z-index: 50;
+}
 .GamesContainer .contentContainer {
   width: auto;
   height: 80vh auto;
@@ -371,22 +417,22 @@ form button:hover {
   margin-top: 70px;
   display: flex;
   flex-direction: column;
-  row-gap: 1rem; }
-
+  row-gap: 1rem;
+}
 .GamesContainer .contentContainer .Game {
   width: 100%;
-  height: calc(25vw / (16 / 9));
+  height: calc(25vw / 1.7777777778);
   border-radius: 0.5em;
   border: 0.1em solid black;
   overflow: hidden;
   transition: 0.2s;
-  box-shadow: 0px 8px 20px 0px; }
-
+  box-shadow: 0px 8px 20px 0px;
+}
 .GamesContainer .contentContainer .Game:hover {
   border: 0.1em solid white;
   transition: 0.2s;
-  scale: 1.1; }
-
+  scale: 1.1;
+}
 .GamesContainer .contentContainer .Game .content {
   transition: 0.2s;
   display: flex;
@@ -394,86 +440,97 @@ form button:hover {
   background-color: #008cb3;
   width: 100%;
   height: 100%;
-  pointer-events: auto; }
-
+}
 .GamesContainer .contentContainer .Game .content:hover {
-  background-color: #00952d; }
-
+  background-color: #00952d;
+}
+.GamesContainer .contentContainer .Game .content {
+  pointer-events: auto;
+}
 .GamesContainer .contentContainer .Game .content a {
   width: calc(2 * projectWidth);
   height: 100%;
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  text-decoration: none; }
-
+  text-decoration: none;
+}
 .GamesContainer .contentContainer .Game .content a:hover .description {
   color: black;
-  transition: 0.2s; }
-
+  transition: 0.2s;
+}
 .GamesContainer .contentContainer .Game .content a:hover .description h2 {
   color: white;
-  transition: 0.2s; }
-
+  transition: 0.2s;
+}
 .GamesContainer .contentContainer .Game .content .description {
   width: auto;
   height: 90%;
-  margin-top: calc(25vw / (16 / 9) / 3);
+  margin-top: calc(25vw / 1.7777777778 / 3);
   color: white;
   display: inline;
   font-family: "Playfair Display", serif;
   letter-spacing: 0.3px;
   transition: 0.2s;
-  overflow: hidden; }
-
+  overflow: hidden;
+}
 .GamesContainer .contentContainer .Game .content .description h2 {
   font-family: "Cinzel", serif;
   margin: 0;
   color: black;
   transition: 0.2s;
-  letter-spacing: -1px; }
-
+  letter-spacing: -1px;
+}
 .GamesContainer .contentContainer .Game .content .image {
   background-color: black;
   width: 25vw;
-  height: calc(25vw / (16 / 9));
+  height: calc(25vw / 1.7777777778);
   object-fit: cover;
   transition: 0.2s;
-  border-radius: 0 0.5em 0.5em 0; }
+  border-radius: 0 0.5em 0.5em 0;
+}
 
 @media screen and (max-width: 1280px) {
   .GamesContainer .contentContainer .Game {
     width: 95%;
-    height: calc(1.5 * 25vw / (16 / 9));
-    align-self: center; }
+    height: calc(1.5 * 25vw / 1.7777777778);
+    align-self: center;
+  }
   .GamesContainer .contentContainer .Game .content {
-    height: 100%; }
+    height: 100%;
+  }
   .GamesContainer .contentContainer .Game .content .description {
     width: clamp(20vw, auto, 50vw);
     font-size: 2.2vmin;
-    margin-top: calc(25vw / (16 / 9) / 6); }
+    margin-top: calc(25vw / 1.7777777778 / 6);
+  }
   .GamesContainer .contentContainer .Game .content .image {
     width: calc(1.5 * 25vw);
-    height: calc(1.5 * 25vw / (16 / 9));
-    flex-shrink: 0; } }
-
+    height: calc(1.5 * 25vw / 1.7777777778);
+    flex-shrink: 0;
+  }
+}
 @media screen and (max-width: 1000px) {
   .GamesContainer .contentContainer .Game {
-    height: calc(2 * 25vw / (16 / 9));
-    align-self: center; }
+    height: calc(2 * 25vw / 1.7777777778);
+    align-self: center;
+  }
   .GamesContainer .contentContainer .Game .content {
-    height: 100%; }
+    height: 100%;
+  }
   .GamesContainer .contentContainer .Game .content .description {
     width: clamp(20vw, auto, 50vw);
     font-size: 2.2vmin;
-    margin-top: calc(25vw / (16 / 9) / 6);
+    margin-top: calc(25vw / 1.7777777778 / 6);
     overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+  }
   .GamesContainer .contentContainer .Game .content .image {
     width: calc(2 * 25vw);
-    height: calc(2 * 25vw / (16 / 9));
-    flex-shrink: 0; } }
-
+    height: calc(2 * 25vw / 1.7777777778);
+    flex-shrink: 0;
+  }
+}
 .MusicContainer {
   width: 90vw;
   height: auto;
@@ -483,7 +540,8 @@ form button:hover {
   display: grid;
   row-gap: 25px;
   grid-template-rows: 2.2vh 2.2vh 38vh 38vh 2.2vh 38vh;
-  grid-template-columns: repeat(3, 29.83vw); }
+  grid-template-columns: repeat(3, 29.83vw);
+}
 
 .MText {
   text-align: center;
@@ -497,7 +555,8 @@ form button:hover {
   grid-row-start: 1;
   grid-row-end: 1;
   text-decoration: underline;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .GMHeader {
   text-align: center;
@@ -510,7 +569,8 @@ form button:hover {
   background-color: #00a2ff;
   grid-row-start: 2;
   grid-row-end: 2;
-  margin-top: 3px; }
+  margin-top: 3px;
+}
 
 .TUEOST,
 .IRTOST,
@@ -524,25 +584,31 @@ form button:hover {
   width: 100%;
   height: 100%;
   border-radius: 0.5em;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .GameTrackOne {
-  grid-row-start: 3; }
+  grid-row-start: 3;
+}
 
 .GameTrackTwo {
   grid-row-start: 3;
-  grid-column-start: 2; }
+  grid-column-start: 2;
+}
 
 .GameTrackThree {
   grid-row-start: 3;
-  grid-column-start: 3; }
+  grid-column-start: 3;
+}
 
 .SfinxInternshipTracks {
-  grid-row-start: 4; }
+  grid-row-start: 4;
+}
 
 .SpiritFox {
   grid-row-start: 4;
-  grid-column-start: 2; }
+  grid-column-start: 2;
+}
 
 .MPHeader {
   text-align: center;
@@ -554,56 +620,71 @@ form button:hover {
   grid-column-end: 3;
   background-color: #00a2ff;
   grid-row-start: 5;
-  grid-row-end: 5; }
+  grid-row-end: 5;
+}
 
 .TrackOne {
   grid-row-start: 6;
-  grid-column-start: 1; }
+  grid-column-start: 1;
+}
 
 .TrackTwo {
   grid-row-start: 6;
-  grid-column-start: 2; }
+  grid-column-start: 2;
+}
 
 .TrackThree {
   grid-row-start: 6;
-  grid-column-start: 3; }
+  grid-column-start: 3;
+}
 
 @media screen and (max-width: 800px) {
   .MusicContainer {
     height: auto;
     grid-template-rows: 2.2vh 2.2vh repeat(5, 45vh) 2.2vh repeat(3, 45vh);
-    grid-template-columns: 89vw; }
+    grid-template-columns: 89vw;
+  }
   .GameTrackOne {
     grid-row: auto;
-    grid-column: 1; }
+    grid-column: 1;
+  }
   .GameTrackTwo {
     grid-row: auto;
-    grid-column: 1; }
+    grid-column: 1;
+  }
   .GameTrackThree {
     grid-row: auto;
-    grid-column: 1; }
+    grid-column: 1;
+  }
   .SfinxInternshipTracks {
     grid-row: auto;
-    grid-column: 1; }
+    grid-column: 1;
+  }
   .SpiritFox {
     grid-row: auto;
-    grid-column: 1; }
+    grid-column: 1;
+  }
   .MPHeader {
-    grid-row: auto; }
+    grid-row: auto;
+  }
   .TrackOne {
     grid-row: auto;
-    grid-column: 1; }
+    grid-column: 1;
+  }
   .TrackTwo {
     grid-row: auto;
-    grid-column: 1; }
+    grid-column: 1;
+  }
   .TrackThree {
     grid-row: auto;
-    grid-column: 1; } }
-
+    grid-column: 1;
+  }
+}
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
-  overflow: visible; }
+  overflow: visible;
+}
 
 .homeContainer {
   padding-top: 75px;
@@ -611,22 +692,24 @@ html {
   flex-direction: column;
   gap: 2em;
   align-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .container {
   scroll-snap-align: start;
   margin-top: 0;
   padding-top: 25px;
-  position: relative; }
-
+  position: relative;
+}
 .container .proxBar {
   top: 0;
   width: 100%;
   height: 1px;
-  position: absolute; }
-
+  position: absolute;
+}
 .container > *:not(.proxBar) {
-  padding-top: 2rem; }
+  padding-top: 2rem;
+}
 
 .introContainer {
   --introHeight: 20em;
@@ -637,8 +720,8 @@ html {
   background-color: #00a2ff;
   justify-content: center;
   align-content: center;
-  place-content: center; }
-
+  place-content: center;
+}
 .introContainer .contentWrapper {
   display: flex;
   flex-direction: row-reverse;
@@ -648,13 +731,13 @@ html {
   justify-self: center;
   align-self: center;
   justify-content: center;
-  align-content: center; }
-
+  align-content: center;
+}
 .introContainer .contentWrapper .buttonWrapper {
   align-content: center;
   justify-content: center;
-  width: 15vw; }
-
+  width: 15vw;
+}
 .introContainer .contentWrapper .buttonWrapper .button {
   align-self: center;
   justify-self: center;
@@ -670,8 +753,8 @@ html {
   font-weight: bold;
   text-decoration: none;
   font-size: auto;
-  transition: all 0.2s; }
-
+  transition: all 0.2s;
+}
 .introContainer .contentWrapper .buttonWrapper .button span {
   width: 80%;
   align-self: center;
@@ -679,60 +762,62 @@ html {
   font-size: 1.5rem;
   letter-spacing: 0.3px;
   word-wrap: break-word;
-  opacity: 1; }
-
+  opacity: 1;
+}
 .introContainer .contentWrapper .buttonWrapper .button .material-icons {
   align-self: center;
   font-size: 1.5rem;
-  opacity: 1; }
-
+  opacity: 1;
+}
 .introContainer .contentWrapper .buttonWrapper .button span, .introContainer .contentWrapper .buttonWrapper .button .material-icons {
-  margin: 0 auto; }
-
+  margin: 0 auto;
+}
 .introContainer .contentWrapper .buttonWrapper .button:hover {
   cursor: pointer;
   border: 0.1em solid black;
-  transition: all 0.2s; }
-
+  transition: all 0.2s;
+}
 .introContainer .contentWrapper .buttonWrapper .button:hover > * {
-  color: black; }
-
+  color: black;
+}
 .introContainer .contentWrapper .buttonWrapper .aboutMeButton {
   margin-top: 15vh;
-  background-color: #00952d; }
-
+  background-color: #00952d;
+}
 .introContainer .contentWrapper .buttonWrapper .projectsButton {
-  background-color: #008cb3; }
-
+  background-color: #008cb3;
+}
 .introContainer .contentWrapper .buttonWrapper .musicButton {
-  background-color: #b35000; }
-
+  background-color: #b35000;
+}
 .introContainer .contentWrapper .selfie {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 3/4;
   height: 50vh;
-  width: auto; }
+  width: auto;
+}
 
 .introTextContainer {
   display: flex;
   flex-direction: column;
   margin-top: -10vh;
   padding-right: 2em;
-  padding-left: 2em; }
-
+  padding-left: 2em;
+}
 .introTextContainer .introHeader {
   padding-top: 75px;
   color: black;
   font-size: 5em;
   letter-spacing: -1px;
-  align-self: center; }
-
+  align-self: center;
+}
 .introTextContainer .introSubHeader {
   color: white;
   font-size: 2em;
   margin-top: -5vh;
   letter-spacing: 0.3px;
   align-self: center;
-  text-align: center; }
+  text-align: center;
+}
 
 .projectsContainer {
   width: 90vw;
@@ -744,10 +829,11 @@ html {
   background-color: #008cb3;
   align-content: center;
   align-self: center;
-  color: white; }
-
+  color: white;
+}
 .projectsContainer > * {
-  align-self: center; }
+  align-self: center;
+}
 
 .progProjects {
   width: 80%;
@@ -756,8 +842,8 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 2em; }
-
+  row-gap: 2em;
+}
 .progProjects .button {
   align-self: center;
   justify-self: center;
@@ -775,8 +861,8 @@ html {
   transition: all 0.2s;
   background-color: #00a2ff;
   flex-basis: 50%;
-  margin: 2em; }
-
+  margin: 2em;
+}
 .progProjects .button span {
   width: 90%;
   align-self: center;
@@ -784,29 +870,30 @@ html {
   font-size: 2rem;
   letter-spacing: 0.3px;
   padding-left: 2em;
-  opacity: 1; }
-
+  opacity: 1;
+}
 .progProjects .button .material-icons {
   align-self: center;
   margin-right: 2em;
   font-size: 2rem;
-  opacity: 1; }
-
+  opacity: 1;
+}
 .progProjects .button:hover {
   cursor: pointer;
   border: 0.1em solid black;
-  transition: all 0.2s; }
-
+  transition: all 0.2s;
+}
 .progProjects .button:hover > * {
-  color: black; }
+  color: black;
+}
 
 .proj {
   width: 30vw;
-  height: calc(30vw / (16/9));
+  height: calc(30vw / 1.7777777778);
   position: relative;
   animation-direction: normal;
-  text-decoration: none; }
-
+  text-decoration: none;
+}
 .proj img {
   width: 100%;
   height: 100%;
@@ -815,17 +902,17 @@ html {
   background-color: black;
   border-radius: 0.5em;
   transition: 0.2s;
-  z-index: 10; }
-
+  z-index: 10;
+}
 .proj figcaption {
   position: relative;
   color: white;
   text-align: center;
-  font-size: x-large; }
-
+  font-size: x-large;
+}
 .proj > * {
-  text-decoration: none; }
-
+  text-decoration: none;
+}
 .proj .hoverBorder {
   width: 10%;
   height: 10%;
@@ -835,14 +922,15 @@ html {
   left: 0;
   transition: 0.2s;
   border-radius: 0.5em;
-  z-index: 5; }
-
+  z-index: 5;
+}
+.proj:hover figcaption {
+  color: black;
+}
 .proj:hover {
   text-decoration: underline;
-  transition: 0.2s; }
-
-.proj:hover figcaption {
-  color: black; }
+  transition: 0.2s;
+}
 
 .musicContainer {
   height: 100vh;
@@ -853,10 +941,11 @@ html {
   flex-direction: column;
   background-color: #b35000;
   align-self: center;
-  color: white; }
-
+  color: white;
+}
 .musicContainer > * {
-  align-self: center; }
+  align-self: center;
+}
 
 .tracks {
   width: 80%;
@@ -865,8 +954,8 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2em; }
-
+  gap: 2em;
+}
 .tracks .button {
   justify-self: center;
   color: white;
@@ -883,8 +972,8 @@ html {
   transition: all 0.2s;
   background-color: #00a2ff;
   flex-basis: 50%;
-  margin: 2em; }
-
+  margin: 2em;
+}
 .tracks .button span {
   width: 90%;
   align-self: center;
@@ -892,307 +981,412 @@ html {
   font-size: 2rem;
   letter-spacing: 0.3px;
   padding-left: 2em;
-  opacity: 1; }
-
+  opacity: 1;
+}
 .tracks .button .material-icons {
   align-self: center;
   margin-right: 2em;
   font-size: 2rem;
-  opacity: 1; }
-
+  opacity: 1;
+}
 .tracks .button:hover {
   cursor: pointer;
   border: 0.1em solid black;
-  transition: all 0.2s; }
-
+  transition: all 0.2s;
+}
 .tracks .button:hover > * {
-  color: black; }
+  color: black;
+}
 
 .track {
   width: 20vw;
   height: 20vw;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+}
 
 .song {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .hidden {
     opacity: 0;
-    transition: all 1.2s; }
+    transition: all 1.2s;
+  }
   .show {
-    opacity: 1; }
+    opacity: 1;
+  }
   .proj .hoverBorder {
-    animation: calc(1 * (0.2s)) a_borderOut forwards; }
+    animation: calc(1 * (0.2s)) a_borderOut forwards;
+  }
   .proj:hover {
-    transition: calc(2 * (0.2s)); }
+    transition: calc(2 * (0.2s));
+  }
   .proj:hover img {
     width: 105%;
     height: 105%;
-    transition: calc(2 * (0.2s)); }
+    transition: calc(2 * (0.2s));
+  }
   .proj:hover .hoverBorder {
     animation-direction: normal;
-    animation: calc(2 * (0.2s)) linear a_borderHeight forwards, calc(1 * (0.2s)) ease-out a_borderWidth forwards; }
+    animation: calc(2 * (0.2s)) linear a_borderHeight forwards, calc(1 * (0.2s)) ease-out a_borderWidth forwards;
+  }
   @keyframes a_borderHeight {
     from {
       height: 10%;
-      top: 0; }
+      top: 0;
+    }
     to {
-      height: calc(100% + (2 * 5px));
-      top: -5px; } }
+      height: calc(100% + 2 * 5px);
+      top: -5px;
+    }
+  }
   @keyframes a_borderWidth {
     0%, 40% {
-      width: 10%; }
+      width: 10%;
+    }
     from {
       width: 10%;
-      left: 0; }
+      left: 0;
+    }
     to {
-      width: calc(100% + (2 * 5px));
-      left: -5px; } }
+      width: calc(100% + 2 * 5px);
+      left: -5px;
+    }
+  }
   @keyframes a_borderOut {
     0%, 40% {
-      width: calc(100% + (2 * 5px)); }
+      width: calc(100% + 2 * 5px);
+    }
     from {
-      width: calc(100% + (2 * 5px));
-      height: calc(100% + (2 * 5px));
+      width: calc(100% + 2 * 5px);
+      height: calc(100% + 2 * 5px);
       top: -5px;
-      left: -5px; }
+      left: -5px;
+    }
     to {
       width: 10%;
       height: 10%;
       top: 0;
-      left: 0; } } }
-
+      left: 0;
+    }
+  }
+}
 @media screen and (max-width: 3841px) {
   .introTextContainer .introHeader {
-    font-size: 5rem; }
+    font-size: 5rem;
+  }
   .introTextContainer .introSubHeader {
     font-size: 4rem;
-    padding-top: 75px; }
+    padding-top: 75px;
+  }
   .introTextContainer .button .material-icons {
-    margin-right: 2em; }
+    margin-right: 2em;
+  }
   .introTextContainer .button span, .introTextContainer .button .material-icons {
-    font-size: 3.5rem; }
+    font-size: 3.5rem;
+  }
   .projectsContainer {
-    font-size: x-large; }
+    font-size: x-large;
+  }
   .projectsContainer .button span, .projectsContainer .button .material-icons {
-    font-size: 3.5rem; }
+    font-size: 3.5rem;
+  }
   .proj figcaption, .proj .material-icons {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+  }
   .musicContainer {
-    font-size: x-large; }
+    font-size: x-large;
+  }
   .musicContainer .button {
-    margin-top: -20vh; }
+    margin-top: -20vh;
+  }
   .musicContainer .button span, .musicContainer .button .material-icons {
-    font-size: 3.5rem; } }
-
+    font-size: 3.5rem;
+  }
+}
 @media screen and (max-width: 2560px) {
   .introTextContainer .introHeader {
     margin-top: -5.5rem;
-    font-size: 3rem; }
+    font-size: 3rem;
+  }
   .introTextContainer .introSubHeader {
     margin-top: -6rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+  }
   .introTextContainer .button .material-icons {
-    margin-right: 10%; }
+    margin-right: 10%;
+  }
   .introTextContainer .button span, .introTextContainer .button .material-icons {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+  }
   .projectsContainer {
-    font-size: medium; }
+    font-size: medium;
+  }
   .projectsContainer .button span, .projectsContainer .button .material-icons {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+  }
   .proj figcaption, .proj .material-icons {
-    font-size: medium; }
+    font-size: medium;
+  }
   .musicContainer {
-    font-size: medium; }
+    font-size: medium;
+  }
   .musicContainer .button {
-    margin-top: -20vh; }
+    margin-top: -20vh;
+  }
   .musicContainer .button span, .musicContainer .button .material-icons {
-    font-size: 1.5rem; } }
-
+    font-size: 1.5rem;
+  }
+}
 @media screen and (max-width: 1280px) {
   .introTextContainer .introHeader {
     margin-top: -5.5rem;
-    font-size: 3rem; }
+    font-size: 3rem;
+  }
   .introTextContainer .introSubHeader {
     margin-top: -6rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+  }
   .introTextContainer .button .material-icons {
-    margin-right: 10%; }
+    margin-right: 10%;
+  }
   .introTextContainer .button span, .introTextContainer .button .material-icons {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+  }
   .projectsContainer {
-    font-size: medium; }
+    font-size: medium;
+  }
   .projectsContainer .button span, .projectsContainer .button .material-icons {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+  }
   .proj figcaption, .proj .material-icons {
-    font-size: medium; } }
-
+    font-size: medium;
+  }
+}
 @media screen and (max-width: 1080px) {
   .container {
-    width: 100%; }
+    width: 100%;
+  }
   .selfie {
-    height: 70%; }
+    height: 70%;
+  }
   .introTextContainer .introHeader {
-    font-size: 2rem; }
+    font-size: 2rem;
+  }
   .introTextContainer .introSubHeader {
     margin-top: 0.5em;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+  }
   .introTextContainer .button {
     width: 20vw;
-    height: 8vw; }
+    height: 8vw;
+  }
   .introTextContainer .button span {
-    padding-left: 15px; }
+    padding-left: 15px;
+  }
   .introTextContainer .button .material-icons {
-    margin-right: 5px; }
+    margin-right: 5px;
+  }
   .projectsContainer .button {
-    margin-top: 6rem; }
+    margin-top: 6rem;
+  }
   .proj {
     width: 35vw;
-    height: calc(35vw / (16 / 9)); }
+    height: 19.6875vw;
+  }
   .musicContainer {
     height: auto;
-    padding-bottom: 2em; }
+  }
   .musicContainer .button {
     flex-basis: 100%;
     width: 30%;
-    align-self: center; }
+    align-self: center;
+  }
   .musicContainer .tracks {
     flex-direction: row;
-    place-content: center; }
+    place-content: center;
+  }
   .musicContainer .track {
     width: 100%;
-    height: 30vw; } }
-
+    height: 30vw;
+  }
+  .musicContainer {
+    padding-bottom: 2em;
+  }
+}
 @media screen and (max-width: 811px) {
   .introContainer .introHeader {
-    text-align: center; }
+    text-align: center;
+  }
   .introContainer .introSubHeader {
-    margin-top: -4rem; }
+    margin-top: -4rem;
+  }
   .introContainer .contentWrapper {
-    width: 100%; }
+    width: 100%;
+  }
   .introContainer .contentWrapper .buttonWrapper {
-    justify-self: center; }
+    justify-self: center;
+  }
   .introContainer .contentWrapper .buttonWrapper .button {
     width: 40vw;
-    height: 4rem; }
+    height: 4rem;
+  }
   .introContainer .contentWrapper .selfie {
     height: 30vh;
     align-self: center;
-    margin-left: 8rem; }
+    margin-left: 8rem;
+  }
   .projectsContainer .button {
-    margin-top: 8rem; }
+    margin-top: 8rem;
+  }
   .musicContainer {
-    height: 95vh; }
+    height: 95vh;
+  }
   .musicContainer .button {
     position: absolute;
     flex-basis: 100%;
     width: 30%;
     align-self: center;
-    bottom: 0px; }
+    bottom: 0px;
+  }
   .musicContainer .button .material-icons {
-    margin-right: 1rem; }
+    margin-right: 1rem;
+  }
   .musicContainer .tracks {
     place-content: center;
-    margin-top: -5vh; } }
-
+    margin-top: -5vh;
+  }
+}
 @media screen and (max-width: 541px) {
   .introContainer .contentWrapper {
     flex-direction: column;
-    gap: 0px; }
+    gap: 0px;
+  }
   .introContainer .contentWrapper .buttonWrapper {
     align-self: center;
     justify-self: center;
-    margin-right: 25vw; }
+    margin-right: 25vw;
+  }
   .introContainer .contentWrapper .buttonWrapper .button span, .introContainer .contentWrapper .buttonWrapper .button .material-icons {
-    font-size: 1rem; }
+    font-size: 1rem;
+  }
   .introContainer .contentWrapper .selfie {
     margin-left: 0px;
     top: 5rem;
-    height: 15rem; }
+    height: 15rem;
+  }
   .proj figcaption {
     width: 200%;
-    margin-left: -50%; } }
-
+    margin-left: -50%;
+  }
+}
 @media screen and (max-width: 501px) {
   .selfie {
     top: 40vh;
     align-self: center;
     right: initial;
-    margin-left: 7vw; }
+    margin-left: 7vw;
+  }
   .introContainer {
     padding-top: 75px;
     align-content: center;
     justify-content: center;
-    flex-direction: column; }
+    flex-direction: column;
+  }
   .introContainer .introHeader {
-    text-align: center; }
+    text-align: center;
+  }
   .projectsContainer .button span, .projectsContainer .button .material-icons {
-    padding-left: 5%; }
+    padding-left: 5%;
+  }
   .musicContainer {
-    height: calc(100vh * 1.5); }
+    height: calc(100vh * 1.5);
+  }
   .musicContainer .button span, .musicContainer .button .material-icons {
     padding-left: 5%;
-    align-self: center; }
+    align-self: center;
+  }
   .musicContainer .tracks {
-    padding-top: 0px; }
+    padding-top: 0px;
+  }
   .musicContainer .track {
-    height: 20rem; } }
-
+    height: 20rem;
+  }
+}
 @media screen and (max-width: 361px) {
   .selfie {
     position: absolute;
-    right: .1rem;
-    top: 58vh; }
+    right: 0.1rem;
+    top: 58vh;
+  }
   .introContainer {
-    padding-top: 0px; }
+    padding-top: 0px;
+  }
   .introContainer .introHeader {
-    text-align: center; }
+    text-align: center;
+  }
   .introContainer .aboutMeButton {
-    margin-top: 10vh; }
+    margin-top: 10vh;
+  }
   .introContainer .button {
     width: 40vw;
-    margin-left: -45vw; }
+    margin-left: -45vw;
+  }
   .introContainer .button span, .introContainer .button .material-icons {
     font-size: x-small;
     align-self: center;
     justify-self: center;
-    overflow: visible; }
+    overflow: visible;
+  }
   .progProjects {
     width: 100%;
-    height: auto; }
+    height: auto;
+  }
   .progProjects .button {
-    margin-top: 2em; }
+    margin-top: 2em;
+  }
   .progProjects .button span, .progProjects .button .material-icons {
     font-size: medium;
     overflow: visible;
-    opacity: 1; }
+    opacity: 1;
+  }
   .proj {
-    width: calc((2 * 30vw));
-    height: calc((2 * 30vw) / (16/9)); }
+    width: calc(2 * 30vw);
+    height: calc(2 * 30vw / 1.7777777778);
+  }
   .proj figcaption, .proj .material-icons {
-    font-size: small; }
+    font-size: small;
+  }
   .musicContainer {
-    height: 110vh; }
+    height: 110vh;
+  }
   .musicContainer .button {
-    width: calc((2.5 * 20vw));
+    width: calc(2.5 * 20vw);
     align-self: center;
-    margin-top: -50vh; }
+    margin-top: -50vh;
+  }
   .musicContainer .button .material-icons {
-    margin-right: 1rem; }
+    margin-right: 1rem;
+  }
   .musicContainer .button span, .musicContainer .button .material-icons {
     font-size: small;
-    opacity: 1; }
+    opacity: 1;
+  }
   .musicContainer .tracks {
     flex-direction: row;
     place-content: center;
     margin-top: 20vh;
-    width: calc((2.5 * 20vw));
-    height: calc((2.5 * 20vw)); } }
-
+    width: calc(2.5 * 20vw);
+    height: calc(2.5 * 20vw);
+  }
+}
 html,
 body {
   padding: 0px;
   margin: 0px;
-  background-color: #272525; }
+  background-color: #272525;
+}
+
+/*# sourceMappingURL=main.css.map */

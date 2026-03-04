@@ -1,0 +1,18 @@
+[tools]
+npm = "latest"
+"npm:http-server" = "latest"
+"npm:sass" = "latest"
+
+[tasks.serve]
+description = "Serve the site locally"
+run = "npx http-server . -p 3000 -c-1"
+
+[tasks.sass_watch]
+description = "Watch SCSS and compile to CSS"
+run = "npx sass --watch Sass/Main.scss:Sass/main.css"
+
+[tasks.dev]
+description = "Run server + sass watcher together"
+run = [
+    { tasks = ["serve", "sass_watch"] }
+]
